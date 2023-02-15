@@ -1,6 +1,6 @@
 <template>
 	<view>
-		order
+		wallet
 	</view>
 </template>
 

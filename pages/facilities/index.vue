@@ -1,7 +1,4 @@
 <template>
-	<view>
-		order
-	</view>
 </template>
 
 <script>

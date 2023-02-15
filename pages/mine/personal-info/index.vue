@@ -1,6 +1,6 @@
 <template>
 	<view>
-		order
+		personal info
 	</view>
 </template>
 

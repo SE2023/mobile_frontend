@@ -2,7 +2,6 @@
 	<view class="container">
 		<view class="main-header" :style="{ height: platform == 'H5' ? '260rpx' : '320rpx', paddingTop: platform == 'H5' ? '0' : '80rpx' }">
 			<view class="bgc"></view>
-			<!-- <image class="bg-image" src="/static/background/user-header2.png" mode="scaleToFill"></image> -->
 			<!-- 用户信息 -->
 			<view v-if="isLogin" class="user-info">
 				<!-- 头像 -->
@@ -20,38 +19,19 @@
 				      <avatar-image :width="100" />
 				</view>
 				<view class="user-content">
-				      <view class="nick-name">未登录</view>
-				      <view class="login-tips">点击登录账号</view>
+				      <view class="nick-name">Sign In</view>
+				      <view class="login-tips">Click here to sign in</view>
 				</view>
-			</view>
+			</view>	
 		</view>	
+		
 		<!-- 订单操作 -->
-			<uni-card :is-shadow="false" extra >
-				<view>
-					<text>我的订单</text>
-					
-				</view>
-				<view class="order-navbar">
-					
-							<view class="order-navbar-item" v-for="(item, index) in orderNavbar" :key="index" @click="onTargetOrder(item)">
-								<view class="item-icon">
-									<text class="iconfont" :class="[`icon-${item.icon}`]"></text>
-								</view>
-								<view class="item-name">{{ item.name }}</view>
-								<view class="item-badge" v-if="item.count && item.count > 0">
-									<text v-if="item.count <= 99" class="text">{{ item.count }}</text>
-									<text v-else class="text">99+</text>
-								</view>
-							</view>
-				</view>
-			</uni-card>
-	
+		<Card :DataList="orderNavbar" name="Order" extra="more >" class="cards"></Card>
 		
 		<!-- 其他 -->
 		<view>
-			<uni-list  v-for="(item, index) in itemList" :key="index" @click="onTargetItem(item)">
-				<uni-list-item :title="item.name" link to="/pages/vue/index/index" @click="onClick($event,1)" ></uni-list-item>
-			
+			<uni-list  v-for="(item, index) in itemList" :key="index" @click="handleService(item.url)">
+				<uni-list-item :title="item.name" ></uni-list-item>
 			</uni-list>
 			
 		</view>
@@ -63,25 +43,27 @@
 
 <script>
 	import AvatarImage from '@/components/avatar-image'
+	import Card from '@/components/card'
 	
 	// 订单操作
 	const orderNavbar = [
-	  { id: 'all', name: '全部预约', icon: 'qpdingdan' },
-	  { id: 'payment', name: '待支付', icon: 'daifukuan', count: 0 },
-	  { id: 'delivery', name: '待使用', icon: 'daifahuo', count: 0 },
-	  { id: 'received', name: '已完成', icon: 'daishouhuo', count: 0 },
+	  { id: 'all', name: 'ToBePaid', iconpath: '/static/icon/tobepaid.svg' },
+	  { id: 'payment', name: 'Paid', iconpath: '/static/icon/paid.svg' },
+	  { id: 'delivery', name: 'Cancelled', iconpath: '/static/icon/cancelled.svg' },
 	]
 	
 	const itemList = [
-		{ id: 'all', name: '修改信息', icon: 'qpdingdan' },
-		{ id: 'payment', name: '会员专享', icon: 'daifukuan', count: 0 },
-		{ id: 'delivery', name: '我的收藏', icon: 'daifahuo', count: 0 },
-		{ id: 'received', name: '设置', icon: 'daishouhuo', count: 0 },
+	  { id: 'all', name: 'Personal Info', icon: 'qpdingdan',url:'./personal-info/index' },
+	  { id: 'payment', name: 'Wallet', icon: 'daifukuan', url:'./wallet/index' },
+	  { id: 'delivery', name: 'Bookings', icon: 'daifahuo', url:'../order/index' },
+	  { id: 'received', name: 'Settings', icon: 'daishouhuo', url:'./settings/index' },
+	  { id: 'received', name: 'Logout', icon: 'daishouhuo', url:'./logout/index' },
 	]
 	
 	export default {
 		components: {
-			AvatarImage
+			AvatarImage,
+			Card
 		},
 		data() {
 			return {
@@ -114,6 +96,12 @@
 			      })
 			  })
 			},
+			handleService(url) {
+				uni.navigateTo({
+					url:url
+				})
+			  // this.$navTo(url)
+			},
 			
 			// 跳转到登录页
 			handleLogin() {
@@ -122,12 +110,7 @@
 				})
 			},
 			
-			// 跳转到订单页
-			onTargetOrder(item) {
-				uni.navigateTo({
-					url:'/pages/order/index'
-				})
-			},
+			
 		}
 	}
 </script>
@@ -137,7 +120,6 @@
   // 页面头部
   .main-header {
     background-color: #fff;
-    // background-image: url('/static/background/user-header.png');
     position: relative;
     width: 100%;
     height: 280rpx;
@@ -151,9 +133,9 @@
 		top:-40%;
 		left:-10%;
 		width:120%;
-		height:480rpx ;
+		height:580rpx ;
 		background-color: #F25E5E;
-		border-radius: 50%;
+		border-radius: 40%;
 		z-index: 0;
 	}
     
@@ -166,13 +148,16 @@
       display: flex;
       height: 100rpx;
       z-index: 1;
+	  position: relative;
+	  top:-30%;
+	  left:5%;
 
       .user-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: 30rpx;
-        color: #c59a46;
+        color: #fff;
 		z-index: 1;
 
         .nick-name {
@@ -219,8 +204,10 @@
       }
     }
   }
-
-  // 角标组件
+  .cards{
+	 margin-top:-150rpx;
+	}
+  //角标组件
   .item-badge {
     position: absolute;
     top: 0;
@@ -236,7 +223,7 @@
     padding: 1rpx;
     font-size: 24rpx;
   }
-
+  
   // 我的钱包
   .my-asset {
     display: flex;
@@ -253,7 +240,7 @@
       color: #545454;
 
       .item-icon {
-        font-size: 44rpx;
+        width: 5rpx;
       }
 
       .item-name {
@@ -286,38 +273,7 @@
 
   }
 
-  // 订单操作
-  .order-navbar {
-    display: flex;
-    margin: 20rpx auto 20rpx auto;
-    padding: 20rpx 0;
-    width: 94%;
-    box-shadow: 0 1rpx 5rpx 0px rgba(0, 0, 0, 0.05);
-    font-size: 30rpx;
-    border-radius: 5rpx;
-    background: #fff;
-
-    &-item {
-      position: relative;
-      width: 25%;
-
-      .item-icon {
-        text-align: center;
-        margin: 0 auto;
-        padding: 10rpx 0;
-        color: #545454;
-        font-size: 44rpx;
-      }
-
-      .item-name {
-        font-size: 28rpx;
-        color: #545454;
-        text-align: center;
-        margin-right: 10rpx;
-      }
-
-    }
-  }
+  
 
   // 我的服务
   .my-service {

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		order
+		timetable
 	</view>
 </template>
 
