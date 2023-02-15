@@ -7,21 +7,59 @@
 			}
 		},
 		{
+			"path": "pages/facilities/index",
+			"style": {
+				"navigationBarTitleText": "Facility"
+			}
+		},
+		{
+			"path": "pages/facilities/details/index",
+			"style": {
+				"navigationBarTitleText": "Facility Details"
+			}
+		},
+		{
+			"path": "pages/facilities/timetable/index",
+			"style": {
+				"navigationBarTitleText": "Facility Timetable"
+			}
+		},
+		{
 			"path": "pages/others/others",
 			"style": {
-				"navigationBarTitleText": "SportsCenter"
+				"navigationBarTitleText": "Others"
 			}
 		},
 		{
 			"path": "pages/mine/mine",
 			"style": {
-				"navigationBarTitleText": "SportsCenter"
+				"navigationBarTitleText": ""
 			}
 		},
+		
 		{
 			"path": "pages/login/index",
 			"style": {
-				"navigationBarTitleText": "SportsCenter"
+				"navigationBarTitleText": "Login"
+			}
+		},
+		
+		{
+			"path": "pages/mine/personal-info/index",
+			"style": {
+				"navigationBarTitleText": "MyInfo"
+			}
+		},
+		{
+			"path": "pages/mine/wallet/index",
+			"style": {
+				"navigationBarTitleText": "MyWallet"
+			}
+		},
+		{
+			"path": "pages/order/index",
+			"style": {
+				"navigationBarTitleText": "Order"
 			}
 		}
 	],

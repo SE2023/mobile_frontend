@@ -1,6 +1,6 @@
 <template>
 	<view>
-		order
+		settings
 	</view>
 </template>
 
