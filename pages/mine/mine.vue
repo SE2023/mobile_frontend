@@ -30,10 +30,9 @@
 		
 		<!-- 其他 -->
 		<view>
-			<uni-list  v-for="(item, index) in itemList" :key="index" @click="handleService(item.url)">
+			<uni-list v-for="(item, index) in itemList" :key="index" @click="handleService(item.url)">
 				<uni-list-item :title="item.name" ></uni-list-item>
 			</uni-list>
-			
 		</view>
 	</view>
 		
