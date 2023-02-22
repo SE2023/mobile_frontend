@@ -61,6 +61,18 @@
 			"style": {
 				"navigationBarTitleText": "Order"
 			}
+		},
+		{
+			"path": "pages/mine/settings/index",
+			"style": {
+				"navigationBarTitleText": "Settings"
+			}
+		},
+		{
+			"path": "pages/facilities/find/index",
+			"style": {
+				"navigationBarTitleText": "Facilities"
+			}
 		}
 	],
 	
