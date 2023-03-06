@@ -1,7 +1,6 @@
 /**
  * request插件地址：https://ext.dcloud.net.cn/plugin?id=822
  */
-import store from '@/store'
 import request from './request'
 import Config from '@/core/config'
 
