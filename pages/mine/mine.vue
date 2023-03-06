@@ -43,12 +43,14 @@
 <script>
 	import AvatarImage from '@/components/avatar-image'
 	import Card from '@/components/card'
+	import * as UserApi from '@/api/user'
+	
 	
 	// 订单操作
 	const orderNavbar = [
-	  { id: 'all', name: 'ToBePaid', iconpath: '/static/icon/tobepaid.svg' },
-	  { id: 'payment', name: 'Paid', iconpath: '/static/icon/paid.svg' },
-	  { id: 'delivery', name: 'Cancelled', iconpath: '/static/icon/cancelled.svg' },
+	  { id: 'all', name: 'ToBePaid', iconpath: '/static/icon/tobepaid.svg',url:'../order/index' },
+	  { id: 'payment', name: 'Paid', iconpath: '/static/icon/paid.svg',url:'../order/index' },
+	  { id: 'delivery', name: 'Cancelled', iconpath: '/static/icon/cancelled.svg',url:'../order/index' },
 	]
 	
 	const itemList = [
@@ -72,7 +74,8 @@
 				mobile:'12345'
 			},
 			orderNavbar,
-			itemList
+			itemList,
+			isLogin: false,
 			}
 		},
 		methods: {
