@@ -5,8 +5,9 @@
 		<uni-notice-bar show-icon scrollable
 						text="sportscenter真不错" />			
 		<Card :DataList="orderNavbar" name="" extra=""></Card>
-		<Tabbar :tabBars="tabBars" @TarTap="TarData" :tabIndex="tabIndex" ></Tabbar>
-		<component v-bind:is="currentTabComponent"></component>
+		<TopNavBar :barNameList="barNameList" :barContentList="barContentList"></TopNavBar>
+		<!-- <Tabbar :tabBars="tabBars" @TarTap="TarData" :tabIndex="tabIndex" ></Tabbar>
+		<component v-bind:is="currentTabComponent"></component> -->
 		<view>Recommend</view>
 	</view>
 </template>
@@ -16,6 +17,7 @@
 	import Banner from '@/components/banner'
 	import Card from '@/components/card'
 	import Tabbar from '@/components/tabbar'
+	import TopNavBar from '@/components/top-navbar/index.vue'
 	import Swimming from '@/components/tabbar-component/swimming.vue'
 	import Fitness from '@/components/tabbar-component/fitness.vue'
 	import Squash from '@/components/tabbar-component/Squash.vue'
@@ -33,6 +35,34 @@
 	  { id: 'delivery', name: 'Squash Courts', iconpath: '/static/icon/cancelled.svg' },
 	  { id: 'delivery', name: 'Sports Hall', iconpath: '/static/icon/cancelled.svg' },
 	]
+	const barNameList = [
+		{name: 'FitnessRoom',id: '0'}, 
+		{name: 'SwimmingPool',id: '1'}, 
+		{name: 'Squash',id: '2'},
+		{name: 'SportsCenter',id: '3'},]
+		
+	const barContentList= [
+		{
+			id:"01",
+			title:"To be Paid",
+			status:"unused",
+			time:"2023-4-1",
+			
+		},
+		{
+			id:"02",
+			title:"Paid",
+			status:"1",
+			time:"2023-4-2",
+			
+		},
+		{
+			id:"03",
+			title:"Cancelled",
+			status:"2",
+			time:"2023-4-3",
+			
+		},]
 	export default {
 		components: {
 		  Search,
@@ -42,7 +72,8 @@
 		  Swimming,
 		  Fitness,
 		  Squash,
-		  Sports  
+		  Sports ,
+		  TopNavBar
 		},
 		data() {
 			return {
@@ -54,6 +85,8 @@
 			  items: [],
 			  orderNavbar,
 			  itemList,
+			  barNameList,
+			  barContentList,
 			  tabIndex: "ChooseTime",
 			  tabBars:[
 			  	{
