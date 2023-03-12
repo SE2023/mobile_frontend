@@ -1,0 +1,115 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "SportsCenter"
+			}
+		},
+		{
+			"path": "pages/facilities/index",
+			"style": {
+				"navigationBarTitleText": "Facility"
+			}
+		},
+		{
+			"path": "pages/facilities/details/index",
+			"style": {
+				"navigationBarTitleText": "Facility Details"
+			}
+		},
+		{
+			"path": "pages/facilities/timetable/index",
+			"style": {
+				"navigationBarTitleText": "Facility Timetable"
+			}
+		},
+		{
+			"path": "pages/others/others",
+			"style": {
+				"navigationBarTitleText": "Others"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "Login"
+			}
+		},
+		
+		{
+			"path": "pages/mine/personal-info/index",
+			"style": {
+				"navigationBarTitleText": "MyInfo"
+			}
+		},
+		{
+			"path": "pages/mine/wallet/index",
+			"style": {
+				"navigationBarTitleText": "MyWallet"
+			}
+		},
+		{
+			"path": "pages/order/index",
+			"style": {
+				"navigationBarTitleText": "Order"
+			}
+		},
+		{
+			"path": "pages/mine/settings/index",
+			"style": {
+				"navigationBarTitleText": "Settings"
+			}
+		},
+		{
+			"path": "pages/facilities/find/index",
+			"style": {
+				"navigationBarTitleText": "Facilities"
+			}
+		}
+	],
+	
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "SportsCenter",
+		"navigationBarBackgroundColor": "#F25E5E",
+		"backgroundColor": "#F25E5E",
+		"enablePullDownRefresh": true,
+		"backgroundTextStyle": "light",
+		"h5":{
+			"pullToRefresh": {
+				"color": "#F25E5E"
+			}
+		}
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabbar/list.png",
+			"selectedIconPath": "static/tabbar/list_active.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/others/others",
+			"iconPath": "static/tabbar/grid.png",
+			"selectedIconPath": "static/tabbar/grid_active.png",
+			"text": "其他"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/tabbar/me.png",
+			"selectedIconPath": "static/tabbar/me_active.png",
+			"text": "我的"
+		}]
+	}
+}
