@@ -1,11 +1,12 @@
 <template>
 	<view>
-		timetable
+		Time
 	</view>
 </template>
 
 <script>
 </script>
+
 
 <style>
 </style>
