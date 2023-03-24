@@ -74,7 +74,16 @@
 				"navigationBarTitleText": "Facilities"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/register/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Register",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

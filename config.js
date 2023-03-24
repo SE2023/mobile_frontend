@@ -1,11 +1,11 @@
 export default {
 
   // 系统名称
-  name: "Sports Center",
+  name: "BodyBuddy",
 
   // 必填: 后端api地址, 斜杠/结尾, 参照下面格式
   // 例如: https://www.你的域名.com/index.php?s=/api/
-  apiUrl: "http://127.0.0.1:8880",
+  urlPrefix: 'http://127.0.0.1:8880',
 
   /**
    * 是否启用商城设置缓存

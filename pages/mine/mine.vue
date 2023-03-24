@@ -48,7 +48,7 @@
 	
 	// 订单操作
 	const orderNavbar = [
-	  { id: 'all', name: 'ToBePaid', iconpath: '/static/icon/tobepaid.svg',url:'../order/index' },
+	  { id: 'all', name: 'To Be Paid', iconpath: '/static/icon/tobepaid.svg',url:'../order/index' },
 	  { id: 'payment', name: 'Paid', iconpath: '/static/icon/paid.svg',url:'../order/index' },
 	  { id: 'delivery', name: 'Cancelled', iconpath: '/static/icon/cancelled.svg',url:'../order/index' },
 	]

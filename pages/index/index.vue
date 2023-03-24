@@ -22,8 +22,12 @@
 	import Fitness from '@/components/tabbar-component/fitness.vue'
 	import Squash from '@/components/tabbar-component/Squash.vue'
 	import Sports from '@/components/tabbar-component/Sports.vue'
+	import Config from '@/config.js'
+	
+	const urlPrefix = Config.urlPrefix
 	
 	const App = getApp()
+
 	const itemList=[
 		{id:0, url:'/static/swiper/swiper1.jpg'},
 		{id:1, url:'/static/swiper/swiper2.jpg'},
@@ -116,6 +120,14 @@
 		 */
 		onLoad() {
 		  
+		},
+		mounted() {
+			uni.request({
+				url: urlPrefix + '/user/staffs',
+				method: 'GET',
+			}).then((res)=>{
+				console.log('result', res.data.result)
+			})
 		},
 		methods: {
 			TarData(item){
