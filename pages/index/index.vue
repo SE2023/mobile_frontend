@@ -24,6 +24,10 @@
 	import Fitness from '@/components/tabbar-component/fitness.vue'
 	import Squash from '@/components/tabbar-component/Squash.vue'
 	import Sports from '@/components/tabbar-component/Sports.vue'
+	import Config from '@/config.js'
+	
+	const urlPrefix = Config.urlPrefix
+
 	import Book from '@/components/book/index.vue'
 	import Time from '@/components/time/index.vue'
 	
@@ -135,6 +139,14 @@
 		 */
 		onLoad() {
 		  
+		},
+		mounted() {
+			uni.request({
+				url: urlPrefix + '/user/staffs',
+				method: 'GET',
+			}).then((res)=>{
+				console.log('result', res.data.result)
+			})
 		},
 		methods: {
 			TarData(item){
