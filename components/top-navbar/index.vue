@@ -8,7 +8,8 @@
 		<swiper id="tabContent" :current="tabIndex" @change="tabChange">
 			<swiper-item v-for="(item,index) in barContentList" :key="item.id">
 				<view>
-					<OrderItem :item="item"></OrderItem>
+					<component :is="item.mft_components" ></component>  
+					<!-- <OrderItem :item="item"></OrderItem> -->
 				</view>
 			</swiper-item>
 		</swiper>
@@ -19,6 +20,7 @@
 
 <script> 
 	import OrderItem from '@/components/order-item/index.vue'
+	import Time from '@/components/time/index.vue'
 	export default{
 		name:'TopNavBar',
 		props:{
@@ -30,7 +32,8 @@
 			}
 		},
 		components:{
-			OrderItem
+			OrderItem,
+			Time
 		},
 		data(){
 			return{

@@ -25,6 +25,7 @@
 	import Squash from '@/components/tabbar-component/Squash.vue'
 	import Sports from '@/components/tabbar-component/Sports.vue'
 	import Book from '@/components/book/index.vue'
+	import Time from '@/components/time/index.vue'
 	
 	const App = getApp()
 	const width = "25%"
@@ -51,6 +52,7 @@
 			title:"To be Paid",
 			status:"unused",
 			time:"2023-4-1",
+			mft_components:"Time"
 			
 		},
 		{
@@ -58,6 +60,7 @@
 			title:"Paid",
 			status:"1",
 			time:"2023-4-2",
+			mft_components:"Time"
 			
 		},
 		{
@@ -65,6 +68,15 @@
 			title:"Cancelled",
 			status:"2",
 			time:"2023-4-3",
+			mft_components:"Time"
+			
+		},
+		{
+			id:"04",
+			title:"Cancelled",
+			status:"2",
+			time:"2023-4-3",
+			mft_components:"Time"
 			
 		},]
 	export default {
@@ -78,7 +90,8 @@
 		  Squash,
 		  Sports ,
 		  TopNavBar,
-		  Book
+		  Book,
+		  Time
 		},
 		data() {
 			return {
