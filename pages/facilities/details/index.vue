@@ -14,7 +14,10 @@
 				<view>1-hour session</view>
 				<view>some description here</view>
 				<view>$100</view>
-				<button type="warn">Book Now</button>
+				<navigator url="../find/index">
+					<button type="warn">Book Now</button>
+				</navigator>
+				
 			</uni-card>
 		</uni-section>
 	</view>
@@ -39,6 +42,14 @@
 			return{
 				itemList
 			}
+		},
+		method:{
+			toTargetItem() {
+				console.log('ok')
+				uni.navigateTo({
+					url:"./facilities/index"
+				})
+			},
 		}
 		
 	}

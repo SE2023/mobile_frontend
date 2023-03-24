@@ -207,8 +207,10 @@
     }
   }
   .cards{
-	 margin-top:-150rpx;
+	margin-left:20rpx;
+	margin-top:-150rpx;
 	}
+	
   //角标组件
   .item-badge {
     position: absolute;

@@ -1,4 +1,5 @@
 import App from './App'
+// import store from './store'
 
 // #ifndef VUE3
 import Vue from 'vue'
@@ -7,6 +8,7 @@ App.mpType = 'app'
 const app = new Vue({
     ...App
 })
+require('./api/mock.js')
 app.$mount()
 // #endif
 
