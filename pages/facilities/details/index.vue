@@ -10,12 +10,11 @@
 			<view>Contact: 18833000000</view>
 		</view>
 		<uni-section title="Activites" type="line" padding>
-			<uni-card class="book-card">
-				<view>1-hour session</view>
-				<view>some description here</view>
-				<view>$100</view>
-				<button type="warn">Book Now</button>
-			</uni-card>
+			<Book></Book>
+			<Book></Book>
+		</uni-section>
+		<uni-section title="Comments" type="line" padding>
+			<Comment :UserList="UserList"></Comment>
 		</uni-section>
 	</view>
 	
@@ -23,22 +22,38 @@
 
 <script>
 	import Banner from '@/components/banner'
+	import Book from '@/components/book/index.vue'
+	import Comment from '@/components/comments/index.vue'
 	
 	const itemList=[
 		{id:0, url:'/static/swiper/swiper4.jpg'},
 		{id:1, url:'/static/swiper/swiper4.jpg'},
 		{id:2, url:'/static/swiper/swiper4.jpg'},
 	]
-	
+	const UserList=[
+		{user:"Test",date:"2023-4-1",comment:"That's great!",avatar_url:"/static/default-avatar.png"},
+		{user:"Test",date:"2023-4-1",comment:"That's great!",avatar_url:"/static/default-avatar.png"},
+		{user:"Test",date:"2023-4-1",comment:"That's great!",avatar_url:"/static/default-avatar.png"}
+	]
 	export default {
 		components: {
 		  Banner,
-		  
+		  Book,
+		  Comment
 		},
 		data(){
 			return{
-				itemList
+				itemList,
+				UserList
 			}
+		},
+		method:{
+			toTargetItem() {
+				console.log('ok')
+				uni.navigateTo({
+					url:"./facilities/index"
+				})
+			},
 		}
 		
 	}

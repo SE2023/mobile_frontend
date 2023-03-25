@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<TopNavBar :barNameList="barNameList" :barContentList="barContentList"></TopNavBar>
+		<TopNavBar :width="width" :barNameList="barNameList" :barContentList="barContentList"></TopNavBar>
 
 	</view>
 </template>
@@ -34,6 +34,7 @@
 			time:"2023-4-3",
 			
 		},]
+		const width = "33.3%"
 		
 	export default{
 		components:{
@@ -42,7 +43,8 @@
 		data(){
 			return{
 				barNameList,
-				barContentList			
+				barContentList,
+				width,
 			}
 		},
 		methods:{

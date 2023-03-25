@@ -1,14 +1,15 @@
 <template>
 	<view>
 		<scroll-view id="tab" scroll-x="true">
-				<view v-for="(item,index) in barNameList" :key="item.id" class="tabName" :data-current="index" @click="ontabtap">
+				<view v-for="(item,index) in barNameList" :key="item.id" class="tabName" :data-current="index" @click="ontabtap" :style="{width:width}">
 					<text class="tabName_text" :class="tabIndex == index?'active_text':''">{{item.name}}</text>
 				</view>
 		</scroll-view>
 		<swiper id="tabContent" :current="tabIndex" @change="tabChange">
 			<swiper-item v-for="(item,index) in barContentList" :key="item.id">
 				<view>
-					<OrderItem :item="item"></OrderItem>
+					<component :is="item.mft_components" ></component>  
+					<!-- <OrderItem :item="item"></OrderItem> -->
 				</view>
 			</swiper-item>
 		</swiper>
@@ -19,18 +20,25 @@
 
 <script> 
 	import OrderItem from '@/components/order-item/index.vue'
+	import Time from '@/components/time/index.vue'
 	export default{
 		name:'TopNavBar',
 		props:{
 			barNameList:Array,
-			barContentList:Array,	
+			barContentList:Array,
+			width:{
+					type:String,
+					// default:"33.33%"
+			}
 		},
 		components:{
-			OrderItem
+			OrderItem,
+			Time
 		},
 		data(){
 			return{
 				tabIndex:0,	
+				// distMenu: this.weight,
 			}
 		},
 		methods:{
@@ -58,21 +66,24 @@
 			
 		}
 	}
+	
 </script>
 
 
 <style>
+	/* $dist_menu: var(--dist-menu); */
 	#tab{
 		width: 100%;
 		display: flex;
 	}
 	.tabName{
 		text-align: center;
-		width: 33.33%;
+		/* width: $dist_menu; */
+		/* margin-left:30rpx; */
 		display: inline-block;
 		height: 80rpx;
 		line-height: 80rpx;
-		white-space: nowrap;
+		white-space: break-word;
 	}
 	.tabName_text{
 		display: inline-block;

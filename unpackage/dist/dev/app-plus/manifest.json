@@ -114,19 +114,19 @@
           "pagePath": "pages/index/index",
           "iconPath": "/static/tabbar/list.png",
           "selectedIconPath": "/static/tabbar/list_active.png",
-          "text": "首页"
+          "text": "Home"
         },
         {
           "pagePath": "pages/others/others",
           "iconPath": "/static/tabbar/grid.png",
           "selectedIconPath": "/static/tabbar/grid_active.png",
-          "text": "其他"
+          "text": "Others"
         },
         {
           "pagePath": "pages/mine/mine",
           "iconPath": "/static/tabbar/me.png",
           "selectedIconPath": "/static/tabbar/me_active.png",
-          "text": "我的"
+          "text": "Mine"
         }
       ],
       "selectedIndex": 0,
