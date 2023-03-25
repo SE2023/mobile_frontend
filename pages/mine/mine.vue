@@ -9,9 +9,13 @@
 					<avatar-image :url="userInfo.avatar_url" :width="100" />
 				</view>
 				<!-- 信息 -->
-				<view class="user-content">
-					<view class="nick-name oneline-hide">{{ userInfo.nick_name }}</view>
-					<view class="mobile">{{ userInfo.mobile }}</view>
+				<view class="user-content" v-if="!isLogin">
+					<view class="nick-name oneline-hide">Login</view>
+					<view class="mobile">Click here to login</view>
+				</view>
+				<view class="user-content" v-if="isLogin">
+					<view class="nick-name oneline-hide">{{ userInfo.username }}</view>
+					<view class="mobile">{{ userInfo.email }}</view>
 				</view>    
 			</view>
 			<view v-else class="user-info" @click="handleLogin">
@@ -33,6 +37,9 @@
 			<uni-list v-for="(item, index) in itemList" :key="index" @click="handleService(item.url)">
 				<uni-list-item :title="item.name" ></uni-list-item>
 			</uni-list>
+			<uni-list @click="logout">
+				<uni-list-item title="Logout" ></uni-list-item>
+			</uni-list>
 		</view>
 	</view>
 		
@@ -44,6 +51,9 @@
 	import AvatarImage from '@/components/avatar-image'
 	import Card from '@/components/card'
 	import * as UserApi from '@/api/user'
+	import Config from '@/config.js'
+	
+	const urlPrefix = Config.urlPrefix
 	
 	
 	// 订单操作
@@ -58,7 +68,6 @@
 	  { id: 'payment', name: 'Wallet', icon: 'daifukuan', url:'./wallet/index' },
 	  { id: 'delivery', name: 'Bookings', icon: 'daifahuo', url:'../order/index' },
 	  { id: 'received', name: 'Settings', icon: 'daishouhuo', url:'./settings/index' },
-	  { id: 'received', name: 'Logout', icon: 'daishouhuo', url:'./logout/index' },
 	]
 	
 	export default {
@@ -70,8 +79,8 @@
 			return {
 			text:'nihao',
 			userInfo: {
-				nick_name:'test',
-				mobile:'12345'
+				username: null,
+				email: null,
 			},
 			orderNavbar,
 			itemList,
@@ -80,23 +89,27 @@
 		},
 		methods: {
 			// 获取当前用户信息
-			getUserInfo() {
-			  const app = this
-			  return new Promise((resolve, reject) => {
-			    !app.isLogin ? resolve(null) : UserApi.info({}, { load: app.isFirstload })
-			      .then(result => {
-			        app.userInfo = result.data.userInfo
-			        resolve(app.userInfo)
-			      })
-			      .catch(err => {
-			        if (err.result && err.result.status == 401) {
-			          app.isLogin = false
-			          resolve(null)
-			        } else {
-			          reject(err)
-			        }
-			      })
-			  })
+			async getUserInfo() {
+				uni.request({
+					url: urlPrefix + '/user',
+					method: 'GET',
+					header: {
+						'Authorization': uni.getStorageSync('token')
+					}
+				}).then(res => {
+					if (res.data.code === 0) {
+						console.log('username: ', res.data.result.username)
+						console.log('email: ', res.data.result.email)
+						this.isLogin = true
+						this.userInfo.username = res.data.result.username
+						this.userInfo.email = res.data.result.email
+					} else {
+						uni.showToast({
+							title: 'Get info failed',
+							duration: 2000
+						})
+					}
+				})
 			},
 			handleService(url) {
 				uni.navigateTo({
@@ -104,16 +117,25 @@
 				})
 			  // this.$navTo(url)
 			},
-			
 			// 跳转到登录页
 			handleLogin() {
 				!this.isLogin && uni.navigateTo({
 					url:'/pages/login/index'
 				})
 			},
-			
-			
-		}
+			logout() {
+				console.log('logout')
+				uni.setStorageSync('token', null)
+				this.isLogin = false
+			}
+		},
+		mounted() {
+			console.log('token', uni.getStorageSync('token'))
+			if (uni.getStorageSync('token') !== null) {
+				console.log('asdfsdfsad')
+				this.getUserInfo()
+			}
+		},
 	}
 </script>
 
