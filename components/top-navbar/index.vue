@@ -81,8 +81,8 @@
 	}
 	.active_text{
 		/* background-color: #FDDD9B; */
-		color: #FA8072;
-		border-bottom: 2px solid #FA8072;
+		color: #F25E5E;
+		border-bottom: 2px solid #F25E5E;
 	}
 	#tabContent{
 		width: 100%;
