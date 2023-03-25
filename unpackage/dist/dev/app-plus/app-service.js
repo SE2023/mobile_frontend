@@ -1264,7 +1264,7 @@ if (uni.restoreGlobal) {
       onClick: _cache[0] || (_cache[0] = (...args) => $options._onClick && $options._onClick(...args))
     }, null, 6);
   }
-  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$z], ["__scopeId", "data-v-d31e1c47"], ["__file", "D:/sportscenter/client/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
+  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$z], ["__scopeId", "data-v-d31e1c47"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
@@ -1487,7 +1487,7 @@ if (uni.restoreGlobal) {
       ])) : vue.createCommentVNode("v-if", true)
     ], 4)) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$y], ["__scopeId", "data-v-c3453ea3"], ["__file", "D:/sportscenter/client/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue"]]);
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$y], ["__scopeId", "data-v-c3453ea3"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue"]]);
   const isObject = (val) => val !== null && typeof val === "object";
   const defaultDelimiters = ["{", "}"];
   class BaseFormatter {
@@ -1983,7 +1983,7 @@ if (uni.restoreGlobal) {
       }, vue.toDisplayString($options.cancelTextI18n), 1)) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$x], ["__scopeId", "data-v-f07ef577"], ["__file", "D:/sportscenter/client/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$x], ["__scopeId", "data-v-f07ef577"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
   const _sfc_main$y = {
     props: {
       itemIndex: String,
@@ -2011,7 +2011,7 @@ if (uni.restoreGlobal) {
       vue.createCommentVNode(' <view class="inner"  @click="onTargetSearch">\n      <view class="search-input">\n        <text class="search-icon iconfont icon-search"></text>\n        <text>search</text>\n      </view>\n    </view> ')
     ]);
   }
-  const Search = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$w], ["__scopeId", "data-v-205fdbfe"], ["__file", "D:/sportscenter/client/pages/index/search/index.vue"]]);
+  const Search = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$w], ["__scopeId", "data-v-205fdbfe"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/index/search/index.vue"]]);
   const _sfc_main$x = {
     name: "Banner",
     props: {
@@ -2043,7 +2043,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const Banner = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$v], ["__scopeId", "data-v-4971621b"], ["__file", "D:/sportscenter/client/components/banner/index.vue"]]);
+  const Banner = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$v], ["__scopeId", "data-v-4971621b"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/banner/index.vue"]]);
   const _sfc_main$w = {
     name: "UniCard",
     emits: ["click"],
@@ -2174,7 +2174,7 @@ if (uni.restoreGlobal) {
       ])
     ], 6);
   }
-  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$u], ["__scopeId", "data-v-ae4bee67"], ["__file", "D:/sportscenter/client/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
+  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$u], ["__scopeId", "data-v-ae4bee67"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
   const _sfc_main$v = {
     name: "Card",
     props: {
@@ -2222,7 +2222,7 @@ if (uni.restoreGlobal) {
       }, 8, ["extra", "title"])
     ]);
   }
-  const Card = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$t], ["__scopeId", "data-v-99c72c33"], ["__file", "D:/sportscenter/client/components/card/index.vue"]]);
+  const Card = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$t], ["__scopeId", "data-v-99c72c33"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/card/index.vue"]]);
   const _sfc_main$u = {
     name: "Tabbar",
     props: {
@@ -2259,7 +2259,7 @@ if (uni.restoreGlobal) {
       ])
     ], 2112);
   }
-  const Tabbar = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$s], ["__scopeId", "data-v-0e399a7b"], ["__file", "D:/sportscenter/client/components/tabbar/index.vue"]]);
+  const Tabbar = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$s], ["__scopeId", "data-v-0e399a7b"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/tabbar/index.vue"]]);
   const _sfc_main$t = /* @__PURE__ */ vue.defineComponent({
     __name: "index",
     props: ["item"],
@@ -2276,15 +2276,12 @@ if (uni.restoreGlobal) {
       };
     }
   });
-  const OrderItem = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["__file", "D:/sportscenter/client/components/order-item/index.vue"]]);
+  const OrderItem = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/order-item/index.vue"]]);
   const _sfc_main$s = {
     name: "TopNavBar",
     props: {
       barNameList: Array,
-      barContentList: Array,
-      width: {
-        type: String
-      }
+      barContentList: Array
     },
     components: {
       OrderItem
@@ -2327,13 +2324,12 @@ if (uni.restoreGlobal) {
             key: item.id,
             class: "tabName",
             "data-current": index,
-            onClick: _cache[0] || (_cache[0] = (...args) => $options.ontabtap && $options.ontabtap(...args)),
-            style: vue.normalizeStyle({ width: $props.width })
+            onClick: _cache[0] || (_cache[0] = (...args) => $options.ontabtap && $options.ontabtap(...args))
           }, [
             vue.createElementVNode("text", {
               class: vue.normalizeClass(["tabName_text", $data.tabIndex == index ? "active_text" : ""])
             }, vue.toDisplayString(item.name), 3)
-          ], 12, ["data-current"]);
+          ], 8, ["data-current"]);
         }), 128))
       ]),
       vue.createElementVNode("swiper", {
@@ -2353,7 +2349,7 @@ if (uni.restoreGlobal) {
       ], 40, ["current"])
     ]);
   }
-  const TopNavBar = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$r], ["__scopeId", "data-v-af1b11e8"], ["__file", "D:/sportscenter/client/components/top-navbar/index.vue"]]);
+  const TopNavBar = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$r], ["__scopeId", "data-v-af1b11e8"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/top-navbar/index.vue"]]);
   const _sfc_main$r = {
     name: "Swimming",
     data() {
@@ -2363,7 +2359,7 @@ if (uni.restoreGlobal) {
   function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "timetable" }, " swimming ");
   }
-  const Swimming = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$q], ["__scopeId", "data-v-bc4ef2c9"], ["__file", "D:/sportscenter/client/components/tabbar-component/swimming.vue"]]);
+  const Swimming = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$q], ["__scopeId", "data-v-bc4ef2c9"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/tabbar-component/swimming.vue"]]);
   const _sfc_main$q = {
     name: "Fitness",
     data() {
@@ -2373,7 +2369,7 @@ if (uni.restoreGlobal) {
   function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, " fitness ");
   }
-  const Fitness = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$p], ["__file", "D:/sportscenter/client/components/tabbar-component/fitness.vue"]]);
+  const Fitness = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$p], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/tabbar-component/fitness.vue"]]);
   const _sfc_main$p = {
     name: "Squash",
     data() {
@@ -2383,7 +2379,7 @@ if (uni.restoreGlobal) {
   function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "timetable" }, " squash ");
   }
-  const Squash = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$o], ["__scopeId", "data-v-de316cc3"], ["__file", "D:/sportscenter/client/components/tabbar-component/Squash.vue"]]);
+  const Squash = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$o], ["__scopeId", "data-v-de316cc3"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/tabbar-component/Squash.vue"]]);
   const _sfc_main$o = {
     name: "Sports",
     data() {
@@ -2393,9 +2389,8 @@ if (uni.restoreGlobal) {
   function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, " sports ");
   }
-  const Sports = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$n], ["__file", "D:/sportscenter/client/components/tabbar-component/Sports.vue"]]);
+  const Sports = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$n], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/tabbar-component/Sports.vue"]]);
   getApp();
-  const width$1 = "25%";
   const itemList$3 = [
     { id: 0, url: "/static/swiper/swiper1.jpg" },
     { id: 1, url: "/static/swiper/swiper2.jpg" },
@@ -2408,10 +2403,10 @@ if (uni.restoreGlobal) {
     { id: "delivery", name: "Sports Hall", iconpath: "/static/icon/cancelled.svg" }
   ];
   const barNameList$1 = [
-    { name: "Fitness", id: "0" },
-    { name: "Swimming", id: "1" },
+    { name: "FitnessRoom", id: "0" },
+    { name: "SwimmingPool", id: "1" },
     { name: "Squash", id: "2" },
-    { name: "Sports", id: "3" }
+    { name: "SportsCenter", id: "3" }
   ];
   const barContentList$1 = [
     {
@@ -2452,25 +2447,24 @@ if (uni.restoreGlobal) {
         items: [],
         orderNavbar: orderNavbar$1,
         itemList: itemList$3,
-        width: width$1,
         barNameList: barNameList$1,
         barContentList: barContentList$1,
         tabIndex: "ChooseTime",
         tabBars: [
           {
-            name: "Swimming",
+            name: "SwimmingPool",
             id: "Swimming"
           },
           {
-            name: "Fitness",
+            name: "FitnessRoom",
             id: "Fitness"
           },
           {
-            name: "Squash",
+            name: "SquashCourts",
             id: "Squash"
           },
           {
-            name: "Sports",
+            name: "SportsHall",
             id: "Sports"
           }
         ],
@@ -2498,7 +2492,7 @@ if (uni.restoreGlobal) {
       vue.createVNode(_component_uni_notice_bar, {
         "show-icon": "",
         scrollable: "",
-        text: "Sports Center is pretty great!"
+        text: "sportscenter\u771F\u4E0D\u9519"
       }),
       vue.createVNode(_component_Card, {
         DataList: $data.orderNavbar,
@@ -2506,19 +2500,19 @@ if (uni.restoreGlobal) {
         extra: ""
       }, null, 8, ["DataList"]),
       vue.createVNode(_component_TopNavBar, {
-        width: $data.width,
         barNameList: $data.barNameList,
         barContentList: $data.barContentList
-      }, null, 8, ["width", "barNameList", "barContentList"]),
+      }, null, 8, ["barNameList", "barContentList"]),
+      vue.createCommentVNode(' <Tabbar :tabBars="tabBars" @TarTap="TarData" :tabIndex="tabIndex" ></Tabbar>\n		<component v-bind:is="currentTabComponent"></component> '),
       vue.createElementVNode("view", null, "Recommend")
     ]);
   }
-  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m], ["__scopeId", "data-v-1cf27b2a"], ["__file", "D:/sportscenter/client/pages/index/index.vue"]]);
+  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m], ["__scopeId", "data-v-1cf27b2a"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/index/index.vue"]]);
   const _sfc_main$m = {};
   function _sfc_render$l(_ctx, _cache) {
     return null;
   }
-  const PagesFacilitiesIndex = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$l], ["__file", "D:/sportscenter/client/pages/facilities/index.vue"]]);
+  const PagesFacilitiesIndex = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$l], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/facilities/index.vue"]]);
   const _sfc_main$l = {
     name: "UniRate",
     props: {
@@ -2735,7 +2729,7 @@ if (uni.restoreGlobal) {
       ], 512)
     ]);
   }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$k], ["__scopeId", "data-v-5c8fbdf3"], ["__file", "D:/sportscenter/client/uni_modules/uni-rate/components/uni-rate/uni-rate.vue"]]);
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$k], ["__scopeId", "data-v-5c8fbdf3"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-rate/components/uni-rate/uni-rate.vue"]]);
   const _sfc_main$k = {
     name: "UniSection",
     emits: ["click"],
@@ -2828,7 +2822,7 @@ if (uni.restoreGlobal) {
       ], 4)
     ]);
   }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$j], ["__scopeId", "data-v-637fd36b"], ["__file", "D:/sportscenter/client/uni_modules/uni-section/components/uni-section/uni-section.vue"]]);
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$j], ["__scopeId", "data-v-637fd36b"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-section/components/uni-section/uni-section.vue"]]);
   const itemList$2 = [
     { id: 0, url: "/static/swiper/swiper4.jpg" },
     { id: 1, url: "/static/swiper/swiper4.jpg" },
@@ -2842,14 +2836,6 @@ if (uni.restoreGlobal) {
       return {
         itemList: itemList$2
       };
-    },
-    method: {
-      toTargetItem() {
-        formatAppLog("log", "at pages/facilities/details/index.vue:48", "ok");
-        uni.navigateTo({
-          url: "./facilities/index"
-        });
-      }
     }
   };
   function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
@@ -2890,9 +2876,7 @@ if (uni.restoreGlobal) {
               vue.createElementVNode("view", null, "1-hour session"),
               vue.createElementVNode("view", null, "some description here"),
               vue.createElementVNode("view", null, "$100"),
-              vue.createElementVNode("navigator", { url: "../find/index" }, [
-                vue.createElementVNode("button", { type: "warn" }, "Book Now")
-              ])
+              vue.createElementVNode("button", { type: "warn" }, "Book Now")
             ]),
             _: 1
           })
@@ -2901,17 +2885,17 @@ if (uni.restoreGlobal) {
       })
     ]);
   }
-  const PagesFacilitiesDetailsIndex = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__file", "D:/sportscenter/client/pages/facilities/details/index.vue"]]);
+  const PagesFacilitiesDetailsIndex = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/facilities/details/index.vue"]]);
   const _sfc_main$i = {};
   function _sfc_render$h(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, " Time ");
   }
-  const PagesFacilitiesTimetableIndex = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__file", "D:/sportscenter/client/pages/facilities/timetable/index.vue"]]);
+  const PagesFacilitiesTimetableIndex = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/facilities/timetable/index.vue"]]);
   const _sfc_main$h = {};
   function _sfc_render$g(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, " items ");
   }
-  const PagesOthersOthers = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__file", "D:/sportscenter/client/pages/others/others.vue"]]);
+  const PagesOthersOthers = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/others/others.vue"]]);
   const _sfc_main$g = {
     name: "UniBadge",
     emits: ["click"],
@@ -3046,7 +3030,7 @@ if (uni.restoreGlobal) {
       }, vue.toDisplayString($options.displayValue), 7)) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-c97cb896"], ["__file", "D:/sportscenter/client/uni_modules/uni-badge/components/uni-badge/uni-badge.vue"]]);
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-c97cb896"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-badge/components/uni-badge/uni-badge.vue"]]);
   const _sfc_main$f = {
     name: "UniListItem",
     emits: ["click", "switchChange"],
@@ -3244,7 +3228,7 @@ if (uni.restoreGlobal) {
           this.pageApi("navigateTo");
         }
       },
-      pageApi(api) {
+      pageApi(api2) {
         let callback = {
           url: this.to,
           success: (res) => {
@@ -3258,7 +3242,7 @@ if (uni.restoreGlobal) {
             });
           }
         };
-        switch (api) {
+        switch (api2) {
           case "navigateTo":
             uni.navigateTo(callback);
             break;
@@ -3364,7 +3348,7 @@ if (uni.restoreGlobal) {
       })) : vue.createCommentVNode("v-if", true)
     ], 14, ["hover-class"]);
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-c7524739"], ["__file", "D:/sportscenter/client/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue"]]);
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-c7524739"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue"]]);
   const _sfc_main$e = {
     name: "uniList",
     "mp-weixin": {
@@ -3419,7 +3403,7 @@ if (uni.restoreGlobal) {
       })) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-c2f1266a"], ["__file", "D:/sportscenter/client/uni_modules/uni-list/components/uni-list/uni-list.vue"]]);
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-c2f1266a"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-list/components/uni-list/uni-list.vue"]]);
   const _sfc_main$d = {
     props: {
       url: {
@@ -3453,7 +3437,360 @@ if (uni.restoreGlobal) {
       }, null, 12, ["src"])
     ]);
   }
-  const AvatarImage = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-28a89d63"], ["__file", "D:/sportscenter/client/components/avatar-image/index.vue"]]);
+  const AvatarImage = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-28a89d63"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/avatar-image/index.vue"]]);
+  const mergeConfig$1 = (_this, options) => {
+    let urlType = /^(http|https):\/\//.test(options.url);
+    let config2 = Object.assign({
+      timeout: _this.timeout
+    }, _this.config, options);
+    if (options.method == "FILE") {
+      config2.url = urlType ? options.url : _this.fileUrl + options.url;
+    } else {
+      config2.url = urlType ? options.url : _this.baseUrl + options.url;
+    }
+    if (options.header) {
+      config2.header = Object.assign({}, _this.header, options.header);
+    } else {
+      config2.header = Object.assign({}, _this.header);
+    }
+    return config2;
+  };
+  const dispatchRequest = (requestInfo) => {
+    return new Promise((resolve, reject) => {
+      let requestAbort = true;
+      let requestData = {
+        url: requestInfo.url,
+        header: requestInfo.header,
+        success: (res) => {
+          requestAbort = false;
+          resolve(res);
+        },
+        fail: (err) => {
+          requestAbort = false;
+          if (err.errMsg == "request:fail abort") {
+            reject({
+              errMsg: "\u8BF7\u6C42\u8D85\u65F6\uFF0C\u8BF7\u91CD\u65B0\u5C1D\u8BD5",
+              statusCode: 0
+            });
+          } else {
+            reject(err);
+          }
+        }
+      };
+      if (requestInfo.method) {
+        requestData.method = requestInfo.method;
+      }
+      if (requestInfo.data) {
+        requestData.data = requestInfo.data;
+      }
+      if (requestInfo.dataType) {
+        requestData.dataType = requestInfo.dataType;
+      }
+      let requestTask = uni.request(requestData);
+      setTimeout(() => {
+        if (requestAbort) {
+          requestTask.abort();
+        }
+      }, requestInfo.timeout);
+    });
+  };
+  const jsonpRequest = (requestInfo) => {
+    return new Promise((resolve, reject) => {
+      let dataStr = "";
+      Object.keys(requestInfo.data).forEach((key) => {
+        dataStr += key + "=" + requestInfo.data[key] + "&";
+      });
+      if (dataStr !== "") {
+        dataStr = dataStr.substr(0, dataStr.lastIndexOf("&"));
+      }
+      requestInfo.url = requestInfo.url + "?" + dataStr;
+    });
+  };
+  class request {
+    constructor(options) {
+      this.baseUrl = options.baseUrl || "";
+      this.fileUrl = options.fileUrl || "";
+      this.timeout = options.timeout || 6e3;
+      this.defaultUploadUrl = options.defaultUploadUrl || "";
+      this.header = options.header || {};
+      this.config = options.config || {
+        isPrompt: true,
+        load: true,
+        isFactory: true,
+        resend: 0
+      };
+    }
+    post(url = "", data = {}, options = {}) {
+      return this.request({
+        method: "POST",
+        data,
+        url,
+        ...options
+      });
+    }
+    get(url = "", data = {}, options = {}) {
+      return this.request({
+        method: "GET",
+        data,
+        url,
+        ...options
+      });
+    }
+    put(url = "", data = {}, options = {}) {
+      return this.request({
+        method: "PUT",
+        data,
+        url,
+        ...options
+      });
+    }
+    delete(url = "", data = {}, options = {}) {
+      return this.request({
+        method: "DELETE",
+        data,
+        url,
+        ...options
+      });
+    }
+    jsonp(url = "", data = {}, options = {}) {
+      return this.request({
+        method: "JSONP",
+        data,
+        url,
+        ...options
+      });
+    }
+    async request(data) {
+      let requestInfo, runRequestStart = false;
+      try {
+        if (!data.url) {
+          throw {
+            errMsg: "\u3010request\u3011\u7F3A\u5931\u6570\u636Eurl",
+            statusCode: 0
+          };
+        }
+        requestInfo = mergeConfig$1(this, data);
+        runRequestStart = true;
+        if (this.requestStart) {
+          let requestStart = this.requestStart(requestInfo);
+          if (typeof requestStart == "object") {
+            let changekeys = ["data", "header", "isPrompt", "load", "isFactory"];
+            changekeys.forEach((key) => {
+              requestInfo[key] = requestStart[key];
+            });
+          } else {
+            throw {
+              errMsg: "\u3010request\u3011\u8BF7\u6C42\u5F00\u59CB\u62E6\u622A\u5668\u672A\u901A\u8FC7",
+              statusCode: 0,
+              data: requestInfo.data,
+              method: requestInfo.method,
+              header: requestInfo.header,
+              url: requestInfo.url
+            };
+          }
+        }
+        let requestResult = {};
+        if (requestInfo.method == "JSONP") {
+          requestResult = await jsonpRequest(requestInfo);
+        } else {
+          requestResult = await dispatchRequest(requestInfo);
+        }
+        if (requestInfo.isFactory && this.dataFactory) {
+          let result = await this.dataFactory({
+            ...requestInfo,
+            response: requestResult
+          });
+          return Promise.resolve(result);
+        } else {
+          return Promise.resolve(requestResult);
+        }
+      } catch (err) {
+        this.requestError && this.requestError(err);
+        return Promise.reject(err);
+      } finally {
+        if (runRequestStart) {
+          this.requestEnd && this.requestEnd(requestInfo);
+        }
+      }
+    }
+  }
+  const config = {
+    name: "Sports Center",
+    apiUrl: "http://127.0.0.1:8880",
+    enabledSettingCache: true
+  };
+  const defaultConfig = {
+    name: "\u8424\u706B\u5546\u57CE2.0",
+    apiUrl: "./index.php?s=/api/",
+    enabledSettingCache: false
+  };
+  const mergeConfig = Object.assign({}, defaultConfig, config);
+  const Config = {
+    all() {
+      return mergeConfig;
+    },
+    get(key, def = void 0) {
+      if (mergeConfig.hasOwnProperty(key)) {
+        return mergeConfig[key];
+      }
+      formatAppLog("error", "at core/config/index.js:22", `\u68C0\u6D4B\u5230\u4E0D\u5B58\u5728\u7684\u914D\u7F6E\u9879: ${key}`);
+      return def;
+    }
+  };
+  const apiUrl = Config.get("apiUrl");
+  const $http = new request({
+    baseUrl: apiUrl,
+    fileUrl: apiUrl,
+    defaultUploadUrl: "upload/image",
+    header: {
+      "content-type": "application/json;charset=utf-8"
+    },
+    timeout: 15e3,
+    config: {
+      isPrompt: true,
+      load: true,
+      isFactory: true
+    }
+  });
+  let requestNum = 0;
+  $http.requestStart = (options) => {
+    if (options.load) {
+      if (requestNum <= 0) {
+        uni.showLoading({
+          title: "\u52A0\u8F7D\u4E2D",
+          mask: true
+        });
+      }
+      requestNum += 1;
+    }
+    if (options.method == "FILE" && options.maxSize) {
+      const maxSize = options.maxSize;
+      for (let item of options.files) {
+        if (item.size > maxSize) {
+          setTimeout(() => {
+            uni.showToast({
+              title: "\u56FE\u7247\u8FC7\u5927\uFF0C\u8BF7\u91CD\u65B0\u4E0A\u4F20",
+              icon: "none"
+            });
+          }, 10);
+          return false;
+        }
+      }
+    }
+    options.header["platform"] = store.getters.platform;
+    options.header["Access-Token"] = store.getters.token;
+    return options;
+  };
+  $http.requestEnd = (options) => {
+    if (options.load) {
+      requestNum = requestNum - 1;
+      if (requestNum <= 0) {
+        uni.hideLoading();
+      }
+    }
+  };
+  let loginModal = false;
+  $http.dataFactory = async (res) => {
+    if (!res.response.statusCode || res.response.statusCode != 200) {
+      return Promise.reject({
+        statusCode: res.response.statusCode,
+        errMsg: "http\u72B6\u6001\u7801\u9519\u8BEF"
+      });
+    }
+    let httpData = res.response.data;
+    if (typeof httpData == "string") {
+      try {
+        httpData = JSON.parse(httpData);
+      } catch {
+        httpData = false;
+      }
+    }
+    if (httpData === false || typeof httpData !== "object") {
+      return Promise.reject({
+        statusCode: res.response.statusCode,
+        errMsg: "\u8BF7\u68C0\u67E5api\u5730\u5740\u80FD\u5426\u8BBF\u95EE\u6B63\u5E38"
+      });
+    }
+    if (httpData.status == 200) {
+      return Promise.resolve(httpData);
+    }
+    if (httpData.status == 401) {
+      store.dispatch("Logout");
+      if (!loginModal) {
+        loginModal = true;
+        uni.showModal({
+          title: "\u6E29\u99A8\u63D0\u793A",
+          content: "\u6B64\u65F6\u6B64\u523B\u9700\u8981\u60A8\u767B\u5F55\u5594~",
+          confirmText: "\u53BB\u767B\u5F55",
+          cancelText: "\u518D\u901B\u4F1A",
+          success: (res2) => {
+            if (res2.confirm) {
+              uni.navigateTo({
+                url: "/pages/login/index"
+              });
+            }
+            if (res2.cancel && getCurrentPages().length > 1) {
+              uni.navigateBack();
+            }
+            loginModal = false;
+          }
+        });
+      }
+      return Promise.reject({
+        statusCode: 0,
+        errMsg: httpData.message,
+        result: httpData
+      });
+    }
+    if (httpData.status == 500) {
+      if (res.isPrompt) {
+        setTimeout(() => {
+          uni.showToast({
+            title: httpData.message,
+            icon: "none",
+            duration: 2500
+          }, 10);
+        });
+      }
+      return Promise.reject({
+        statusCode: 0,
+        errMsg: httpData.message,
+        result: httpData
+      });
+    }
+  };
+  $http.requestError = (e) => {
+    if (e.statusCode === 0) {
+      throw e;
+    } else {
+      setTimeout(() => showRequestError(e), 10);
+    }
+  };
+  const showRequestError = (e) => {
+    let errMsg = `\u7F51\u7EDC\u8BF7\u6C42\u51FA\u9519\uFF1A${e.errMsg}`;
+    if (e.errMsg === "request:fail") {
+      errMsg = "\u7F51\u7EDC\u8BF7\u6C42\u9519\u8BEF\uFF1A\u8BF7\u68C0\u67E5api\u5730\u5740\u80FD\u5426\u8BBF\u95EE\u6B63\u5E38";
+    }
+    uni.showToast({
+      title: errMsg,
+      icon: "none",
+      duration: 3500
+    });
+  };
+  const api = {
+    userInfo: "/Consumer",
+    assets: "user/assets",
+    bindMobile: "user/bindMobile",
+    personal: "user/personal"
+  };
+  const info = (param, option) => {
+    const options = {
+      isPrompt: true,
+      load: true,
+      ...option
+    };
+    return $http.get(api.userInfo, param, options);
+  };
   const orderNavbar = [
     { id: "all", name: "ToBePaid", iconpath: "/static/icon/tobepaid.svg", url: "../order/index" },
     { id: "payment", name: "Paid", iconpath: "/static/icon/paid.svg", url: "../order/index" },
@@ -3487,7 +3824,7 @@ if (uni.restoreGlobal) {
       getUserInfo() {
         const app = this;
         return new Promise((resolve, reject) => {
-          !app.isLogin ? resolve(null) : (void 0)({}, { load: app.isFirstload }).then((result) => {
+          !app.isLogin ? resolve(null) : info({}, { load: app.isFirstload }).then((result) => {
             app.userInfo = result.data.userInfo;
             resolve(app.userInfo);
           }).catch((err) => {
@@ -3579,12 +3916,12 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesMineMine = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-7c2ebfa5"], ["__file", "D:/sportscenter/client/pages/mine/mine.vue"]]);
+  const PagesMineMine = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-7c2ebfa5"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/mine/mine.vue"]]);
   const _sfc_main$b = {};
   function _sfc_render$a(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "login");
   }
-  const PagesLoginIndex = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__file", "D:/sportscenter/client/pages/login/index.vue"]]);
+  const PagesLoginIndex = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/login/index.vue"]]);
   const _sfc_main$a = {
     components: {
       AvatarImage
@@ -3654,7 +3991,7 @@ if (uni.restoreGlobal) {
       }, "Submit")
     ], 64);
   }
-  const PagesMinePersonalInfoIndex = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__file", "D:/sportscenter/client/pages/mine/personal-info/index.vue"]]);
+  const PagesMinePersonalInfoIndex = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/mine/personal-info/index.vue"]]);
   const _sfc_main$9 = {};
   function _sfc_render$8(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
@@ -3672,7 +4009,7 @@ if (uni.restoreGlobal) {
       }, "Top Up")
     ], 64);
   }
-  const PagesMineWalletIndex = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__file", "D:/sportscenter/client/pages/mine/wallet/index.vue"]]);
+  const PagesMineWalletIndex = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/mine/wallet/index.vue"]]);
   const barNameList = [
     { name: "To be Paid", id: "0" },
     { name: "Paid", id: "1" },
@@ -3698,7 +4035,6 @@ if (uni.restoreGlobal) {
       time: "2023-4-3"
     }
   ];
-  const width = "33.3%";
   const _sfc_main$8 = {
     components: {
       TopNavBar
@@ -3706,8 +4042,7 @@ if (uni.restoreGlobal) {
     data() {
       return {
         barNameList,
-        barContentList,
-        width
+        barContentList
       };
     },
     methods: {}
@@ -3716,13 +4051,12 @@ if (uni.restoreGlobal) {
     const _component_TopNavBar = vue.resolveComponent("TopNavBar");
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createVNode(_component_TopNavBar, {
-        width: $data.width,
         barNameList: $data.barNameList,
         barContentList: $data.barContentList
-      }, null, 8, ["width", "barNameList", "barContentList"])
+      }, null, 8, ["barNameList", "barContentList"])
     ]);
   }
-  const PagesOrderIndex = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__file", "D:/sportscenter/client/pages/order/index.vue"]]);
+  const PagesOrderIndex = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/order/index.vue"]]);
   const itemList = [
     { id: "security", name: "Account Security", url: "" },
     { id: "language", name: "Language", url: "" },
@@ -3756,7 +4090,7 @@ if (uni.restoreGlobal) {
       }), 128))
     ]);
   }
-  const PagesMineSettingsIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__file", "D:/sportscenter/client/pages/mine/settings/index.vue"]]);
+  const PagesMineSettingsIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/mine/settings/index.vue"]]);
   class Calendar {
     constructor({
       date,
@@ -3851,7 +4185,7 @@ if (uni.restoreGlobal) {
       for (let i = 1; i <= dateData; i++) {
         let nowDate = full.year + "-" + (full.month < 10 ? full.month : full.month) + "-" + (i < 10 ? "0" + i : i);
         let isDay = fullDate === nowDate;
-        let info = this.selected && this.selected.find((item) => {
+        let info2 = this.selected && this.selected.find((item) => {
           if (this.dateEqual(nowDate, item.date)) {
             return item;
           }
@@ -3889,8 +4223,8 @@ if (uni.restoreGlobal) {
           isDay,
           userChecked: false
         };
-        if (info) {
-          data.extraInfo = info;
+        if (info2) {
+          data.extraInfo = info2;
         }
         dateArr.push(data);
       }
@@ -4130,7 +4464,7 @@ if (uni.restoreGlobal) {
       }, null, 2)
     ], 34);
   }
-  const calendarItem = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-3c762a01"], ["__file", "D:/sportscenter/client/uni_modules/uni-datetime-picker/components/uni-datetime-picker/calendar-item.vue"]]);
+  const calendarItem = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-3c762a01"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-datetime-picker/components/uni-datetime-picker/calendar-item.vue"]]);
   const en = {
     "uni-datetime-picker.selectDate": "select date",
     "uni-datetime-picker.selectTime": "select time",
@@ -4883,7 +5217,7 @@ if (uni.restoreGlobal) {
       ], 6)) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const timePicker = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-1d532b70"], ["__file", "D:/sportscenter/client/uni_modules/uni-datetime-picker/components/uni-datetime-picker/time-picker.vue"]]);
+  const timePicker = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-1d532b70"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-datetime-picker/components/uni-datetime-picker/time-picker.vue"]]);
   const { t } = initVueI18n(i18nMessages);
   const _sfc_main$4 = {
     components: {
@@ -5507,7 +5841,7 @@ if (uni.restoreGlobal) {
       ], 2)) : vue.createCommentVNode("v-if", true)
     ], 32);
   }
-  const calendar = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-1d379219"], ["__file", "D:/sportscenter/client/uni_modules/uni-datetime-picker/components/uni-datetime-picker/calendar.vue"]]);
+  const calendar = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-1d379219"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-datetime-picker/components/uni-datetime-picker/calendar.vue"]]);
   const _sfc_main$3 = {
     name: "UniDatetimePicker",
     options: {
@@ -6485,7 +6819,7 @@ if (uni.restoreGlobal) {
       }, null, 8, ["date", "defTime", "start-date", "end-date", "selectableTimes", "startPlaceholder", "endPlaceholder", "pleStatus", "range", "typeHasTime", "hideSecond", "onConfirm", "onMaskClose"])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-9802168a"], ["__file", "D:/sportscenter/client/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue"]]);
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-9802168a"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue"]]);
   const _sfc_main$2 = {
     name: "time_slot",
     props: {
@@ -6686,7 +7020,7 @@ if (uni.restoreGlobal) {
       ], 2)) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const timeSlot = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-d011683a"], ["__file", "D:/sportscenter/client/components/wanghexu-timeslot/wanghexu-timeslot.vue"]]);
+  const timeSlot = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-d011683a"], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/components/wanghexu-timeslot/wanghexu-timeslot.vue"]]);
   const _sfc_main$1 = {
     components: {
       timeSlot
@@ -6771,7 +7105,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesFacilitiesFindIndex = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "D:/sportscenter/client/pages/facilities/find/index.vue"]]);
+  const PagesFacilitiesFindIndex = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/pengchenchen/repo/SE Project/Mobile/pages/facilities/find/index.vue"]]);
   __definePage("pages/index/index", PagesIndexIndex);
   __definePage("pages/facilities/index", PagesFacilitiesIndex);
   __definePage("pages/facilities/details/index", PagesFacilitiesDetailsIndex);
@@ -6795,7 +7129,7 @@ if (uni.restoreGlobal) {
       formatAppLog("log", "at App.vue:10", "App Hide");
     }
   };
-  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "D:/sportscenter/client/App.vue"]]);
+  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "/Users/pengchenchen/repo/SE Project/Mobile/App.vue"]]);
   function createApp() {
     const app = vue.createVueApp(App);
     return {

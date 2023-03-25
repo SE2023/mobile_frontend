@@ -1048,19 +1048,17 @@
   box-sizing: border-box;
 }
 
-	/* $dist_menu: var(--dist-menu); */
 #tab[data-v-af1b11e8]{
 		width: 100%;
 		display: flex;
 }
 .tabName[data-v-af1b11e8]{
 		text-align: center;
-		/* width: $dist_menu; */
-		/* margin-left:30rpx; */
+		width: 33.33%;
 		display: inline-block;
 		height: 2.5rem;
 		line-height: 2.5rem;
-		white-space: break-word;
+		white-space: nowrap;
 }
 .tabName_text[data-v-af1b11e8]{
 		display: inline-block;
