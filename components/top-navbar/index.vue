@@ -8,8 +8,8 @@
 		<swiper id="tabContent" :current="tabIndex" @change="tabChange">
 			<swiper-item v-for="(item,index) in barContentList" :key="item.id">
 				<view>
-					<component :is="item.mft_components" ></component>  
-					<!-- <OrderItem :item="item"></OrderItem> -->
+					<!-- <component :is="item.mft_components" ></component> --> 
+					<OrderItem :item="item"></OrderItem>
 				</view>
 			</swiper-item>
 		</swiper>
