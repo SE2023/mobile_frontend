@@ -4,7 +4,7 @@
 		<view class="comment">
 			<view class="user-info">
 				<view class="user-avatar">
-					<avatar-image :url="item.avatar_url" :width="100" />
+					<avatar-image :url="item.avatar_url" :width="65" style="margin-top: 5px;" />
 				</view>
 				<view class="user-text">
 					<view class="user-name">
@@ -14,7 +14,7 @@
 						{{item.date}}
 					</view>
 				</view>	
-				<uni-rate class="star" active-color="red" v-model="rateValue" />
+				<uni-rate class="star" active-color="red" v-model="rateValue[index]" />
 			</view>
 
 			<view class="comment-item">{{item.comment}}</view>
@@ -34,7 +34,11 @@
 		props:{
 			UserList:Array,
 		},
-		
+		data() {
+			return {
+				rateValue: [5, 4, 4.5]
+			}
+		},
 		methods: {
 			// 跳转到详情页
 			toTargetItem(item) {
