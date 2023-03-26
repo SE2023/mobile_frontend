@@ -31,9 +31,9 @@
 		{id:2, url:'/static/swiper/swiper4.jpg'},
 	]
 	const UserList=[
-		{user:"XJY",date:"2023-4-1",comment:"That's great!",avatar_url:"/static/icon/avatar1.jpg"},
-		{user:"CPC",date:"2023-4-1",comment:"Many guys exercise there!",avatar_url:"/static/icon/avatar3.jpg"},
-		{user:"lpy",date:"2023-4-1",comment:"I have a nice day there!",avatar_url:"/static/icon/avatar2.jpg"}
+		{user:"XJY",date:"2023-3-24",comment:"That's great!",avatar_url:"/static/icon/avatar1.jpg"},
+		{user:"CPC",date:"2023-3-25",comment:"Many guys exercise there!",avatar_url:"/static/icon/avatar3.jpg"},
+		{user:"LPY",date:"2023-3-25",comment:"I have a nice day there!",avatar_url:"/static/icon/avatar2.jpg"}
 	]
 	export default {
 		components: {
@@ -44,7 +44,8 @@
 		data(){
 			return{
 				itemList,
-				UserList
+				UserList,
+				rateValue: 4.5
 			}
 		},
 		method:{
@@ -62,8 +63,8 @@
 <style>
 	.detail{
 		color:gray;
-		padding:10rpx;
-		font-size: 15rpx;
+		padding:18rpx;
+		font-size: 30rpx;
 		border-top: 1px solid gray;
 		border-bottom:1px solid gray ;
 	}
