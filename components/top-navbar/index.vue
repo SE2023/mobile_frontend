@@ -1,16 +1,17 @@
 <template>
 	<view>
+		<!-- tab name -->
 		<scroll-view id="tab" scroll-x="true">
-				<view v-for="(item,index) in barNameList" :key="item.id" class="tabName" :data-current="index" @click="ontabtap" :style="{width:width}">
-					<text class="tabName_text" :class="tabIndex == index?'active_text':''">{{item.name}}</text>
-				</view>
+			<view v-for="(item,index) in barNameList" :key="item.id" class="tabName" :data-current="index" @click="ontabtap" :style="{width:width}">
+				<text class="tabName_text" :class="tabIndex == index?'active_text':''">{{item.name}}</text>
+			</view>
 		</scroll-view>
-		<swiper id="tabContent" :current="tabIndex" @change="tabChange">
+		<!-- tab content -->
+		<swiper class="swiper-item"  id="tabContent" :current="tabIndex" @change="tabChange">
 			<swiper-item v-for="(item,index) in barContentList" :key="item.id">
-				<view>
-					<!-- <component :is="item.mft_components" ></component> --> 
-					<OrderItem :item="item"></OrderItem>
-				</view>
+				
+					<component :is="item.mft_components" :content="item.content"></component> 
+				
 			</swiper-item>
 		</swiper>
 	
@@ -21,6 +22,8 @@
 <script> 
 	import OrderItem from '@/components/order-item/index.vue'
 	import Time from '@/components/time/index.vue'
+	
+	
 	export default{
 		name:'TopNavBar',
 		props:{
@@ -38,7 +41,6 @@
 		data(){
 			return{
 				tabIndex:0,	
-				// distMenu: this.weight,
 			}
 		},
 		methods:{
@@ -97,5 +99,8 @@
 	}
 	#tabContent{
 		width: 100%;
+	}
+	.swiper-item{
+		height:1000rpx !important;
 	}
 </style>

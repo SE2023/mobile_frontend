@@ -1,12 +1,13 @@
 <template>
 	<view>
-		<TopNavBar :width="width" :barNameList="barNameList" :barContentList="barContentList"></TopNavBar>
-
+		<TopNavBar :width="width" :barNameList="barNameList" :barContentList="barContentList" ></TopNavBar>
 	</view>
 </template>
 
 <script>
 	import TopNavBar from '@/components/top-navbar/index.vue'
+	import OrderItem from '@/components/order-item/index.vue'
+	
 	const barNameList = [
 		{name: 'To be Paid',id: '0'}, 
 		{name: 'Paid',id: '1'}, 
@@ -14,31 +15,55 @@
 		
 	const barContentList= [
 		{
-			id:"01",
-			title:"To be Paid",
-			status:"unused",
-			time:"2023-4-1",
+			content:[
+				{
+					id:"01",
+					title:"To be Paid",
+					status:"unpaid",
+					time:"2023-4-1 10:00-11:00",
+				},
+				{
+					id:"02",
+					title:"To be Paid",
+					status:"unpaid",
+					time:"2023-4-1 11:00-12:00",
+				},
+			],
+			mft_components:"OrderItem"
 			
 		},
 		{
-			id:"02",
-			title:"Paid",
-			status:"1",
-			time:"2023-4-2",
+			content:[
+				{
+					id:"02",
+					title:"Paid",
+					status:"unused",
+					time:"2023-4-2 10:00-11:00",
+				},
+			],
+			
+			mft_components:"OrderItem"
 			
 		},
 		{
-			id:"03",
-			title:"Cancelled",
-			status:"2",
-			time:"2023-4-3",
+			content:[
+				{
+					id:"03",
+					title:"Cancelled",
+					status:"used",
+					time:"2023-4-3 10:00-11:00",
+					mft_components:"OrderItem"
+				},
+			],
+			mft_components:"OrderItem"
 			
-		},]
-		const width = "33.3%"
+		}]
+	const width = "33.3%"
 		
 	export default{
 		components:{
-			TopNavBar
+			TopNavBar,
+			OrderItem
 		},
 		data(){
 			return{

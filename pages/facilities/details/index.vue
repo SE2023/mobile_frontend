@@ -31,9 +31,9 @@
 		{id:2, url:'/static/swiper/swiper4.jpg'},
 	]
 	const UserList=[
-		{user:"Test",date:"2023-4-1",comment:"That's great!",avatar_url:"/static/default-avatar.png"},
-		{user:"Test",date:"2023-4-1",comment:"That's great!",avatar_url:"/static/default-avatar.png"},
-		{user:"Test",date:"2023-4-1",comment:"That's great!",avatar_url:"/static/default-avatar.png"}
+		{user:"XJY",date:"2023-4-1",comment:"That's great!",avatar_url:"/static/icon/avatar1.jpg"},
+		{user:"CPC",date:"2023-4-1",comment:"Many guys exercise there!",avatar_url:"/static/icon/avatar3.jpg"},
+		{user:"lpy",date:"2023-4-1",comment:"I have a nice day there!",avatar_url:"/static/icon/avatar2.jpg"}
 	]
 	export default {
 		components: {
