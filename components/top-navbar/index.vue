@@ -7,10 +7,10 @@
 			</view>
 		</scroll-view>
 		<!-- tab content -->
-		<swiper class="swiper-item"  id="tabContent" :current="tabIndex" @change="tabChange">
+		<swiper class="swiper-item" id="tabContent" :current="tabIndex" @change="tabChange">
 			<swiper-item v-for="(item,index) in barContentList" :key="item.id">
 				
-					<component :is="item.mft_components" :content="item.content"></component> 
+					<component :is="item.mft_components" :content="item.content"></component>  
 				
 			</swiper-item>
 		</swiper>
@@ -101,6 +101,6 @@
 		width: 100%;
 	}
 	.swiper-item{
-		height:1000rpx !important;
+		height:375rpx;
 	}
 </style>

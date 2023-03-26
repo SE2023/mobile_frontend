@@ -10,24 +10,27 @@
 		</view>
 	</view>
 	<view class="user-content">
-		<view class="row">
-			<text class="title">Username</text>
-			<text class="content">{{ userInfo.nick_name }}</text>
-		</view>
-		<view class="row">
-			<text class="title">Phone</text>
-			<text class="content">{{ userInfo.mobile }}</text>
-		</view>
-		<view class="row">
-			<text class="title">Gender</text>
-			<text class="content">{{ userInfo.mobile }}</text>
-		</view>	
+		<uni-row class="row">
+			<uni-col :span="10" class="title">Username</uni-col>
+			<uni-col :span="14">{{userInfo.username}}</uni-col>
+		</uni-row>
+		<uni-row class="row">
+			<uni-col :span="10" class="title">Email</uni-col>
+			<uni-col :span="14">{{userInfo.email}}</uni-col>
+		</uni-row>
+		<uni-row class="row">
+			<uni-col :span="10" class="title">Gender</uni-col>
+			<uni-col :span="14">Male</uni-col>
+		</uni-row>
 	</view> 
 	<button type="warn" class="submit-btn">Submit</button>
 </template>
 
 <script>
 	import AvatarImage from '@/components/avatar-image'
+	import Config from '@/config.js'
+	
+	const urlPrefix = Config.urlPrefix
 	
 	export default {
 		components: {
@@ -36,31 +39,40 @@
 		data() {
 			return{
 				userInfo: {
-					nick_name:'test',
-					mobile:'12345'
+					username:'Username',
+					email:'Email'
 				},
 			}
 		},
 		methods:{
-			// 获取当前用户信息
-			getUserInfo() {
-			  const app = this
-			  return new Promise((resolve, reject) => {
-			    !app.isLogin ? resolve(null) : UserApi.info({}, { load: app.isFirstload })
-			      .then(result => {
-			        app.userInfo = result.data.userInfo
-			        resolve(app.userInfo)
-			      })
-			      .catch(err => {
-			        if (err.result && err.result.status == 401) {
-			          app.isLogin = false
-			          resolve(null)
-			        } else {
-			          reject(err)
-			        }
-			      })
-			  })
-			},
+			async getUserInfo() {
+				uni.request({
+					url: urlPrefix + '/user',
+					method: 'GET',
+					header: {
+						'Authorization': uni.getStorageSync('token')
+					}
+				}).then(res => {
+					if (res.data.code === 0) {
+						console.log('username: ', res.data.result.username)
+						console.log('email: ', res.data.result.email)
+						this.userInfo.username = res.data.result.username
+						this.userInfo.email = res.data.result.email
+					} else {
+						uni.showToast({
+							title: 'Get info failed',
+							duration: 2000
+						})
+					}
+				})
+			}
+		},
+		mounted() {
+			console.log('token', uni.getStorageSync('token'))
+			if (uni.getStorageSync('token') !== null) {
+				console.log('asdfsdfsad')
+				this.getUserInfo()
+			}
 		}
 	}
 </script>
@@ -98,10 +110,10 @@
 	}
 	.content{
 		margin-left: 20%;
-		text-align: right;
+		/* text-align: right; */
 	}
 	.row{
-		margin: 20rpx auto ;
+		margin: 30rpx auto ;
 	}
 	.submit-btn{
 		margin-top: 10%;
