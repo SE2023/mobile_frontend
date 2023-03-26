@@ -2,7 +2,7 @@
 	<view class="example-body">
 		<uni-datetime-picker type="date" :clear-icon="false" v-model="single" @maskClick="maskClick" />
 	</view>
-	<view>
+	<view class="choose-time">
 		<button class="time-btn" @click="openTime">choose specific time</button>
 	</view>
 	<button type="warn" size="mini"	class="btn">Find Suitable Places</button>
@@ -75,6 +75,7 @@
 
 <style lang="scss">
 	.example-body {
+		margin-top:10px;
 		width: 100%;
 		background-color: #fff;
 		text-align: center;
@@ -96,7 +97,8 @@
 	}
 	.btn{
 		margin-left:225rpx;
-		// margin-top:10rpx;
+		margin-top:20rpx;
 		border-radius: 10rpx;
 	}
+	
 </style>

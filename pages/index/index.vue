@@ -5,8 +5,8 @@
 		<uni-notice-bar show-icon scrollable
 						text="Sports Center is pretty great!" />			
 		<Card :DataList="orderNavbar" name="" extra=""></Card>
-		<TopNavBar :width="width" :barNameList="barNameList" :barContentList="barContentList"></TopNavBar>
-		<uni-section title="Recommend" type="line" padding>
+		<TopNavBar :width="width" :height="height" :barNameList="barNameList" :barContentList="barContentList"></TopNavBar>
+		<uni-section title="Recommend For You"  padding class="decoration" titleFontSize="30rpx" titleColor="#F25E5E"> 
 			<Book></Book>
 			<Book></Book>
 		</uni-section>
@@ -24,12 +24,13 @@
 	import Fitness from '@/components/tabbar-component/fitness.vue'
 	import Squash from '@/components/tabbar-component/Squash.vue'
 	import Sports from '@/components/tabbar-component/Sports.vue'
+	import Book from '@/components/book/index.vue'
+	import Time from '@/components/time/index.vue'
 	import Config from '@/config.js'
 	
 	const urlPrefix = Config.urlPrefix
 
-	import Book from '@/components/book/index.vue'
-	import Time from '@/components/time/index.vue'
+	
 	
 	const App = getApp()
 	const width = "25%"
@@ -39,14 +40,14 @@
 		{id:2, url:'/static/swiper/swiper3.jpg'},
 	]
 	const orderNavbar = [
-	  { id: 'all', name: 'Swimming Pool', iconpath: '/static/icon/tobepaid.svg',url:'../facilities/details/index' },
-	  { id: 'payment', name: 'Fitness Room', iconpath: '/static/icon/paid.svg' },
-	  { id: 'delivery', name: 'Squash Courts', iconpath: '/static/icon/cancelled.svg' },
-	  { id: 'delivery', name: 'Sports Hall', iconpath: '/static/icon/cancelled.svg' },
+	  { id: 'all', name: 'Swimming Pool', iconpath: '/static/icon/swim.png',url:'../facilities/details/index' },
+	  { id: 'payment', name: 'Fitness Room', iconpath: '/static/icon/squash.png' },
+	  { id: 'delivery', name: 'Squash Courts', iconpath: '/static/icon/fitness.png' },
+	  { id: 'delivery', name: 'Sports Hall', iconpath: '/static/icon/sports.png' },
 	]
 	const barNameList = [
-		{name: 'Fitness',id: '0'}, 
-		{name: 'Swimming',id: '1'}, 
+		{name: 'Swim',id: '0'}, 
+		{name: 'Fitness',id: '1'}, 
 		{name: 'Squash',id: '2'},
 		{name: 'Sports',id: '3'},]
 		
@@ -168,4 +169,7 @@
   .container {
     background: #fff;
   }
+  .decoration{
+  	  background-color: #e2e0db;
+    }
 </style>

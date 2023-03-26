@@ -1,14 +1,14 @@
 <template>
-	<view class="order-item">
-		<view class="text">
+	<view class="order-item" v-for="(item, index) in content" :key="item">
+		<view class="text" >
 			<view class="title">
-				{{props.item.title}}
+				{{item.title}}
 			</view>
 			<view class="time">
-				{{props.item.time}}
+				{{item.time}}
 			</view>
 			<view class="status">
-				{{props.item.status}}
+				{{item.status}}
 			</view>
 		</view>
 		<button class="cancelBtn">
@@ -17,12 +17,10 @@
 	</view>
 </template>
 
-<script lang='ts' setup>	
-	import { defineProps } from 'vue'
-	
-	let props = defineProps(['item'])
-	
-	console.log('item in component', props.item)
+<script setup>	
+
+const props = defineProps(['content'])
+
 </script>
 
 <style>
