@@ -8,7 +8,17 @@
 	import TopNavBar from '@/components/top-navbar/index.vue'
 	import OrderItem from '@/components/order-item/index.vue'
 	import Config from '@/config.js';
-
+	import {
+		onBeforeMount,
+		onMounted,
+		reactive,
+	} from "vue";
+	import {
+		onShow,
+	} from '@dcloudio/uni-app';
+	onMounted(() => {
+		request_orders()
+	})
 	const urlPrefix = Config.urlPrefix;
 	const barNameList = [{
 			name: 'To be Paid',
@@ -24,28 +34,37 @@
 		},
 	]
 	let orders = []
-	const reqContentList = []
-	uni.request({
-		url: urlPrefix + '/order/token/',
-		methods: 'GET',
-		header: {
-			'Authorization': uni.getStorageSync('token')
-		}
-	}).then(res => {
-		orders = res.data.result
-		console.log(orders.filter(order => {
-			return order.status === 'unpaid'
-		}))
-		console.log('orders', orders)
-		reqContentList.push({
-			content: orders.filter(order => {
-				return order.status === 'unpaid'
-			}),
-			mft_components: "OrderItem"
+	const reqContentList = reactive([])
+	const request_orders = function() {
+		uni.request({
+			url: urlPrefix + '/order/token/',
+			methods: 'GET',
+			header: {
+				'Authorization': uni.getStorageSync('token')
+			}
+		}).then(res => {
+			orders = res.data.result
+			reqContentList.push({
+				content: orders.filter(order => {
+					return order.status === 'unpaid'
+				}),
+				mft_components: "OrderItem"
+			})
+			reqContentList.push({
+				content: orders.filter(order => {
+					return order.status === 'paid'
+				}),
+				mft_components: "OrderItem"
+			})
+			reqContentList.push({
+				content: orders.filter(order => {
+					return order.status === 'cancelled'
+				}),
+				mft_components: "OrderItem"
+			})
+			console.log(reqContentList)
 		})
-		console.log(reqContentList)
-	})
-
+	}
 
 	const barContentList = [{
 			content: [{

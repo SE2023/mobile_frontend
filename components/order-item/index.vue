@@ -2,7 +2,7 @@
 	<view class="order-item" v-for="(item, index) in content" :key="item">
 		<view class="text">
 			<view class="title">
-				{{item.title}}
+				{{item.name}}
 			</view>
 			<view class="time">
 				{{item.time}}
@@ -11,7 +11,7 @@
 				{{item.status}}
 			</view>
 		</view>
-		<button class="cancelBtn">
+		<button class="cancelBtn" v-if="item.status!='cancelled'">
 			Cancel
 		</button>
 	</view>
