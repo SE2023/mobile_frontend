@@ -1,6 +1,6 @@
 <template>
 	<view class="order-item" v-for="(item, index) in content" :key="item">
-		<view class="text" >
+		<view class="text">
 			<view class="title">
 				{{item.title}}
 			</view>
@@ -12,15 +12,13 @@
 			</view>
 		</view>
 		<button class="cancelBtn">
-			Cancle
+			Cancel
 		</button>
 	</view>
 </template>
 
-<script setup>	
-
-const props = defineProps(['content'])
-
+<script setup>
+	const props = defineProps(['content'])
 </script>
 
 <style>
@@ -29,23 +27,28 @@ const props = defineProps(['content'])
 		height: 90px;
 		background-color: #fee5e6;
 	}
+
 	.text {
 		float: left;
 		margin-top: 12px;
 		padding-left: 15px;
 	}
+
 	.title {
 		font-size: 17px;
 		font-weight: bold;
 	}
+
 	.time {
 		font-size: 15px;
 		color: #585858;
 	}
+
 	.status {
 		font-size: 16px;
 		color: #F25E5E;
 	}
+
 	.cancelBtn {
 		color: #fff;
 		float: right;
