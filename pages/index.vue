@@ -5,7 +5,8 @@
 					@input="binddata('username', formData.username)" /></uni-forms-item>
 			<uni-forms-item label="Password" name="password" style="position: relative; bottom: 10px;">
 				<uni-easyinput class="input" v-model="formData.password" type="password"
-					@input="binddata('password', formData.password)"></uni-easyinput>
+					@input="binddata('password', formData.password)">
+				</uni-easyinput>
 			</uni-forms-item>
 		</uni-forms>
 		<button @click="submit"
@@ -65,7 +66,6 @@
 							method: 'POST',
 							data: this.formData,
 							success(res) {
-								console.log(res.data.result.token)
 								if (res.data.code === 0) {
 									uni.showModal({
 										title: 'Login Successfully!',
