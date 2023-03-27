@@ -1,0 +1,1 @@
+<view class="avatar-image data-v-28a89d63"><image class="image data-v-28a89d63" style="{{'width:' + a + ';' + ('height:' + b) + ';' + ('border-width:' + c) + ';' + ('border-color:' + d)}}" src="{{e}}"></image></view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Find",
+  "usingComponents": {
+    "time-slot": "../../../components/wanghexu-timeslot/wanghexu-timeslot",
+    "uni-datetime-picker": "../../../uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker"
+  }
+}

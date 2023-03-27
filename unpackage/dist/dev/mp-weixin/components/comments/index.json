@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "avatar-image": "../avatar-image/index",
+    "uni-rate": "../../uni_modules/uni-rate/components/uni-rate/uni-rate"
+  }
+}

@@ -6,23 +6,18 @@
 		<view>
 			<button class="time-btn" @click="openTime">choose specific time</button>
 		</view>
-		
 		<view class="content">
 			<view class="text">The choosen time period is: {{single + time || "None"}}</view>
-			<timeSlot 
-			ref="timeslot"
-			:title="'Choose the time'"
-			@confirm="confirmTime">
-			</timeSlot>
 		</view>
 	</view>
+	<timeSlot ref="timeslot" :title="'Choose the time'" @confirm="confirmTime" />
 </template>
 
 <script>
 	import timeSlot from "@/components/wanghexu-timeslot/wanghexu-timeslot"
-	
+
 	export default {
-		components:{
+		components: {
 			timeSlot
 		},
 		data() {
@@ -37,7 +32,7 @@
 			}
 		},
 		onLoad() {
-		
+
 		},
 		watch: {
 			datetimesingle(newval) {
@@ -55,17 +50,17 @@
 				this.datetimesingle = Date.now()
 				this.single = ''
 				this.datetimerange = ["2022-10-12 0:01:10", "2026-08-08 23:59:59"]
-			},3000)
+			}, 3000)
 		},
-		methods:{
+		methods: {
 			//点击吊起弹窗
-			openTime(){
+			openTime() {
 				this.$refs.timeslot.open()
 			},
 			//确认
-			confirmTime(e){
+			confirmTime(e) {
 				console.log(e)
-				this.time = e.start.hour+":"+e.start.min+"~"+e.end.hour+":"+e.end.min
+				this.time = e.start.hour + ":" + e.start.min + "~" + e.end.hour + ":" + e.end.min
 			},
 			change(e) {
 				this.single = e
@@ -74,7 +69,7 @@
 			changeLog(e) {
 				console.log('Event change:', e);
 			},
-			maskClick(e){
+			maskClick(e) {
 				console.log('Event maskClick:', e);
 			}
 		}
@@ -89,11 +84,13 @@
 		text-align: center;
 		// padding: 10px;
 	}
-	.content{
+
+	.content {
 		width: 686rpx;
 		margin: 0 auto;
 	}
-	.time-btn{
+
+	.time-btn {
 		height: 70rpx;
 		width: 100%;
 		font-size: 30rpx;

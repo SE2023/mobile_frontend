@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Order",
+  "usingComponents": {
+    "top-nav-bar": "../../components/top-navbar/index"
+  }
+}

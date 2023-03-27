@@ -65,7 +65,7 @@
 							method: 'POST',
 							data: this.formData,
 							success(res) {
-								console.log(res.data.result.token)
+								// console.log(res.data.result.token)
 								if (res.data.code === 0) {
 									uni.showModal({
 										title: 'Login Successfully!',

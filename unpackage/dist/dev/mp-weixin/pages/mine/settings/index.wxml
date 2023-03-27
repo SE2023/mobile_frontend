@@ -1,0 +1,1 @@
+<view class="main"><uni-list wx:for="{{a}}" wx:for-item="item" wx:key="c" u-s="{{['d']}}" bindclick="{{item.d}}" u-i="{{item.e}}" bind:__l="__l"><uni-list-item wx:if="{{item.b}}" u-i="{{item.a}}" bind:__l="__l" u-p="{{item.b}}"></uni-list-item></uni-list></view>

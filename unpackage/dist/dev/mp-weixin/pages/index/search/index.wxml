@@ -1,0 +1,1 @@
+<view class="diy-search data-v-205fdbfe"><uni-search-bar wx:if="{{b}}" class="uni-mt-10 data-v-205fdbfe" bindconfirm="{{a}}" u-i="205fdbfe-0" bind:__l="__l" u-p="{{b}}"/></view>
