@@ -39,16 +39,31 @@
 				'Authorization': uni.getStorageSync('token')
 			}
 		}).then((res) => {
-			console.log(res)
-			uni.showToast({
-				title: 'Order Success!',
-				duration: 2000
-			})
-			setTimeout(() => {
-				uni.redirectTo({
-					url: '/pages/order/index'
+			if (res.statusCode === 200) {
+				uni.showToast({
+					title: 'Order Success!',
+					duration: 2000
 				})
-			}, 1500)
+				setTimeout(() => {
+					uni.redirectTo({
+						url: '/pages/order/index'
+					})
+				}, 1500)
+			} else {
+				uni.showToast({
+					title: res.data.message.split(';')[0],
+					duration: 2000,
+					icon: 'error'
+				})
+			}
+			console.log(res)
+
+		}).catch((error) => {
+			uni.showToast({
+				title: 'Order Failed!',
+				duration: 2000,
+				icon: 'error'
+			})
 		})
 	}
 </script>
