@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c84199d3-ae2c-4a7f-84aa-fb95f518b62d" name="变更" comment="" />
+    <list default="true" id="c84199d3-ae2c-4a7f-84aa-fb95f518b62d" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +41,7 @@
       <updated>1678091409625</updated>
       <workItem from="1678091410965" duration="59000" />
       <workItem from="1679822737026" duration="75000" />
+      <workItem from="1679932591334" duration="5000" />
     </task>
     <servers />
   </component>
