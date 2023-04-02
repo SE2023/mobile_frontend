@@ -1016,7 +1016,6 @@
 /* 透明度 */
 /* 文章场景相关 */
 .card[data-v-99c72c33] {
-  width: 80%;
   z-index: 1;
   border-radius: 1.5625rem;
 }
@@ -1146,6 +1145,7 @@
   font-size: 0.9375rem;
 }
 .cards[data-v-7c2ebfa5] {
+  margin-left: 0.625rem;
   margin-top: -4.6875rem;
 }
 .item-badge[data-v-7c2ebfa5] {
