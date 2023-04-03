@@ -9,7 +9,9 @@
 		<!-- tab content -->
 		<swiper class="swiper-item"  id="tabContent" :current="tabIndex" @change="tabChange">
 			<swiper-item v-for="(item,index) in barContentList" :key="item.id">
-				<component :is="item.mft_components" :content="item.content"></component> 
+				
+					<component :is="item.mft_components" :content="item.content"></component> 
+				
 			</swiper-item>
 		</swiper>
 	

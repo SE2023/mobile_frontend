@@ -1,0 +1,1 @@
+<view wx:for="{{a}}" wx:for-item="item" wx:key="e" class="order-item"><view class="text"><view class="title">{{item.a}}</view><view class="time">{{item.b}}</view><view class="status">{{item.c}}</view></view><button wx:if="{{item.d}}" class="cancelBtn"> Cancel </button></view>

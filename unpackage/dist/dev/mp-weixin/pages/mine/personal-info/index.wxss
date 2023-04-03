@@ -1,0 +1,44 @@
+
+.user-avatar{
+		margin-top: 5%;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+}
+.avatar-btn{
+		margin-top: 5%;
+		background: transparent;
+		border: 1px solid #F25E5E;
+		color: #F25E5E;
+		display: flex;
+		justify-content: center;
+}
+.user-content{
+		margin-left: 15%;
+}
+.main{
+		display: flex;
+		align-items: center;
+}
+.user-info{
+		margin: 20rpx auto ;
+}
+.title{
+		color:gray;
+		font-size: 18px;
+}
+.content{
+		margin-left: 20%;
+		/* text-align: right; */
+}
+.row{
+		margin: 30rpx auto ;
+}
+.submit-btn{
+		margin-top: 10%;
+		width: 75%;
+		display: flex;
+		justify-content: center;
+}

@@ -5,12 +5,16 @@
 		<uni-notice-bar show-icon scrollable
 						text="Sports Center is pretty great!" />			
 		<Card :DataList="orderNavbar" name="" extra=""></Card>
-		<TopNavBar :width="width" :height="height" :barNameList="barNameList" :barContentList="barContentList"></TopNavBar>
+
+		<TopNavBar :width="width" :height="height" :barNameList="barNameList"></TopNavBar>
+		<view style="text-align: center; margin-top: -350rpx; margin-bottom: 25rpx;">
+			<uni-datetime-picker type="datetime" style="text-align: center;"></uni-datetime-picker>
+			<button type="warn" size="mini"	class="btn">Find Suitable Places</button>
+		</view>
 		<uni-section title="Recommend For You"  padding class="decoration" titleFontSize="30rpx" titleColor="#F25E5E"> 
 			<Book></Book>
 			<Book></Book>
 		</uni-section>
-		
 	</view>
 </template>
 
@@ -29,7 +33,6 @@
 	import Config from '@/config.js'
 	
 	const urlPrefix = Config.urlPrefix
-
 	
 	
 	const App = getApp()
@@ -156,8 +159,6 @@
 							//显示标签对应的组件内容
 							this.currentTabComponent = item.id
 						}
-
-
 		}
 	}
 </script>
@@ -170,6 +171,10 @@
     background: #fff;
   }
   .decoration{
-  	  background-color: #e2e0db;
+  	  background-color: #f5d9dd;
     }
+	.btn{
+		margin-top:20rpx;
+		border-radius: 10rpx;
+	}
 </style>
