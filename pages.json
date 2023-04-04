@@ -82,7 +82,25 @@
                 "enablePullDownRefresh": false
             }
             
-        }
+        },
+		{
+			"path": "pages/mine/about/index",
+			"style": {
+				"navigationBarTitleText": "About BodyBuddy"
+			}
+		},
+		{
+			"path": "pages/mine/help/index",
+			"style": {
+				"navigationBarTitleText": "Help & Feedback"
+			}
+		},
+		{
+			"path": "pages/mine/security/index",
+			"style": {
+				"navigationBarTitleText": "Account Security"
+			}
+		}
     ],
 	
 	"globalStyle": {
