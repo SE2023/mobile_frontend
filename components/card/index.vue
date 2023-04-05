@@ -28,6 +28,7 @@
 			toTargetItem(item) {
 				uni.navigateTo({
 					url:item.url
+					// url:item.url+"?id="+item.id,
 				})
 			},
 		}

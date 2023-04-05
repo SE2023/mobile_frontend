@@ -23,8 +23,6 @@
 <script>
 	import OrderItem from '@/components/order-item/index.vue'
 	import Time from '@/components/time/index.vue'
-
-
 	export default {
 		name: 'TopNavBar',
 		props: {
@@ -66,7 +64,6 @@
 				let index = e.target.dataset.current || e.currentTarget.dataset.current;
 				this.switchTab(index);
 			},
-
 		}
 	}
 </script>
@@ -78,7 +75,6 @@
 		width: 100%;
 		display: flex;
 	}
-
 	.tabName {
 		text-align: center;
 		/* width: $dist_menu; */
@@ -88,22 +84,18 @@
 		line-height: 80rpx;
 		white-space: break-word;
 	}
-
 	.tabName_text {
 		display: inline-block;
 		width: 100%;
 	}
-
 	.active_text {
 		/* background-color: #FDDD9B; */
 		color: #F25E5E;
 		border-bottom: 2px solid #F25E5E;
 	}
-
 	#tabContent {
 		width: 100%;
 	}
-
 	.swiper-item {
 		height: 80vh;
 	}

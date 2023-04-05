@@ -33,7 +33,6 @@
 	import Config from '@/config.js'
 	
 	const urlPrefix = Config.urlPrefix
-
 	
 	
 	const App = getApp()
@@ -44,10 +43,10 @@
 		{id:2, url:'/static/swiper/swiper3.jpg'},
 	]
 	const orderNavbar = [
-	  { id: 'all', name: 'Swimming Pool', iconpath: '/static/icon/swim.png',url:'../facilities/details/index' },
-	  { id: 'payment', name: 'Fitness Room', iconpath: '/static/icon/squash.png' },
-	  { id: 'delivery', name: 'Squash Courts', iconpath: '/static/icon/fitness.png' },
-	  { id: 'delivery', name: 'Sports Hall', iconpath: '/static/icon/sports.png' },
+	  { id: '0', name: 'Swimming Pool', iconpath: '/static/icon/swim.png',url:'../choosefacility/index' },
+	  { id: '1', name: 'Fitness Room', iconpath: '/static/icon/squash.png',url:'../choosefacility/index' },
+	  { id: '2', name: 'Squash Courts', iconpath: '/static/icon/fitness.png',url:'../choosefacility/index' },
+	  { id: '3', name: 'Sports Hall', iconpath: '/static/icon/sports.png',url:'../choosefacility/index' },
 	]
 	const barNameList = [
 		{name: 'Swim',id: '0'}, 
@@ -160,8 +159,6 @@
 							//显示标签对应的组件内容
 							this.currentTabComponent = item.id
 						}
-
-
 		}
 	}
 </script>
