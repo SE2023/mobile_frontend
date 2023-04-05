@@ -13,6 +13,12 @@
 			}
 		},
 		{
+			"path": "pages/choosefacility/index",
+			"style": {
+				"navigationBarTitleText": "Choose Facility"
+			}
+		},
+		{
 			"path": "pages/facilities/details/index",
 			"style": {
 				"navigationBarTitleText": "Facility Details"
@@ -79,6 +85,15 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "Register",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/facility/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             

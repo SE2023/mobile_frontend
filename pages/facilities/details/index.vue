@@ -21,15 +21,22 @@
 <script setup>
 	import {
 		reactive,
-		ref
+		ref,
 	} from 'vue'
+	import { onLoad} from "@dcloudio/uni-app"
 	import Banner from '@/components/banner'
 	import Book from '@/components/book/index.vue'
 	import Comment from '@/components/comments/index.vue'
 	import config from '@/config.js'
-
+	
+	onLoad(options => {  
+	  console.log('page onLoad: ', options) 
+	  name = options.id
+	   console.log('facility is: ',options.id)  
+	});
+	
 	const urlPrefix = config.urlPrefix
-
+   
 	const itemList = [{
 			id: 0,
 			url: '/static/swiper/swiper4.jpg'
@@ -59,21 +66,21 @@
 		id: 2,
 		price: "$20"
 	}, ])
-	uni.request({
-		url: urlPrefix + '/activity/facility/' + FacilityId,
-		method: 'GET',
-	}).then((res) => {
-		let res_list = res.data.result
-		console.log(res)
-		res_list.forEach((value) => {
-			console.log(value.activity)
-			for (let s in value.activity) {
-				value[s] = value.activity[s]
-			}
-			delete value.activity
-		})
-		ActivityList.value = res_list
-	})
+	// uni.request({
+	// 	url: urlPrefix + '/activity/facility/' + FacilityId,
+	// 	method: 'GET',
+	// }).then((res) => {
+	// 	let res_list = res.data.result
+	// 	console.log(res)
+	// 	res_list.forEach((value) => {
+	// 		console.log(value.activity)
+	// 		for (let s in value.activity) {
+	// 			value[s] = value.activity[s]
+	// 		}
+	// 		delete value.activity
+	// 	})
+	// 	ActivityList.value = res_list
+	// })
 	const UserList = [{
 			user: "XJY",
 			date: "2023-3-24",
