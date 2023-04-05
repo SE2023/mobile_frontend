@@ -14,4 +14,12 @@
 
 <style>
 	/*每个页面公共css */
+	body {
+		font-family: regular;
+	}
+
+	@font-face {
+		font-family: regular;
+		src: url("./static/font/OpenSans-Regular.ttf");
+	}
 </style>
