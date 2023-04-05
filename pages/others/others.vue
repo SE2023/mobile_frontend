@@ -68,7 +68,7 @@
 	])
 
 	let container = reactive({
-		height: '100vh'
+		height: '864px'
 	})
 	//下拉加载
 	onReachBottom(() => {
@@ -96,8 +96,7 @@
 			for (let j = 0; j < 6; j++) {
 				items.push(items_new[j])
 			}
-			console.log(items)
-			container.height = String(parseInt(container.height.slice(0, -2)) + 100) + 'vh'
+			container.height = String(parseInt(container.height.slice(0, -2)) + 864) + 'px'
 		}, 500)
 	})
 	onPullDownRefresh(() => {
@@ -121,15 +120,14 @@
 		position: absolute;
 		display: flex;
 		flex-wrap: wrap;
-		height: 100vh;
-		justify-content: space-between;
+		height: 864px;
+		justify-content: space-around;
 		margin-right: 1vw;
 	}
 
 	.items {
 		/* background-color: antiquewhite; */
 		width: 48vw;
-		/* height: 30vh; */
 		margin-left: 1vw;
 		margin-top: 1vw;
 		border-radius: 15px;

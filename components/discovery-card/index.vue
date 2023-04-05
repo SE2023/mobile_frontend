@@ -1,9 +1,9 @@
 <template>
-	<view>
+	<view :style="card_style">
 		<div id="image">
-			<image :src="post.url" mode="aspectFill" id="cover_image" />
+			<image :src="post.url" mode="aspectFill" id="cover_image" :style="cover_style" />
 		</div>
-		<div id="info">
+		<div id="info" :style="info_style">
 			<div id="title">
 				{{post.title}}
 			</div>
@@ -29,6 +29,8 @@
 <script setup>
 	import {
 		defineProps,
+		onMounted,
+		reactive,
 		ref
 	} from 'vue'
 	const props = defineProps(['post'])
@@ -36,6 +38,9 @@
 	let like_count = ref(Math.ceil(Math.random() * 99))
 	let fill = ref('none')
 	let stroke = ref('currentColor')
+	let cover_style = reactive({})
+	let card_style = reactive({})
+	let info_style = reactive({})
 	const like = () => {
 		if (fill.value != 'Red') {
 			like_count.value += 1
@@ -46,6 +51,32 @@
 			fill.value = 'none'
 			stroke.value = 'currentColor'
 		}
+	}
+	if (props.post.id % 6 === 2) {
+		cover_style['height'] = '180px'
+		card_style['height'] = '228px'
+		card_style['bottom'] = '0px'
+	} else if (props.post.id % 6 === 4) {
+		cover_style['height'] = '240px'
+		card_style['position'] = 'relative'
+		card_style['bottom'] = '60px'
+		card_style['height'] = '288px'
+	} else if (props.post.id % 6 === 3) {
+		card_style['height'] = '288px'
+	} else if (props.post.id % 6 === 0) {
+		cover_style['height'] = '240px'
+		card_style['height'] = '288px'
+		card_style['position'] = 'relative'
+		card_style['bottom'] = '60px'
+		card_style['align-self'] = ''
+	} else if (props.post.id % 6 === 5) {
+		card_style['height'] = '288px'
+	}
+	if (props.post.id % 2 === 0) {
+		card_style['position'] = 'relative'
+		let mul = Math.floor((props.post.id - 1) / 6)
+		console.log(props.post.id, mul)
+		card_style['bottom'] = String(parseInt(card_style['bottom']) + 60 * mul) + 'px'
 	}
 </script>
 
