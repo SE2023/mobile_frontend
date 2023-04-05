@@ -126,7 +126,7 @@
 	}
 
 	.items {
-		/* background-color: antiquewhite; */
+		background-color: ghostwhite;
 		width: 48vw;
 		margin-left: 1vw;
 		margin-top: 1vw;
