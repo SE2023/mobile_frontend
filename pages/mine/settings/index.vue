@@ -25,10 +25,10 @@
 			// 跳转到详情页
 			toTargetItem(item) {
 				uni.navigateTo({
-					url:item.url
+					url: item.url
 				})
 			},
-		}
+		},
 	}
 </script>
 
