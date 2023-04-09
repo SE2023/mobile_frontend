@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "Facility Details",
+  "usingComponents": {
+    "banner": "../../../components/banner/index",
+    "book": "../../../components/book/index",
+    "comment": "../../../components/comments/index",
+    "uni-rate": "../../../uni_modules/uni-rate/components/uni-rate/uni-rate",
+    "uni-section": "../../../uni_modules/uni-section/components/uni-section/uni-section"
+  }
+}

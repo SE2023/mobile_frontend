@@ -1,0 +1,11 @@
+
+.detail{
+		color:gray;
+		padding:18rpx;
+		font-size: 30rpx;
+		border-top: 1px solid gray;
+		border-bottom:1px solid gray ;
+}
+.book-card{
+		background-color: #FFC1C1;
+}

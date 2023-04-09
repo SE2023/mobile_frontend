@@ -3,12 +3,18 @@
 		<Search/>
 		<Banner :itemList="itemList"/>
 		<uni-notice-bar show-icon scrollable
-						text="sportscenter真不错" />			
+						text="Sports Center is pretty great!" />			
 		<Card :DataList="orderNavbar" name="" extra=""></Card>
-		<TopNavBar :barNameList="barNameList" :barContentList="barContentList"></TopNavBar>
-		<!-- <Tabbar :tabBars="tabBars" @TarTap="TarData" :tabIndex="tabIndex" ></Tabbar>
-		<component v-bind:is="currentTabComponent"></component> -->
-		<view>Recommend</view>
+
+		<TopNavBar :width="width" :height="height" :barNameList="barNameList"></TopNavBar>
+		<view style="text-align: center; margin-top: -350rpx; margin-bottom: 25rpx;">
+			<uni-datetime-picker type="datetime" style="text-align: center;"></uni-datetime-picker>
+			<button type="warn" size="mini"	class="btn">Find Suitable Places</button>
+		</view>
+		<uni-section title="Recommend For You"  padding class="decoration" titleFontSize="30rpx" titleColor="#F25E5E"> 
+			<Book></Book>
+			<Book></Book>
+		</uni-section>
 	</view>
 </template>
 
@@ -22,24 +28,31 @@
 	import Fitness from '@/components/tabbar-component/fitness.vue'
 	import Squash from '@/components/tabbar-component/Squash.vue'
 	import Sports from '@/components/tabbar-component/Sports.vue'
+	import Book from '@/components/book/index.vue'
+	import Time from '@/components/time/index.vue'
+	import Config from '@/config.js'
+	
+	const urlPrefix = Config.urlPrefix
+	
 	
 	const App = getApp()
+	const width = "25%"
 	const itemList=[
 		{id:0, url:'/static/swiper/swiper1.jpg'},
 		{id:1, url:'/static/swiper/swiper2.jpg'},
 		{id:2, url:'/static/swiper/swiper3.jpg'},
 	]
 	const orderNavbar = [
-	  { id: 'all', name: 'Swimming Pool', iconpath: '/static/icon/tobepaid.svg',url:'../facilities/details/index' },
-	  { id: 'payment', name: 'Fitness Room', iconpath: '/static/icon/paid.svg' },
-	  { id: 'delivery', name: 'Squash Courts', iconpath: '/static/icon/cancelled.svg' },
-	  { id: 'delivery', name: 'Sports Hall', iconpath: '/static/icon/cancelled.svg' },
+	  { id: '0', name: 'Swimming Pool', iconpath: '/static/icon/swim.png',url:'../choosefacility/index' },
+	  { id: '1', name: 'Fitness Room', iconpath: '/static/icon/squash.png',url:'../choosefacility/index' },
+	  { id: '2', name: 'Squash Courts', iconpath: '/static/icon/fitness.png',url:'../choosefacility/index' },
+	  { id: '3', name: 'Sports Hall', iconpath: '/static/icon/sports.png',url:'../choosefacility/index' },
 	]
 	const barNameList = [
-		{name: 'FitnessRoom',id: '0'}, 
-		{name: 'SwimmingPool',id: '1'}, 
+		{name: 'Swim',id: '0'}, 
+		{name: 'Fitness',id: '1'}, 
 		{name: 'Squash',id: '2'},
-		{name: 'SportsCenter',id: '3'},]
+		{name: 'Sports',id: '3'},]
 		
 	const barContentList= [
 		{
@@ -47,6 +60,7 @@
 			title:"To be Paid",
 			status:"unused",
 			time:"2023-4-1",
+			mft_components:"Time"
 			
 		},
 		{
@@ -54,6 +68,7 @@
 			title:"Paid",
 			status:"1",
 			time:"2023-4-2",
+			mft_components:"Time"
 			
 		},
 		{
@@ -61,6 +76,15 @@
 			title:"Cancelled",
 			status:"2",
 			time:"2023-4-3",
+			mft_components:"Time"
+			
+		},
+		{
+			id:"04",
+			title:"Cancelled",
+			status:"2",
+			time:"2023-4-3",
+			mft_components:"Time"
 			
 		},]
 	export default {
@@ -73,7 +97,9 @@
 		  Fitness,
 		  Squash,
 		  Sports ,
-		  TopNavBar
+		  TopNavBar,
+		  Book,
+		  Time
 		},
 		data() {
 			return {
@@ -85,24 +111,25 @@
 			  items: [],
 			  orderNavbar,
 			  itemList,
+			  width,
 			  barNameList,
 			  barContentList,
 			  tabIndex: "ChooseTime",
 			  tabBars:[
 			  	{
-			  		name: "SwimmingPool",
+			  		name: "Swimming",
 			  		id: "Swimming"
 			  	},
 			  	{
-			  		name:"FitnessRoom",
+			  		name:"Fitness",
 			  		id:"Fitness"
 			  	},
 			  	{
-			  		name: "SquashCourts",
+			  		name: "Squash",
 			  		id: "Squash"
 			  	},
 			  	{
-			  		name: "SportsHall",
+			  		name: "Sports",
 			  		id: 'Sports'
 			  	},
 			
@@ -117,6 +144,14 @@
 		onLoad() {
 		  
 		},
+		mounted() {
+			uni.request({
+				url: urlPrefix + '/user/staffs',
+				method: 'GET',
+			}).then((res)=>{
+				console.log('result', res.data.result)
+			})
+		},
 		methods: {
 			TarData(item){
 							//设置id，来显示选中那个标签，显示下划线
@@ -124,14 +159,22 @@
 							//显示标签对应的组件内容
 							this.currentTabComponent = item.id
 						}
-
-
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
+	// .card{
+	// 	// margin-left:30rpx ;
+	// }
   .container {
     background: #fff;
   }
+  .decoration{
+  	  background-color: #f5d9dd;
+    }
+	.btn{
+		margin-top:20rpx;
+		border-radius: 10rpx;
+	}
 </style>

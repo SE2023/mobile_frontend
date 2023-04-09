@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "BodyBuddy",
+  "usingComponents": {
+    "search": "./search/index",
+    "banner": "../../components/banner/index",
+    "card": "../../components/card/index",
+    "top-nav-bar": "../../components/top-navbar/index",
+    "book": "../../components/book/index",
+    "uni-notice-bar": "../../uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar",
+    "uni-datetime-picker": "../../uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker",
+    "uni-section": "../../uni_modules/uni-section/components/uni-section/uni-section"
+  }
+}

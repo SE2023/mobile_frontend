@@ -1,0 +1,1 @@
+<view class="example-body"><uni-datetime-picker wx:if="{{c}}" bindmaskClick="{{a}}" u-i="74f36170-0" bind:__l="__l" bindupdateModelValue="{{b}}" u-p="{{c}}"/></view><view class="choose-time"><button class="time-btn" bindtap="{{d}}">choose specific time</button></view><button type="warn" size="mini" class="btn">Find Suitable Places</button>

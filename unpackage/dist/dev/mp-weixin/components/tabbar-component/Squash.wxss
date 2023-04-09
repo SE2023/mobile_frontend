@@ -1,0 +1,5 @@
+
+.timetable{
+		height: 300rpx;
+		background-color:darkgray;
+}

@@ -28,6 +28,7 @@
 			toTargetItem(item) {
 				uni.navigateTo({
 					url:item.url
+					// url:item.url+"?id="+item.id,
 				})
 			},
 		}
@@ -36,7 +37,6 @@
 
 <style lang="scss" scoped>
 	.card{
-		 width: 80%;
 		 z-index: 1;
 		 border-radius: 50rpx;
 	}

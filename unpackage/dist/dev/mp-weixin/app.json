@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/facilities/index",
+    "pages/facilities/details/index",
+    "pages/facilities/timetable/index",
+    "pages/others/others",
+    "pages/mine/mine",
+    "pages/login/index",
+    "pages/mine/personal-info/index",
+    "pages/mine/wallet/index",
+    "pages/order/index",
+    "pages/mine/settings/index",
+    "pages/facilities/find/index",
+    "pages/register/register"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "BodyBuddy",
+    "navigationBarBackgroundColor": "#F25E5E",
+    "backgroundColor": "#F25E5E",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar/list.png",
+        "selectedIconPath": "static/tabbar/list_active.png",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/others/others",
+        "iconPath": "static/tabbar/grid.png",
+        "selectedIconPath": "static/tabbar/grid_active.png",
+        "text": "Others"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/tabbar/me.png",
+        "selectedIconPath": "static/tabbar/me_active.png",
+        "text": "Mine"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

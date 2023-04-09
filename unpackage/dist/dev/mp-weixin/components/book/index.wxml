@@ -1,0 +1,1 @@
+<uni-card u-s="{{['d']}}" class="book-card data-v-5e5f9d03" u-i="5e5f9d03-0" bind:__l="__l"><view class="data-v-5e5f9d03">1-hour session</view><view class="data-v-5e5f9d03">some description here</view><view class="data-v-5e5f9d03">$100</view><navigator class="data-v-5e5f9d03" url="../find/index"><button class="data-v-5e5f9d03" type="warn">Book Now</button></navigator></uni-card>

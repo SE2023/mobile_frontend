@@ -1,0 +1,1 @@
+<view class="main"><view class="balance-btn"><button>Balance</button></view><view class="discount-btn"><button>Discount Coupon</button></view></view><button type="warn" class="topup-btn">Top Up</button>
