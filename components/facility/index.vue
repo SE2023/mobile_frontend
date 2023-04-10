@@ -8,7 +8,7 @@
 		<view class="location">
 			[Location:{{item.location}}]
 			<view class="price">
-				from ${{item.price}}/hour
+				from ￥{{item.price}}/hour
 			</view>	
 		</view>
 		
@@ -30,6 +30,9 @@
 
 <style>
 .facility{
+	font-size: 14px;
+	color: #666;
+	line-height: 20px;
 	margin: 30rpx auto;
 	/* margin-bottom:50rpx; */
 	border-bottom: 1rpx solid #F25E5E;
@@ -42,8 +45,8 @@
 	margin-left:20rpx;
 }
 .star {
-		margin-top: -40rpx;
-		margin-left: 265rpx;
+		margin-top: -50rpx;
+		margin-left: 295rpx;
 		/* float: right; */
 	}
 .price{

@@ -25,6 +25,12 @@
 			}
 		},
 		{
+			"path": "pages/facilities/choosetime/index",
+			"style": {
+				"navigationBarTitleText": "Book Activity"
+			}
+		},
+		{
 			"path": "pages/facilities/timetable/index",
 			"style": {
 				"navigationBarTitleText": "Facility Timetable"
