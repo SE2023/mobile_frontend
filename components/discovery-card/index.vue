@@ -75,7 +75,7 @@
 	if (props.post.id % 2 === 0) {
 		card_style['position'] = 'relative'
 		let mul = Math.floor((props.post.id - 1) / 6)
-		console.log(props.post.id, mul)
+		// console.log(props.post.id, mul)
 		card_style['bottom'] = String(parseInt(card_style['bottom']) + 60 * mul) + 'px'
 	}
 </script>

@@ -19,7 +19,11 @@
 	const systemInfo = uni.getSystemInfo()
 	let items = reactive([{
 			id: 1,
+<<<<<<< HEAD
 			url: `./static/other/01.jpg`,
+=======
+			url: `../../static/discovery/${Math.ceil(Math.random() * 20)}.png`,
+>>>>>>> 5d5d707963a10582b596d1f60c1566ace2401a6b
 			author: 'prosperous',
 			avator: `https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`,
 			title: 'Hello World6!',
@@ -27,7 +31,7 @@
 		},
 		{
 			id: 2,
-			url: `https://api.yimian.xyz/img?type=wallpaper&id=${Math.ceil(Math.random() * 100)}`,
+			url: `../../static/discovery/${Math.ceil(Math.random() * 20)}.png`,
 			author: 'prosperousye',
 			avator: `https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`,
 			title: 'Hello World5!',
@@ -35,7 +39,7 @@
 		},
 		{
 			id: 3,
-			url: `https://api.yimian.xyz/img?type=wallpaper&id=${Math.ceil(Math.random() * 100)}`,
+			url: `../../static/discovery/${Math.ceil(Math.random() * 20)}.png`,
 			author: 'prosperous125',
 			avator: `https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`,
 			title: 'Hello World4!',
@@ -43,7 +47,7 @@
 		},
 		{
 			id: 4,
-			url: `https://api.yimian.xyz/img?type=wallpaper&id=${Math.ceil(Math.random() * 100)}`,
+			url: `../../static/discovery/${Math.ceil(Math.random() * 20)}.png`,
 			author: 'Xiaokang',
 			avator: `https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`,
 			title: 'Hello World3!',
@@ -51,7 +55,7 @@
 		},
 		{
 			id: 5,
-			url: `https://api.yimian.xyz/img?type=wallpaper&id=${Math.ceil(Math.random() * 100)}`,
+			url: `../../static/discovery/${Math.ceil(Math.random() * 20)}.png`,
 			author: 'XiaokangYe',
 			avator: `https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`,
 			title: 'Hello World2!',
@@ -59,7 +63,11 @@
 		},
 		{
 			id: 6,
+<<<<<<< HEAD
 			url: `./static/other/01.jpg`,
+=======
+			url: `../../static/discovery/${Math.ceil(Math.random() * 20)}.png`,
+>>>>>>> 5d5d707963a10582b596d1f60c1566ace2401a6b
 			author: 'YouKnowWho',
 			avator: `https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`,
 			title: 'Hello World1!',
@@ -83,7 +91,7 @@
 						item_copy["id"] = item["id"] + items.length
 					} else if (i === "url") {
 						item_copy["url"] =
-							`https://api.yimian.xyz/img?type=wallpaper&id=${Math.ceil(Math.random() * 100)}`
+							`../../static/discovery/${Math.ceil(Math.random() * 20)}.png`
 					} else if (i === "avator") {
 						item_copy["avator"] =
 							`https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`

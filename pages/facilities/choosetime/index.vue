@@ -1,30 +1,30 @@
 <template>
-	<uni-section title="username" type="line" titleFontSize="20px">
+	<uni-section title="username" type="line" titleFontSize="18px">
 		<view class="example-body" >
 			{{order.username}}
 		</view>
 	</uni-section>
-	<uni-section title="activity" type="line" titleFontSize="20px">
+	<uni-section title="activity" type="line" titleFontSize="18px">
 		<view class="example-body">
 			{{order.activity.name}}
 		</view>
 	</uni-section>
-	<uni-section title="discription" type="line" titleFontSize="20px">
+	<uni-section title="discription" type="line" titleFontSize="18px">
 		<view class="example-body">
 			{{order.activity.discription}}
 		</view>
 	</uni-section>
-	<uni-section title="price" type="line" titleFontSize="20px">
+	<uni-section title="price" type="line" titleFontSize="18px">
 		<view class="example-body" >
 			{{order.activity.price}}
 		</view>
 	</uni-section>
 	
-	<uni-section title="choose date" type="line" titleFontSize="20px">
+	<uni-section title="choose date" type="line" titleFontSize="18px">
 		<uni-datetime-picker type="date" :clear-icon="false" v-model="single" @maskClick="maskClick" />
 	</uni-section>
 	
-	<uni-section title="choose time" type="line" titleFontSize="20px">
+	<uni-section title="choose time" type="line" titleFontSize="18px">
 		<TimePicker class="picker" @getStartTime="getStartTime" @getEndTime="getEndTime"></TimePicker>
 	</uni-section>
 	
