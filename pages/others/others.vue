@@ -19,11 +19,7 @@
 	const systemInfo = uni.getSystemInfo()
 	let items = reactive([{
 			id: 1,
-<<<<<<< HEAD
-			url: `./static/other/01.jpg`,
-=======
 			url: `../../static/discovery/${Math.ceil(Math.random() * 20)}.png`,
->>>>>>> 5d5d707963a10582b596d1f60c1566ace2401a6b
 			author: 'prosperous',
 			avator: `https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`,
 			title: 'Hello World6!',
@@ -63,11 +59,7 @@
 		},
 		{
 			id: 6,
-<<<<<<< HEAD
-			url: `./static/other/01.jpg`,
-=======
 			url: `../../static/discovery/${Math.ceil(Math.random() * 20)}.png`,
->>>>>>> 5d5d707963a10582b596d1f60c1566ace2401a6b
 			author: 'YouKnowWho',
 			avator: `https://api.yimian.xyz/img?type=head&id=${Math.ceil(Math.random() * 100)}`,
 			title: 'Hello World1!',

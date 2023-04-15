@@ -2005,6 +2005,7 @@
 /* 透明度 */
 /* 文章场景相关 */
 .example-body[data-v-06b134d2] {
+  margin-top: 10px;
   width: 100%;
   background-color: #fff;
   text-align: center;
@@ -2025,15 +2026,16 @@
 }
 .btn[data-v-06b134d2] {
   margin-left: 7.03125rem;
+  margin-top: 0.625rem;
   border-radius: 0.3125rem;
 }
 
 	/* $dist_menu: var(--dist-menu); */
-#tab[data-v-af1b11e8]{
+#tab[data-v-af1b11e8] {
 		width: 100%;
 		display: flex;
 }
-.tabName[data-v-af1b11e8]{
+.tabName[data-v-af1b11e8] {
 		text-align: center;
 		/* width: $dist_menu; */
 		/* margin-left:30rpx; */
@@ -2042,18 +2044,20 @@
 		line-height: 2.5rem;
 		white-space: break-word;
 }
-.tabName_text[data-v-af1b11e8]{
+.tabName_text[data-v-af1b11e8] {
 		display: inline-block;
 		width: 100%;
-		height: 100%;
 }
-.active_text[data-v-af1b11e8]{
+.active_text[data-v-af1b11e8] {
 		/* background-color: #FDDD9B; */
 		color: #F25E5E;
 		border-bottom: 2px solid #F25E5E;
 }
-#tabContent[data-v-af1b11e8]{
+#tabContent[data-v-af1b11e8] {
 		width: 100%;
+}
+.swiper-item[data-v-af1b11e8] {
+		height: 80vh;
 }
 
 
@@ -2093,6 +2097,9 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.book-card[data-v-5e5f9d03] {
+  background-color: lightpink;
+}
 .card[data-v-5e5f9d03] {
   width: 80%;
   z-index: 1;
@@ -2150,4 +2157,11 @@
 /* 文章场景相关 */
 .container[data-v-1cf27b2a] {
   background: #fff;
+}
+.decoration[data-v-1cf27b2a] {
+  background-color: #f5d9dd;
+}
+.btn[data-v-1cf27b2a] {
+  margin-top: 0.625rem;
+  border-radius: 0.3125rem;
 }
