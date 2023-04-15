@@ -803,9 +803,9 @@
 /* 透明度 */
 /* 文章场景相关 */
 
-uni-input{
-	    outline-style: none ;
+uni-input {
+		outline-style: none;
 		height: 2.1875rem;
 		border-radius: 0.21875rem;
-	    border: 1px solid #dcdcdc;
+		border: 1px solid #dcdcdc;
 }
