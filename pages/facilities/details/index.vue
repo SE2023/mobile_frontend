@@ -28,7 +28,6 @@
 	import Book from '@/components/book/index.vue'
 	import Comment from '@/components/comments/index.vue'
 	import config from '@/config.js'
-	
 	onLoad(options => {  
 	  console.log('page onLoad: ', options) 
 	  name = options.id
