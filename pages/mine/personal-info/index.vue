@@ -5,8 +5,7 @@
 			<view class="user-avatar">
 				<avatar-image :url="userInfo.avatar_url" :width="250" />
 			</view>
-			
-			<button size="mini" class="avatar-btn">update your avatar</button>
+			<button size="mini" class="avatar-btn" :loading="loading" :disabled="disabled" @click="upload">update your avatar</button>
 		</view>
 	</view>
 	<view class="user-content">
@@ -31,6 +30,7 @@
 	import Config from '@/config.js'
 	
 	const urlPrefix = Config.urlPrefix
+	var _self;
 	
 	export default {
 		components: {
@@ -42,6 +42,9 @@
 					username:'Username',
 					email:'Email'
 				},
+				percent:0,
+				loading:false,
+				disabled:false
 			}
 		},
 		methods:{
@@ -65,6 +68,46 @@
 						})
 					}
 				})
+			},
+			// upload image
+			upload() {
+				var _self = this;
+				// choose the image, just 1
+				uni.chooseImage({
+					count: 1,
+					sizeType: ['original'], // original or compressed
+					sourceType: ['album'], // choose from album
+					success: function (res) {
+						console.log('res:', res)
+						_self.curTotal++;
+						_self.imgList.push(res.tempFilePaths[0]);
+						const tempFilePaths = res.tempFilePaths[0];
+						// upload file
+						const uploadTask = uni.uploadFile({
+							url : 'http://22.189.25.91:9988/admin/sys-file/upload', // post请求地址
+						    filePath: tempFilePaths,
+						    name: 'file',  // need to be comfirmed
+						    header: {
+								'Content-Type': 'multipart/form-data',
+								'Authorization': getApp().globalData.token || 'Basic YXBwOmFwcA=='
+							},
+							success: function (uploadFileRes) {
+								console.log('Success:', uploadFileRes);
+								_self.imgsID.push(JSON.parse(uploadFileRes.data).data.fileId);
+								console.log('_self.imgsID:', _self.imgsID)
+							},
+							fail: function (uploadFileFail) {
+								console.log('Error:', uploadFileFail.data);
+							},
+							complete: ()=> {
+								console.log('Complete:');
+							}
+						});
+					},
+					error : function(e){
+						console.log(e);
+					}
+			   });
 			}
 		},
 		mounted() {
