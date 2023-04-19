@@ -1,6 +1,6 @@
 <template>
 	<view class="list">
-		<view  v-for="(item,index) in FacilityList" :key="item.id" class="" @click="toTargetItem(item)">
+		<view  v-for="(item,index) in facilityList" :key="item.id" class="" @click="toTargetItem(item)">
 			<Facility :item="item"></Facility>
 		</view>
 	</view>
@@ -9,20 +9,21 @@
 
 <script>
 	import Facility from '@/components/facility/index.vue'
-	const FacilityList=[
-		{id:"0",name:"Swimming Pool 1",location:"BodyBuddy",price:15,url:'../facilities/details/index'},
-		{id:"1",name:"Swimming Pool 2",location:"BodyBuddy",price:20,url:'../facilities/details/index'},
-		{id:"2",name:"Swimming Pool 3",location:"BodyBuddy",price:17,url:'../facilities/details/index'},
-		{id:"3",name:"Swimming Pool 4",location:"BodyBuddy",price:15,url:'../facilities/details/index'},
-	]
+	import Config from '@/config.js'
+	const urlPrefix = Config.urlPrefix
+
 	export default{
 		data() {
 			return{
-				FacilityList,
+				facilityList: [],
+				type: '',
 			}
 		},
 		components:{
 			Facility
+		},
+		onLoad(option) {
+			this.type = option.type;
 		},
 		methods: {
 			// 跳转到详情页
@@ -32,7 +33,24 @@
 					id: item.id
 					// url:item.url+"?id="+item.id,
 				})
-			},
+			}
+		},
+		mounted() {
+			uni.request({
+				url: urlPrefix + '/facilities/' + this.type,
+				method:'GET'
+			}).then(res => {
+				console.log(res);
+				for (let i = 0; i < res.data.result.length; i++) {
+					this.facilityList.push({
+						id: i,
+						name: res.data.result[i].name,
+						price: 0,
+						location: "BodyBuddy",
+					})
+					console.log(this.facilityList)
+				}
+			})
 		}
 	}
 </script>

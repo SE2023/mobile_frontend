@@ -6,11 +6,11 @@
 						text="Sports Center is pretty great!" />			
 		<Card :DataList="orderNavbar" name="" extra=""></Card>
 
-		<TopNavBar :width="width" :height="height" :barNameList="barNameList"></TopNavBar>
+		<!-- <TopNavBar :width="width" :height="height" :barNameList="barNameList"></TopNavBar>
 		<view style="text-align: center; margin-top: -350rpx; margin-bottom: 25rpx;">
 			<uni-datetime-picker type="datetime" style="text-align: center;"></uni-datetime-picker>
 			<button type="warn" size="mini"	class="btn">Find Suitable Places</button>
-		</view>
+		</view> -->
 		<uni-section title="Recommend For You"  padding class="decoration" titleFontSize="30rpx" titleColor="#F25E5E"> 
 			<Book></Book>
 			<Book></Book>
@@ -43,10 +43,10 @@
 		{id:2, url:'/static/swiper/swiper3.jpg'},
 	]
 	const orderNavbar = [
-	  { id: '0', name: 'Swimming Pool', iconpath: '/static/icon/swim.png',url:'../choosefacility/index' },
-	  { id: '1', name: 'Fitness Room', iconpath: '/static/icon/squash.png',url:'../choosefacility/index' },
-	  { id: '2', name: 'Squash Courts', iconpath: '/static/icon/fitness.png',url:'../choosefacility/index' },
-	  { id: '3', name: 'Sports Hall', iconpath: '/static/icon/sports.png',url:'../choosefacility/index' },
+	  { id: '0', name: 'Swimming pool', iconpath: '/static/icon/swim.png',url:'../choosefacility/index?type=Swimming pool' },
+	  { id: '1', name: 'Fitness room', iconpath: '/static/icon/squash.png',url:'../choosefacility/index?type=Fitness room' },
+	  { id: '2', name: 'Squash court', iconpath: '/static/icon/fitness.png',url:'../choosefacility/index?type=Squash court' },
+	  { id: '3', name: 'Sports hall', iconpath: '/static/icon/sports.png',url:'../choosefacility/index?type=Sports hall' },
 	]
 	const barNameList = [
 		{name: 'Swim',id: '0'}, 

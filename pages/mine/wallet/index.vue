@@ -15,19 +15,19 @@
 			<view class="title">Top Up Your Account</view>
 			<view class="text">Please select the amount you want to recharge:</view>
 			<view class="amount-box-2">
-				<button class="amount-btn">$ 10</button>
-				<button class="amount-btn">$ 15</button>
-				<button class="amount-btn">$ 20</button>
+				<button class="amount-btn">¥ 10</button>
+				<button class="amount-btn">¥ 15</button>
+				<button class="amount-btn">¥ 20</button>
 			</view>
 			<view class="amount-box-1">
-				<button class="amount-btn">$ 30</button>
-				<button class="amount-btn">$ 50</button>
-				<button class="amount-btn">$ 100</button>
+				<button class="amount-btn">¥ 30</button>
+				<button class="amount-btn">¥ 50</button>
+				<button class="amount-btn">¥ 90</button>
 			</view>
 			<view class="input">
-				<input class="cus-input" type="digit" placeholder="Custom Input (Unit: $)" />
+				<input class="cus-input" type="digit" placeholder="Custom Input (Unit: ¥)" />
 			</view>
-			<view class="info">Hint: You can become a member of BodyBuddy by topping up $50 once a time!</view>
+			<view class="info">Hint: You can become a member of BodyBuddy by topping up ¥100 once a time!</view>
 			<button class="btn" @click="isshow=false">Confirm</button>
 		</view>
 		<!-- close button -->
