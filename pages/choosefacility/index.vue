@@ -1,10 +1,9 @@
 <template>
 	<view class="list">
 		<view  v-for="(item,index) in facilityList" :key="item.id" class="" @click="toTargetItem(item)">
-			<Facility :item="item"></Facility>
+			<Facility class="facility" :item="item"></Facility>
 		</view>
 	</view>
-	
 </template>
 
 <script>
@@ -44,7 +43,7 @@
 					this.facilityList.push({
 						id: i,
 						name: res.data.result[i].name,
-						price: 0,
+						price: 10,
 						location: "BodyBuddy",
 					})
 					console.log(this.facilityList)
@@ -56,6 +55,10 @@
 
 <style>
 .list{
-	margin-top:30rpx;
+	/* margin-top:30rpx; */
+	/* background-color: #faebea; */
+}
+.facility {
+	background-color: #faebea;
 }
 </style>
