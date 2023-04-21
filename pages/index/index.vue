@@ -11,9 +11,9 @@
 			<uni-datetime-picker type="datetime" style="text-align: center;"></uni-datetime-picker>
 			<button type="warn" size="mini"	class="btn">Find Suitable Places</button>
 		</view> -->
-		<uni-section title="Recommend For You"  padding class="decoration" titleFontSize="30rpx" titleColor="#F25E5E"> 
-			<Book></Book>
-			<Book></Book>
+		<uni-section title="Recommend For You"  padding class="decoration" titleFontSize="30rpx" titleColor="#4c4950"> 
+			<Book :activity="recommendActivities[0]"></Book>
+			<Book :activity="recommendActivities[1]"></Book>
 		</uni-section>
 	</view>
 </template>
@@ -53,6 +53,29 @@
 		{name: 'Fitness',id: '1'}, 
 		{name: 'Squash',id: '2'},
 		{name: 'Sports',id: '3'},]
+	
+	let recommendActivities = [
+		{
+			id: 0,
+			capacity: 0,
+			facilityId: 0,
+			name: '',
+			note: '',
+			price: '',
+			status: '',
+			userAmount: 0
+		},
+		{
+			id: 0,
+			capacity: 0,
+			facilityId: 0,
+			name: '',
+			note: '',
+			price: '',
+			status: '',
+			userAmount: 0
+		},
+	]
 		
 	const barContentList= [
 		{
@@ -115,6 +138,7 @@
 			  barNameList,
 			  barContentList,
 			  tabIndex: "ChooseTime",
+			  recommendActivities,
 			  tabBars:[
 			  	{
 			  		name: "Swimming",
@@ -151,6 +175,29 @@
 			}).then((res)=>{
 				console.log('result', res.data.result)
 			})
+			uni.request({
+				url: urlPrefix + '/activity',
+				method: 'GET',
+			}).then(res => {
+				console.log('activities: ', res.data.result[0])
+				this.recommendActivities[0].id = res.data.result[0].id
+				this.recommendActivities[0].capacity = res.data.result[0].capacity
+				this.recommendActivities[0].facilityId = res.data.result[0].facilityId
+				this.recommendActivities[0].name = res.data.result[0].name
+				this.recommendActivities[0].note = res.data.result[0].note
+				this.recommendActivities[0].price = res.data.result[0].price
+				this.recommendActivities[0].status = res.data.result[0].status
+				this.recommendActivities[0].userAmount = res.data.result[0].userAmount
+				
+				this.recommendActivities[1].id = res.data.result[1].id
+				this.recommendActivities[1].capacity = res.data.result[1].capacity
+				this.recommendActivities[1].facilityId = res.data.result[1].facilityId
+				this.recommendActivities[1].name = res.data.result[1].name
+				this.recommendActivities[1].note = res.data.result[1].note
+				this.recommendActivities[1].price = res.data.result[1].price
+				this.recommendActivities[1].status = res.data.result[1].status
+				this.recommendActivities[1].userAmount = res.data.result[1].userAmount
+			})
 		},
 		methods: {
 			TarData(item){
@@ -171,7 +218,9 @@
     background: #fff;
   }
   .decoration{
-  	  background-color: #f5d9dd;
+  	  // background-color: #f5d9dd;
+	  // background-color: #fbfbfb;
+	  background-color: #fbfbfb;
     }
 	.btn{
 		margin-top:20rpx;
