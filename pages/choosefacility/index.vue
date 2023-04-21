@@ -1,7 +1,7 @@
 <template>
 	<view class="list">
-		<view  v-for="(item,index) in facilityList" :key="item.id" class="" @click="toTargetItem(item)">
-			<Facility class="facility" :item="item"></Facility>
+		<view  v-for="(item,index) in facilityList" :key="item.id">
+			<Facility :item="item" @click="toTargetItem(item)"></Facility>
 		</view>
 	</view>
 </template>
@@ -27,9 +27,12 @@
 		methods: {
 			// 跳转到详情页
 			toTargetItem(item) {
+				console.log("id is"+item.id);
+				this.$emit('myevent', {
+				  id: item.id
+				})
 				uni.navigateTo({
-					url:item.url
-					// url:item.url+"?id="+item.id,
+					url:"/pages/facilities/details/index"+"?id="+item.id,
 				})
 			}
 		},
@@ -41,7 +44,7 @@
 				console.log(res);
 				for (let i = 0; i < res.data.result.length; i++) {
 					this.facilityList.push({
-						id: i,
+						id: res.data.result[i].id,
 						name: res.data.result[i].name,
 						price: 10,
 						location: "BodyBuddy",

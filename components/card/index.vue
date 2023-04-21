@@ -27,8 +27,8 @@
 			// 跳转到详情页
 			toTargetItem(item) {
 				uni.navigateTo({
-					url:item.url
-					// url:item.url+"?id="+item.id,
+					url:item.url,
+					id: item.id
 				})
 			},
 		}

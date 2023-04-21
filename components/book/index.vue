@@ -1,38 +1,25 @@
 <template>
-	<view v-for="activity in ActivityList" :key="activity">
-		<uni-card class="book-card">
-			<view style="font-size: 150%;color:black;font-weight:bold;">{{activity.name}}</view>
-			<view style="color:dimgrey;font-size:110%">{{activity.price}}</view>
-			<!-- <view style="display: flex;padding-bottom:0.2rem;color:azure;font-weight: 800;font-size: 110%;">
-				<view style="flex: 1 1 500px">{{activity.date}}</view>
-				<view style="flex: 1 1 500px;text-align:right">{{activity.starttime}} - {{activity.endtime}}</view>
-			</view> -->
-			<!-- 		<navigator url="../find/index">
-				<button type="warn">Book Now</button>
-			</navigator> -->
-			<button id="order_btn" type="warn" @click="toTargetItem(activity)">
-				Book Now
-			</button>
-		</uni-card>
-	</view>
+	<uni-card class="book-card">
+		<view style="font-size: 150%;color:black;font-weight:bold;">{{props.activity.name}}</view>
+		<view style="color:dimgrey;font-size:110%">{{props.activity.price}}</view>
+		<button id="order_btn" type="warn" @click="toBookPage(props.activity)">
+			Book Now
+		</button>
+	</uni-card>
 </template>
 
 <script setup>
+	import config from '@/config.js'
 	import {
 		defineProps
 	} from 'vue'
-	import config from '@/config.js'
-
-	const urlPrefix = config.urlPrefix
-	const props = defineProps(['ActivityList'])
-
-	function toTargetItem(item) {
-				uni.navigateTo({
-					url:"/pages/facilities/choosetime/index"
-					// url:item.url+"?id="+item.id,
-				})
-			}
-	
+	const props = defineProps(['activity'])
+	console.log("props.activity is"+props.activity)
+	let toBookPage = function(item) {
+		uni.navigateTo({
+			url:"/pages/facilities/choosetime/index"+"?id="+item.id,
+		})
+	}
 </script>
 
 <style lang="scss" scoped>

@@ -1,22 +1,17 @@
 <template>
-	<uni-section title="username" type="line" titleFontSize="18px">
-		<view class="example-body" >
-			{{order.username}}
-		</view>
-	</uni-section>
 	<uni-section title="activity" type="line" titleFontSize="18px">
 		<view class="example-body">
-			{{order.activity.name}}
+			{{activity.name}}
 		</view>
 	</uni-section>
 	<uni-section title="discription" type="line" titleFontSize="18px">
 		<view class="example-body">
-			{{order.activity.discription}}
+			{{activity.note}}
 		</view>
 	</uni-section>
 	<uni-section title="price" type="line" titleFontSize="18px">
 		<view class="example-body" >
-			{{order.activity.price}}
+			{{activity.price}}
 		</view>
 	</uni-section>
 	
@@ -25,7 +20,7 @@
 	</uni-section>
 	
 	<uni-section title="choose time" type="line" titleFontSize="18px">
-		<TimePicker class="picker" @getStartTime="getStartTime" @getEndTime="getEndTime"></TimePicker>
+		<TimePicker class="picker" @time="time"></TimePicker>
 	</uni-section>
 	
 	<button class="btn" type="warn" @click="order(activity)">Book</button>
@@ -33,46 +28,42 @@
 
 <script>
 	import TimePicker from "../../../components/time-picker/index.vue"
-	const order = {
-		username:"pangyu",
-		activity:{
-			name:"lesson1",
-			price:17,
-			discription:"...",
-		}
-	}
+	import config from '@/config.js'
+	var activity_id = 0
 	export default{
-		name: 'Card',
 		data(){
 			return{
-				order:{
-					username:"pangyu",
-					activity:{
-						name:"lesson1",
-						price:17,
-						discription:"...",
-					}
-				}
+				activity:Object,
+				activity_id
 			}
 		},
 		components:{
 			TimePicker
 		},
+		onLoad(option) {
+			this.activity_id = option.id	
+		},
+		mounted(){
+			const urlPrefix = config.urlPrefix
+			uni.request({
+				url: urlPrefix + '/activity/' + this.activity_id,
+				method: 'GET',
+			}).then((res) => {
+				this.activity = res.data.result
+				console.log(this.activity)
+			})
+		},
 		methods: {
-			
-			getStartTime(e){
-				console.log(e)
-			},
-			getEndTime(e){
-					console.log(e)
+			time(val){
+				console.log(val)
 			},
 			order(activity) {
+				const urlPrefix = config.urlPrefix
 				uni.request({
 					url: urlPrefix + '/order',
 					method: 'POST',
 					data: {
-						activityId: activity.id,
-						name: activity.name
+						activityId: this.activity_id,
 					},
 					header: {
 						'Authorization': uni.getStorageSync('token')
@@ -116,8 +107,7 @@
 		padding: 12px;
 		background-color: #FFFFFF;
 		font-size:30rpx;
-		border:1px solid #E5E5E5;
-		border-radius:20rpx;
+		border-bottom:1px solid #E5E5E5;
 	}
 	.btn{
 		margin-top:50rpx;

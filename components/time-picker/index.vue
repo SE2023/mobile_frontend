@@ -1,44 +1,26 @@
 <template>
-
-	<uni-row class="demo-uni-row" :width="nvueWidth">
-		<uni-col :span="3" class="text">
-			From 
-		</uni-col>
-		<uni-col :span="9">
-			<picker class="start" mode="time" @change="bindsTimeChange">
-				<view>{{ stime }}</view>
-			</picker>
-		</uni-col>
-		<uni-col :span="2" class="text">
-			To 
-		</uni-col>
-		<uni-col :span="9">
-			<picker class="start" mode="time" @change="bindeTimeChange">
-				<view>{{ etime }}</view>
-			</picker>
-		</uni-col>
-	</uni-row>
-	
+	<view>
+	    <picker class="start" mode="selector" :range="array" @change="picker1" :value="index">
+	        <view>{{array[index]}}</view>
+	    </picker>
+	</view>
 </template>
 <script>
+	
 export default {
 	name:"TimePicker",
 	data() {
 		return {
-			stime: 'choose start time',
-			etime: 'choose end time',
-			gutter: 0,
-			nvueWidth: 730
+			array:['11：00-12：00','12：00-13：00','13：00-14：00'],
+			index:0
 		};
 	},
 	methods: {
-		bindsTimeChange: function(e) {
-			this.stime = e.detail.value;
-			this.$emit("getStartTime",this.stime);
-		},
-		bindeTimeChange: function(e) {
-			this.etime = e.detail.value;
-			this.$emit("getEndTime",this.etime);
+		picker1(e){
+		    // console.log(this.array[this.index])
+			this.$emit('time',this.array[this.index]);
+		    //e.detail = this.array[this.index]
+			
 		}
 	}
 };
@@ -47,15 +29,13 @@ export default {
 <style>
 .start{
 	height:50rpx;
+	weight:80%;
 	border: 1px solid  gainsboro;
 	color:gray;
 	text-align: center;
 	border-radius:15rpx;
-	}
-.text{
 	color: gray;
 	text-align: center;
-	
-}
+	}
 </style>
 

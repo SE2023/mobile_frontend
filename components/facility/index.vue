@@ -1,5 +1,5 @@
 <template>
-	<view class="facility" @click="toTargetItem(item)">
+	<view class="facility" >
 		<view class="title">
 			{{item.name}}
 			<uni-rate class="star" active-color="red" :size="18" :value="4.5" />
@@ -23,7 +23,8 @@
 	console.log('item', props.item)
 	let toTargetItem = function(item) {
 		uni.navigateTo({
-			url:item.url
+			url:item.url,
+			id: item.id
 		})
 	}
 </script>
