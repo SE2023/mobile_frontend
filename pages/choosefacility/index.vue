@@ -4,7 +4,6 @@
 			<Facility :item="item" @click="toTargetItem(item)"></Facility>
 		</view>
 	</view>
-	
 </template>
 
 <script>
@@ -47,7 +46,7 @@
 					this.facilityList.push({
 						id: res.data.result[i].id,
 						name: res.data.result[i].name,
-						price: 0,
+						price: 10,
 						location: "BodyBuddy",
 					})
 					console.log(this.facilityList)
@@ -59,6 +58,10 @@
 
 <style>
 .list{
-	margin-top:30rpx;
+	/* margin-top:30rpx; */
+	/* background-color: #faebea; */
+}
+.facility {
+	background-color: #faebea;
 }
 </style>

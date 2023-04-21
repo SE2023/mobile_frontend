@@ -2,11 +2,11 @@
 	<view class="facility" >
 		<view class="title">
 			{{item.name}}
-			<uni-rate class="star" active-color="red" />
+			<uni-rate class="star" active-color="red" :size="18" :value="4.5" />
 		</view>
 		
 		<view class="location">
-			[Location:{{item.location}}]
+			[Location: {{item.location}}]
 			<view class="price">
 				from ￥{{item.price}}/hour
 			</view>	
@@ -34,22 +34,25 @@
 	font-size: 14px;
 	color: #666;
 	line-height: 20px;
-	margin: 30rpx auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 2px;
+	/* margin: 30rpx auto; */
 	/* margin-bottom:50rpx; */
-	border-bottom: 1rpx solid #F25E5E;
+	/* border-bottom: 1rpx solid #F25E5E; */
 }
 .location{
 	margin:10rpx 20rpx;
 }
 .title{
 	font-weight: bold;
+	color: #4c4950;
 	margin-left:20rpx;
 }
 .star {
-		margin-top: -50rpx;
-		margin-left: 295rpx;
-		/* float: right; */
-	}
+	float: right;
+	margin-right: 10px;
+}
 .price{
 	color:#F25E5E;
 	float:right;
