@@ -6,7 +6,7 @@
 	</uni-section>
 	<uni-section title="discription" type="line" titleFontSize="18px">
 		<view class="example-body">
-			{{activity.discription}}
+			{{activity.note}}
 		</view>
 	</uni-section>
 	<uni-section title="price" type="line" titleFontSize="18px">
@@ -28,36 +28,42 @@
 
 <script>
 	import TimePicker from "../../../components/time-picker/index.vue"
-	const activity = {
-			id: 1,
-			name:"lesson1",
-			price:17,
-			discription:"...",
-		}
+	import config from '@/config.js'
+	var activity_id = 0
 	export default{
-		name: 'Card',
 		data(){
 			return{
-				activity,
+				activity:Object,
+				activity_id
 			}
-		},
-		props: {
-			facilityID: Number
 		},
 		components:{
 			TimePicker
+		},
+		onLoad(option) {
+			this.activity_id = option.id	
+		},
+		mounted(){
+			const urlPrefix = config.urlPrefix
+			uni.request({
+				url: urlPrefix + '/activity/' + this.activity_id,
+				method: 'GET',
+			}).then((res) => {
+				this.activity = res.data.result
+				console.log(this.activity)
+			})
 		},
 		methods: {
 			time(val){
 				console.log(val)
 			},
 			order(activity) {
+				const urlPrefix = config.urlPrefix
 				uni.request({
 					url: urlPrefix + '/order',
 					method: 'POST',
 					data: {
-						activityId: activity.id,
-						name: activity.name
+						activityId: this.activity_id,
 					},
 					header: {
 						'Authorization': uni.getStorageSync('token')
