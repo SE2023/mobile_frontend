@@ -1,7 +1,7 @@
 <template>
 	<view>
-	    <picker class="start" mode="selector" :range="array" @change="picker1" :value="index">
-	        <view>{{array[index]}}</view>
+	    <picker class="start" mode="selector" :range="timeList" @change="picker1" :value="index">
+	       <view>{{timeList[index]}}</view>
 	    </picker>
 	</view>
 </template>
@@ -9,17 +9,21 @@
 	
 export default {
 	name:"TimePicker",
+	props:{
+		timeList:[],
+	},
 	data() {
 		return {
-			array:['11：00-12：00','12：00-13：00','13：00-14：00'],
+			// timeList:['11：00-12：00','12：00-13：00','13：00-14：00'],
 			index:0
 		};
 	},
+	
 	methods: {
 		picker1(e){
-		    // console.log(this.array[this.index])
-			this.$emit('time',this.array[this.index]);
-		    //e.detail = this.array[this.index]
+		    this.index = e.detail.value;
+			this.$emit('time',this.timeList[this.index]);
+		    e.detail = this.timeList[this.index]
 			
 		}
 	}
@@ -38,4 +42,5 @@ export default {
 	text-align: center;
 	}
 </style>
+
 
