@@ -214,14 +214,17 @@
 	// .card{
 	// 	// margin-left:30rpx ;
 	// }
-  .container {
-    background: #fff;
-  }
-  .decoration{
-  	  // background-color: #f5d9dd;
-	  // background-color: #fbfbfb;
-	  background-color: #fbfbfb;
-    }
+	
+	.container {
+		background: #fff;
+	}
+	
+	.decoration{
+		// background-color: #f5d9dd;
+		// background-color: #fbfbfb;
+		background-color: #fbfbfb;
+	}
+	
 	.btn{
 		margin-top:20rpx;
 		border-radius: 10rpx;

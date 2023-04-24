@@ -3,12 +3,12 @@
  <view class="diy-search">
 	<!-- 搜索框 -->
 	<uni-search-bar class="uni-mt-10" radius="100" placeholder="search" clearButton="none" cancelButton="none" @confirm="search" />
-   <!-- <view class="inner"  @click="onTargetSearch">
-      <view class="search-input">
-        <text class="search-icon iconfont icon-search"></text>
-        <text>search</text>
-      </view>
-    </view> -->
+		<!-- <view class="inner"  @click="onTargetSearch">
+			<view class="search-input">
+				<text class="search-icon iconfont icon-search"></text>
+				<text>search</text>
+			</view>
+		</view> -->
   </view>
 </template>
 
@@ -44,33 +44,36 @@
 </script>
 
 <style lang="scss" scoped>
-  .diy-search {
-    background:#FFFFF0;
-   
-  }
+	.diy-search {
+		background:#FFFFFF;
+	}
+	
+	.uni-mt-10 {
+		padding: 8rpx;
+	}
 
-  .inner {
-    height: 60rpx;
-    background: #fff;
-    overflow: hidden;
+	.inner {
+		height: 60rpx;
+		background: #fff;
+		overflow: hidden;
+		
+		&.radius {
+			border-radius: 10rpx;
+		}
 
-    &.radius {
-      border-radius: 10rpx;
-    }
+		&.round {
+			border-radius: 60rpx;
+		}
+	}
 
-    &.round {
-      border-radius: 60rpx;
-    }
-  }
+	.search-input {
+		height: 60rpx;
+		line-height: 60rpx;
+		color: #999;
+		padding: 0 20rpx;
 
-  .search-input {
-    height: 60rpx;
-    line-height: 60rpx;
-    color: #999;
-    padding: 0 20rpx;
-
-    .search-icon {
-      margin-right: 8rpx;
-    }
-  }
+		.search-icon {
+			margin-right: 8rpx;
+		}
+	}
 </style>

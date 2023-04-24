@@ -4,7 +4,7 @@
   				duration="500" indicator-active-color="#C67171" >
   				<swiper-item v-for="item in itemList" :key = "item.id" >
   					<view class="swiper-item">
-						<image :src="item.url"></image>
+						<image class="swiper-img" :src="item.url"></image>
 					</view>
   				</swiper-item>
   			</swiper>
@@ -58,35 +58,47 @@
 </script>
 
 <style lang="scss" scoped>
-  .uni-margin-wrap {
+	.uni-margin-wrap {
   		width: 690rpx;
   		width: 100%;
   	}
+	
   	.swiper {
   		height: 500rpx;
   	}
+	
   	.swiper-item {
+		object-fit: cover;
   		display: block;
   		height: 300rpx;
   		line-height: 300rpx;
   		text-align: center;
   	}
+	
   	.swiper-list {
   		margin-top: 40rpx;
   		margin-bottom: 0;
   	}
+	
   	.uni-common-mt {
   		margin-top: 60rpx;
   		position: relative;
   	}
+	
   	.info {
   		position: absolute;
   		right: 20rpx;
   	}
+	
   	.uni-padding-wrap {
   		width: 550rpx;
   		padding: 0 100rpx;
   	}
+	
+	.swiper-img {
+		width: 100%;
+		object-fit: cover;
+	}
 </style>
 
  

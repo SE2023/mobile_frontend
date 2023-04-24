@@ -42,6 +42,8 @@
 					username:'Username',
 					email:'Email'
 				},
+				imgList: [],
+				imgsID: [],
 				percent:0,
 				loading:false,
 				disabled:false
@@ -84,16 +86,16 @@
 						const tempFilePaths = res.tempFilePaths[0];
 						// upload file
 						const uploadTask = uni.uploadFile({
-							url : 'http://22.189.25.91:9988/admin/sys-file/upload', // post请求地址
+							url : 'http://localhost:8880/user/upload', // post请求地址
 						    filePath: tempFilePaths,
 						    name: 'file',  // need to be comfirmed
+							method: 'POST',
 						    header: {
-								'Content-Type': 'multipart/form-data',
 								'Authorization': getApp().globalData.token || 'Basic YXBwOmFwcA=='
 							},
 							success: function (uploadFileRes) {
 								console.log('Success:', uploadFileRes);
-								_self.imgsID.push(JSON.parse(uploadFileRes.data).data.fileId);
+								// _self.imgsID.push(JSON.parse(uploadFileRes.data).data.fileId);
 								console.log('_self.imgsID:', _self.imgsID)
 							},
 							fail: function (uploadFileFail) {
@@ -129,6 +131,7 @@
 		display: flex;
 		justify-content: center;
 	}
+	
 	.avatar-btn{
 		margin-top: 5%;
 		background: transparent;
@@ -137,27 +140,34 @@
 		display: flex;
 		justify-content: center;
 	}
+	
 	.user-content{
 		margin-left: 15%;
 	}
+	
 	.main{
 		display: flex;
 		align-items: center;
 	}
+	
 	.user-info{
 		margin: 20rpx auto ;
 	}
+	
 	.title{
 		color:gray;
 		font-size: 18px;
 	}
+	
 	.content{
 		margin-left: 20%;
 		/* text-align: right; */
 	}
+	
 	.row{
 		margin: 30rpx auto ;
 	}
+	
 	.submit-btn{
 		margin-top: 10%;
 		width: 75%;

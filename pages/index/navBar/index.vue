@@ -44,44 +44,44 @@
 </script>
 
 <style lang="scss" scoped>
-  .diy-navBar .data-list::after {
-    clear: both;
-    content: " ";
-    display: table;
-  }
+	.diy-navBar .data-list::after {
+		clear: both;
+		content: " ";
+		display: table;
+	}
 
-  .item-nav {
-    float: left;
-    margin: 10px 0;
-    text-align: center;
+	.item-nav {
+		float: left;
+		margin: 10px 0;
+		text-align: center;
 
-    .item-text {
-      font-size: 26rpx;
-    }
+		.item-text {
+			font-size: 26rpx;
+		}
 
-    .item-image {
-      margin-bottom: 4px;
-      font-size: 0;
-    }
+		.item-image {
+			margin-bottom: 4px;
+			font-size: 0;
+		}
 
-    .item-image .image {
-      width: 88rpx;
-      height: 88rpx;
-    }
+		.item-image .image {
+			width: 88rpx;
+			height: 88rpx;
+		}
 
-  }
+	}
 
-  /* 分列布局 */
+	/* 分列布局 */
 
-  .diy-navBar .avg-sm-3>.item-nav {
-    width: 33.33333333%;
-  }
+	.diy-navBar .avg-sm-3>.item-nav {
+		width: 33.33333333%;
+	}
 
-  .diy-navBar .avg-sm-4>.item-nav {
-    width: 25%;
-  }
+	.diy-navBar .avg-sm-4>.item-nav {
+		width: 25%;
+	}
 
-  .diy-navBar .avg-sm-5>.item-nav {
-    width: 20%;
-  }
+	.diy-navBar .avg-sm-5>.item-nav {
+		width: 20%;
+	}
 </style>

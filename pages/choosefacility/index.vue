@@ -57,11 +57,12 @@
 </script>
 
 <style>
-.list{
-	/* margin-top:30rpx; */
-	/* background-color: #faebea; */
-}
-.facility {
-	background-color: #faebea;
-}
+	.list {
+		/* margin-top:30rpx; */
+		/* background-color: #faebea; */
+	}
+	
+	.facility {
+		background-color: #faebea;
+	}
 </style>
