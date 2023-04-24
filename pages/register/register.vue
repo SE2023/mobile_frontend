@@ -156,6 +156,14 @@ export default {
 				});
 		},
 		getCaptcha() {
+			if (this.formData.email == '') {
+				uni.showToast({
+					title: 'Please input the email.',
+					duration: 2000,
+					icon: 'error'
+				})
+				return;
+			}
 			this.countNumber = 60;
 			setInterval(() => {
 				if (this.countNumber !== 0) {
