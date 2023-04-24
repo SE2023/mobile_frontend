@@ -1,11 +1,17 @@
 <template>
 	<uni-card class="book-card">
-		<view style="font-size: 35rpx;color:#4c4950;font-weight:bold;">{{props.activity.name}}</view>
-		<view style="color:dimgrey;font: size 28rpx;">Price: {{props.activity.price}}</view>
-		<view style="color:dimgrey;font: size 28rpx;">Capacity: {{props.activity.capacity}}</view>
-		<view style="color:dimgrey;font: size 28rpx;">Status: {{props.activity.status}}</view>
-		<view style="color:dimgrey;font: size 28rpx;">Note: {{props.activity.note}}</view>
-		<view style="color:dimgrey;font: size 28rpx;">User Amount: {{props.activity.userAmount}}</view>
+		<view style="font-size: 35rpx; color: #4c4950; font-weight: bold;">{{props.activity.name}}</view>
+		<view class="information">
+			<view class="container">
+				<view class="box1">Price: {{props.activity.price}}</view>
+				<view class="box2">Status: {{props.activity.status}}</view>
+			</view>
+			<view class="container">
+				<view class="box1">Capacity: {{props.activity.capacity}}</view>
+				<view class="box2">User Amount: {{props.activity.userAmount}}</view>
+			</view>
+			<view style="color: dimgrey; font: size 28rpx;">Note: {{props.activity.note}}</view>
+		</view>
 		<button id="order_btn" type="warn" @click="toBookPage(props.activity)">
 			Book Now
 		</button>
@@ -60,6 +66,28 @@
 		width: 80%;
 		z-index: 1;
 		border-radius: 50rpx;
+	}
+	
+	.container {
+	  display: flex;
+	  flex-direction: row;
+	}
+	
+	.box1 {
+	  width: 50%;
+	  color: dimgrey; 
+	  font-size: 28rpx;
+	}
+	
+	.box2 {
+	  width: 50%;
+	  color: dimgrey;
+	  font-size: 28rpx;
+	}
+	
+	.information {
+		margin-top: 10rpx;
+		margin-bottom: 20rpx;
 	}
 
 	// 订单操作

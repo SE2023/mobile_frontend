@@ -17,6 +17,11 @@
 						<image src="../../../static/swiper/swiper3.jpg" mode=""></image>
 					</view>
   				</swiper-item>
+				<swiper-item>
+					<view class="swiper-item uni-bg-white">
+						<image src="../../../static/swiper/swiper4.jpg" mode=""></image>
+					</view>
+				</swiper-item>
   			</swiper>
   	</view>
 </template>
@@ -28,7 +33,7 @@
     data() {
             return {
 				imgHeights: [], // 图片的高度
-                background: ['color1', 'color2', 'color3'],
+                background: ['color1', 'color2', 'color3', 'color4'],
                 indicatorDots: true,
                 autoplay: true,
                 interval: 2000,
@@ -64,31 +69,37 @@
 </script>
 
 <style lang="scss" scoped>
-  .uni-margin-wrap {
+	.uni-margin-wrap {
   		width: 690rpx;
   		width: 100%;
   	}
+	
   	.swiper {
   		height: 300rpx;
   	}
+	
   	.swiper-item {
   		display: block;
   		height: 300rpx;
   		line-height: 300rpx;
   		text-align: center;
   	}
+	
   	.swiper-list {
   		margin-top: 40rpx;
   		margin-bottom: 0;
   	}
+	
   	.uni-common-mt {
   		margin-top: 60rpx;
   		position: relative;
   	}
+	
   	.info {
   		position: absolute;
   		right: 20rpx;
   	}
+	
   	.uni-padding-wrap {
   		width: 550rpx;
   		padding: 0 100rpx;

@@ -30,31 +30,35 @@
 </script>
 
 <style>
-.facility{
-	font-size: 14px;
-	color: #666;
-	line-height: 20px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin-bottom: 2px;
-	/* margin: 30rpx auto; */
-	/* margin-bottom:50rpx; */
-	/* border-bottom: 1rpx solid #F25E5E; */
-}
-.location{
-	margin:10rpx 20rpx;
-}
-.title{
-	font-weight: bold;
-	color: #4c4950;
-	margin-left:20rpx;
-}
-.star {
-	float: right;
-	margin-right: 10px;
-}
-.price{
-	color:#F25E5E;
-	float:right;
-}
+	.facility {
+		font-size: 14px;
+		color: #666;
+		line-height: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin-bottom: 2px;
+		/* margin: 30rpx auto; */
+		/* margin-bottom:50rpx; */
+		/* border-bottom: 1rpx solid #F25E5E; */
+	}
+	
+	.location {
+		margin:10rpx 20rpx;
+	}
+
+	.title {
+		font-weight: bold;
+		color: #4c4950;
+		margin-left:20rpx;
+	}
+
+	.star {
+		float: right;
+		margin-right: 10px;
+	}
+
+	.price {
+		color:#F25E5E;
+		float:right;
+	}
 </style>

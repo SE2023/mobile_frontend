@@ -50,6 +50,7 @@
 	.main button::after {
 		border: none;
 	}
+	
 	.main button {
 		height: 200rpx;
 		background-color: #F25E5E;
@@ -58,21 +59,25 @@
 		vertical-align: middle;
 		line-height: 200rpx;
 	}
+	
 	.balance-btn {
 	  margin: 5rpx auto 10%;
 	  float: left;
 	  width: 50%;
 	}
+	
 	.discount-btn {
 	  margin: 5rpx auto 10%;
 	  float: right;
 	  width: 50%;
 	}
+	
 	.topup-btn{
 		width: 75%;
 		display: flex;
 		justify-content: center;
 	}
+	
 	.content {
 		width: 100%;
 		height: 100%;
@@ -81,42 +86,50 @@
 		flex-direction: column;
 		justify-content: center;
 	}
+	
 	.title {
 		font-weight: bold;
 		font-size: 35rpx;
 		margin: 0 0 30rpx 0;
 	}
+	
 	.text {
 		font-size: 32rpx;
 		width: 450rpx;
 	}
+	
 	.amount-box-1 {
 		margin: 20rpx 0 20rpx 0;
 		flex-flow: row;
 		justify-content: flex-start;
 		display: flex;
 	}
+	
 	.amount-box-2 {
 		margin: 20rpx 0 0 0;
 		flex-flow: row;
 		justify-content: flex-start;
 		display: flex;
 	}
+	
 	.amount-btn {
 		font-size: 30rpx;
 		font-weight: bold;
 		width: 130rpx;
 		margin: 0 15rpx;
 	}
+	
 	.amount-btn:hover {
 		outline-color: transparent;
 		outline-style:solid;
 		box-shadow: 0 0 0 2px #F25E5E;
 	}
+	
 	.amount-btn:active {
 		background-color: #F25E5E;
 		color: #fff;
 	}
+	
 	.input {
 		height: 80rpx;
 		width: 450rpx;
@@ -124,9 +137,11 @@
 		display: flex;
 		align-items: center;
 	}
+	
 	.cus-input {
 		padding-left: 20rpx;
 	}
+	
 	.info {
 		margin: 30rpx 0;
 		font-size: 24rpx;
@@ -136,6 +151,7 @@
 		border-radius: 16rpx;
 		padding: 16rpx 20rpx;
 	}
+	
 	.btn {
 		width: 300rpx;
 		height: 70rpx;
@@ -147,6 +163,7 @@
 		border-radius: 30rpx;
 		background: linear-gradient(-90deg, #C32C2C, #F25E5E);
 	}
+	
 	.close {
 		width: 60rpx;
 		height: 60rpx;
