@@ -17,6 +17,11 @@
 						<image src="../../../static/swiper/swiper3.jpg" mode=""></image>
 					</view>
   				</swiper-item>
+				<swiper-item>
+					<view class="swiper-item uni-bg-white">
+						<image src="../../../static/swiper/swiper4.jpg" mode=""></image>
+					</view>
+				</swiper-item>
   			</swiper>
   	</view>
 </template>
@@ -28,7 +33,7 @@
     data() {
             return {
 				imgHeights: [], // 图片的高度
-                background: ['color1', 'color2', 'color3'],
+                background: ['color1', 'color2', 'color3', 'color4'],
                 indicatorDots: true,
                 autoplay: true,
                 interval: 2000,

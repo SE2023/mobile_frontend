@@ -97,6 +97,7 @@
 	
 	.swiper-img {
 		width: 100%;
+		height: 500rpx;
 		object-fit: cover;
 	}
 </style>
