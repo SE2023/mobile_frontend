@@ -3,12 +3,12 @@
  <view class="diy-search">
 	<!-- 搜索框 -->
 	<uni-search-bar class="uni-mt-10" radius="100" placeholder="search" clearButton="none" cancelButton="none" @confirm="search" />
-   <!-- <view class="inner"  @click="onTargetSearch">
-      <view class="search-input">
-        <text class="search-icon iconfont icon-search"></text>
-        <text>search</text>
-      </view>
-    </view> -->
+		<!-- <view class="inner"  @click="onTargetSearch">
+			<view class="search-input">
+				<text class="search-icon iconfont icon-search"></text>
+				<text>search</text>
+			</view>
+		</view> -->
   </view>
 </template>
 
@@ -45,7 +45,11 @@
 
 <style lang="scss" scoped>
 	.diy-search {
-		background:#FFFFF0;
+		background:#FFFFFF;
+	}
+	
+	.uni-mt-10 {
+		padding: 8rpx;
 	}
 
 	.inner {
