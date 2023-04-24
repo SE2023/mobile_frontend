@@ -41,6 +41,7 @@
 		{id:0, url:'/static/swiper/swiper1.jpg'},
 		{id:1, url:'/static/swiper/swiper2.jpg'},
 		{id:2, url:'/static/swiper/swiper3.jpg'},
+		{id:3, url:'/static/swiper/swiper4.jpg'},
 	]
 	const orderNavbar = [
 	  { id: '0', name: 'Swimming pool', iconpath: '/static/icon/swim.png',url:'../choosefacility/index?type=Swimming pool' },
