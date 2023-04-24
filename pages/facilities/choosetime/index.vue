@@ -30,8 +30,9 @@
 			<view class="title">Choose the Coupon</view>
 			<view class="text">Please select the coupon you want to use:</view>
 			<view class="amount-box-2" v-for="(item,index) in couponList" :key="item.id" >
-				<button class="amount-btn">¥ {{item.price}}</button>
+				<button class="amount-btn" @click="use_coupon(item.discount)">¥ {{item.discount}}</button>
 			</view>
+			<view>Final Price is : ¥{{price}}</view>
 			<view class="info">Hint: You can become a member of BodyBuddy by topping up ¥100 once a time!</view>
 			<button class="btn" @click="order(activity)">Confirm</button>
 		</view>
@@ -57,6 +58,7 @@
 				chosen_date:'',
 				couponList:[],
 				user_id:0,
+				price:10,
 				
 			}
 		},
@@ -82,6 +84,7 @@
 					'Authorization': uni.getStorageSync('token')
 				}
 			}).then(res => {
+				console.log(res)
 				if (res.data.code === 0) {
 					this.user_id = res.data.result.id
 					console.log(this.user_id)
@@ -93,10 +96,10 @@
 						}
 					}).then((res) => {
 						for (let i = 0; i < res.data.result.length; i++) {
-								var coupon = res.data.result[i]
-								this.couponList.push(coupon)
-							}
-							console.log(this.couponList)
+						var coupon = res.data.result[i]
+						this.couponList.push(coupon)
+					}
+					console.log(this.couponList)
 						})
 				} else {
 					uni.showToast({
@@ -111,6 +114,10 @@
 			time(val){
 				this.chosen_date = val
 				console.log("chosen time is"+this.chosen_date)
+			},
+			use_coupon(val){
+				console.log(val)
+				this.price = this.price-val
 			},
 			change(e) {
 				this.single = e
@@ -130,12 +137,22 @@
 				
 			},
 			order(activity) {
+				var nowDate = new Date()
+				var date = nowDate.getDate()
+				var time = nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds()
+				
 				const urlPrefix = config.urlPrefix
 				uni.request({
 					url: urlPrefix + '/order',
 					method: 'POST',
 					data: {
 						activityId: this.activity_id,
+						name:"test",
+						userId:this.user_id,
+						payMoney:this.price,
+						Time:date+time,
+						status:"unused",
+						remark:"test"
 					},
 					header: {
 						'Authorization': uni.getStorageSync('token')
