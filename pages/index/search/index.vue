@@ -44,33 +44,32 @@
 </script>
 
 <style lang="scss" scoped>
-  .diy-search {
-    background:#FFFFF0;
-   
-  }
+	.diy-search {
+		background:#FFFFF0;
+	}
 
-  .inner {
-    height: 60rpx;
-    background: #fff;
-    overflow: hidden;
+	.inner {
+		height: 60rpx;
+		background: #fff;
+		overflow: hidden;
+		
+		&.radius {
+			border-radius: 10rpx;
+		}
 
-    &.radius {
-      border-radius: 10rpx;
-    }
+		&.round {
+			border-radius: 60rpx;
+		}
+	}
 
-    &.round {
-      border-radius: 60rpx;
-    }
-  }
+	.search-input {
+		height: 60rpx;
+		line-height: 60rpx;
+		color: #999;
+		padding: 0 20rpx;
 
-  .search-input {
-    height: 60rpx;
-    line-height: 60rpx;
-    color: #999;
-    padding: 0 20rpx;
-
-    .search-icon {
-      margin-right: 8rpx;
-    }
-  }
+		.search-icon {
+			margin-right: 8rpx;
+		}
+	}
 </style>

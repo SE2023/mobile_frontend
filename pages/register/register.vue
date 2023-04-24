@@ -1,33 +1,30 @@
 <template>
 	<view>
-		<uni-forms ref="form" :modelValue="formData" :rules="rules" labelPosition="top" style="margin: 20rpx;">
+		<uni-forms class="form" ref="form" :modelValue="formData" :rules="rules" labelPosition="top">
 			<uni-forms-item label="Username" name="username">
 				<uni-easyinput v-model="formData.username" @input="binddata('username', formData.username)"></uni-easyinput>
 			</uni-forms-item>
-			<uni-forms-item label="Email" name="email" style="position: relative; bottom: 10px;">
+			<uni-forms-item class="email" label="Email" name="email">
 				<uni-row class="demo-uni-row">
 					<uni-col :span="18"><uni-easyinput v-model="formData.email" @input="binddata('email', formData.email)"></uni-easyinput></uni-col>
 					<uni-col :span="5" :offset="1">
-						<button style="height: 37px; background-color: #f25e5e; color: #ffffff; font-size: 30rpx;" @click="getCaptcha" :disabled="captchaDisabled">
+						<button class="get-cap-btn" @click="getCaptcha" :disabled="captchaDisabled">
 							{{ getCaptchaText }}
 						</button>
 					</uni-col>
 				</uni-row>
 			</uni-forms-item>
-			<uni-forms-item label="Captcha" name="confirmCode" style="position: relative; bottom: 20px;">
+			<uni-forms-item class="captcha" label="Captcha" name="confirmCode">
 				<uni-easyinput v-model="formData.confirmCode" @input="binddata('confirmCode', formData.confirmCode)"></uni-easyinput>
 			</uni-forms-item>
-			<uni-forms-item label="Password" name="password" style="position: relative; bottom: 30px;">
+			<uni-forms-item class="password" label="Password" name="password">
 				<uni-easyinput type="password" v-model="formData.password" @input="binddata('password', formData.password)"></uni-easyinput>
 			</uni-forms-item>
-			<uni-forms-item label="ConfirmedPassword" name="confirmedPassword" style="position: relative; bottom: 40px;">
+			<uni-forms-item class="confirm" label="ConfirmedPassword" name="confirmedPassword">
 				<uni-easyinput type="password" v-model="formData.confirmedPassword" @input="binddata('confirmedPassword', formData.confirmedPassword)"></uni-easyinput>
 			</uni-forms-item>
 		</uni-forms>
-		<button
-			@click="submitData"
-			style="margin-left: 20rpx; margin-right: 20rpx; background-color: #f25e5e; color: white; font-weight: bold; height: 45px; position: relative; bottom: 50rpx;"
-		>
+		<button class="submit-btn" @click="submitData">
 			Submit
 		</button>
 	</view>
@@ -185,4 +182,49 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+	.form {
+		margin: 20rpx;
+	}
+	
+	.email {
+		position: relative; 
+		bottom: 10px;
+	}
+	
+	.get-cap-btn {
+		height: 37px; 
+		background-color: #f25e5e; 
+		color: #ffffff; 
+		font-size: 30rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.captcha {
+		position: relative;
+		bottom: 20px;
+	}
+	
+	.password {
+		position: relative; 
+		bottom: 30px;
+	}
+	
+	.confirm {
+		position: relative; 
+		bottom: 40px;
+	}
+	
+	.submit-btn {
+		margin-left: 20rpx; 
+		margin-right: 20rpx; 
+		background-color: #f25e5e; 
+		color: white; 
+		font-weight: bold; 
+		height: 45px; 
+		position: relative; 
+		bottom: 50rpx;
+	}
+</style>

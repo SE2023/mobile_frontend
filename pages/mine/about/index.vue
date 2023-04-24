@@ -46,6 +46,7 @@
 		display: flex;
 		justify-content: center;
 	}
+	
 	.name {
 		font-size: 18px;
 		font-weight: bold;
@@ -53,41 +54,48 @@
 		display: flex;
 		justify-content: center;
 	}
+	
 	.slogan {
 		font-size: 14px;
 		color: #ba4039;
 		display: flex;
 		justify-content: center;
 	}
+	
 	.content {
 		margin-left: 15%;
 		margin-right: 15%;
 	}
+	
 	.main {
 		display: flex;
 		align-items: center;
 	}
+	
 	.info {
 		margin: 20rpx auto ;
 	}
+	
 	.title {
 		font-size: 16px;
 		margin-top: 30rpx;
 		margin-bottom: 10rpx;
 	}
+	
 	.detail {
 		color: gray;
 		font-size: 12px;
 		margin: 0;
 	}
+	
 	.bottom {
 		font-size: 8px;
 		color: gray;
-		position: absolute;
 		display: flex;
 		justify-content: center;
 		bottom: 0;
 		width: 100%;
+		margin-top: 60rpx;
 		margin-bottom: 10px;
 	}
 </style>
