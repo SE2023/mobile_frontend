@@ -101,7 +101,8 @@
 				} else {
 					uni.showToast({
 						title: 'Get info failed',
-						duration: 2000
+						duration: 2000,
+						icon: 'error'
 					})
 				}
 			})
