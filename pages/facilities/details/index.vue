@@ -2,12 +2,12 @@
 	<view>
 		<Banner :itemList="itemList" />
 		<uni-section title="Swimming Pool" type="line" padding>
-			<uni-rate active-color="red" v-model="rateValue" @change="onChange" />
+			<uni-rate active-color="red" value="4.5" @change="onChange" />
 		</uni-section>
 		<view class="detail">
 			<view>Opening Hours: {{item.opening_time}}</view>
-			<view>Coach: {{item.coach}}</view>
-			<view>Contact: {{item.contact}}</view>
+			<view style="margin-top: 8rpx;">Coach: {{item.coach}}</view>
+			<view style="margin-top: 8rpx;">Contact: {{item.contact}}</view>
 		</view>
 		<uni-section title="Activites" type="line">
 			<view  v-for="(item,index) in ActivityList" :key="item.id">
@@ -27,7 +27,7 @@
 	import config from '@/config.js'
 	
 	var facility_id = 0
-	const item = {opening_time:"9:00-10:00",coach:"Sam",contact:"130000000"}
+	const item = {opening_time:"7:00-18:00",coach:"Sam",contact:"130000000"}
 	const itemList = [{
 			id: 0,
 			url: '/static/swiper/swiper4.jpg'
@@ -81,6 +81,14 @@
 		},
 		mounted(){
 			const urlPrefix = config.urlPrefix
+			// get Facility Info
+			uni.request({
+				url: urlPrefix + '/facility/' + this.facility_id,
+				method: 'GET'
+			}).then(res => {
+				this.item.coach = res.data.result.manager_name
+				this.item.contact = res.data.result.manager_tel
+			})
 			uni.request({
 				url: urlPrefix + '/activity/facility/' + this.facility_id,
 				method: 'GET',

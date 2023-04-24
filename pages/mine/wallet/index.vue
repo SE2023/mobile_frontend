@@ -1,12 +1,12 @@
 <template>
 	<view class="main">
 		<view class="balance-btn">
-			<button>Balance</button>
+			<button>Balance: ¥{{ userInfo.balance }}</button>
 		</view>
 		<view class="discount-btn">
 			<button>Discount Coupon</button>
 		</view>
-	</view>
+	</view> 
 	<button type="warn" class="topup-btn" @click="isshow=!isshow">Top Up</button>
 	<!-- Use the component -->
 	<zwy-popup :ishide='isshow' width="600rpx" height="760rpx" radius="16rpx">
@@ -25,10 +25,10 @@
 				<button class="amount-btn">¥ 90</button>
 			</view>
 			<view class="input">
-				<input class="cus-input" type="digit" placeholder="Custom Input (Unit: ¥)" />
+				<input class="cus-input" type="digit" placeholder="Custom Input (Unit: ¥)" v-model="money"/>
 			</view>
 			<view class="info">Hint: You can become a member of BodyBuddy by topping up ¥100 once a time!</view>
-			<button class="btn" @click="isshow=false">Confirm</button>
+			<button class="btn" @click="toTopUp()">Confirm</button>
 		</view>
 		<!-- close button -->
 		<view class="close" @click="isshow=false">✕</view>
@@ -36,11 +36,93 @@
 </template>
 
 <script>
+	import Config from '@/config.js'
+	const urlPrefix = Config.urlPrefix
+	
 	export default {
 		data() {
 			return {
-				isshow: false
+				userInfo: {
+					id: null,
+					balance: null,
+					membership: null,
+				},
+				isshow: false,
+				balance: null,
+				money: null
 			}
+		},
+		mounted() {
+			console.log('token', uni.getStorageSync('token'))
+			if (uni.getStorageSync('token') !== null) {
+				this.getUserInfo()
+			}
+		},
+		methods: {
+			toTopUp() {
+				console.log('money, ', this.money)
+				if (this.userInfo.membership != 1) {
+					uni.request({
+						url: urlPrefix + '/membership/set/' + this.userInfo.id,
+						method: 'POST',
+						data: {
+							balance: this.money
+						}
+					}).then(res => {
+						console.log(res.data.result)
+					})
+				} else if (this.userInfo.membership == 1) {
+					uni.request({
+						url: urlPrefix + '/membership/recharge/' + this.userInfo.id,
+						method: 'POST',
+						data: {
+							recharge: this.money
+						}
+					}).then(res => {
+						if (res.data.result != null) {
+							uni.showToast({
+								title: 'Top up successfully',
+								duration: 2000,
+								icon: 'success'
+							})
+							this.isshow = false
+							this.money = null
+							this.getUserInfo()
+						}
+					})
+				}
+			},
+			// 获取当前用户信息
+			async getUserInfo() {
+				uni.request({
+					url: urlPrefix + '/user',
+					method: 'GET',
+					header: {
+						'Authorization': uni.getStorageSync('token')
+					}
+				}).then(res => {
+					if (res.data.code === 0) {
+						this.isLogin = true
+						this.userInfo.id = res.data.result.id
+						this.userInfo.membership = res.data.result.membership
+						if (this.userInfo.membership == 1) {
+							uni.request({
+								url: urlPrefix + '/membership/' + this.userInfo.id,
+								method: 'GET'
+							}).then(res => {
+								this.userInfo.balance = res.data.result.balance
+							})
+						}
+						this.userInfo.balance = res.data.result.balance
+					} else {
+						uni.showToast({
+							title: 'Get info failed',
+							duration: 2000,
+							icon: 'error'
+						})
+					}
+				})
+			},
 		}
 	}
 </script>
