@@ -575,32 +575,39 @@
   text-align: left;
 }
 
-.facility{
-	font-size: 14px;
-	color: #666;
-	line-height: 20px;
-	margin: 0.9375rem auto;
-	/* margin-bottom:50rpx; */
-	border-bottom: 0.03125rem solid #F25E5E;
+.facility {
+		font-size: 14px;
+		color: #666;
+		line-height: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin-bottom: 2px;
+		/* margin: 30rpx auto; */
+		/* margin-bottom:50rpx; */
+		/* border-bottom: 1rpx solid #F25E5E; */
 }
-.location{
-	margin:0.3125rem 0.625rem;
+.location {
+		margin:0.3125rem 0.625rem;
 }
-.title{
-	font-weight: bold;
-	margin-left:0.625rem;
+.title {
+		font-weight: bold;
+		color: #4c4950;
+		margin-left:0.625rem;
 }
 .star {
-		margin-top: -1.5625rem;
-		margin-left: 9.21875rem;
-		/* float: right; */
+		float: right;
+		margin-right: 10px;
 }
-.price{
-	color:#F25E5E;
-	float:right;
+.price {
+		color:#F25E5E;
+		float:right;
 }
 
 
-.list{
-	margin-top:0.9375rem;
+.list {
+		/* margin-top:30rpx; */
+		/* background-color: #faebea; */
+}
+.facility {
+		background-color: #faebea;
 }

@@ -3025,3 +3025,42 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+
+.form {
+		margin: 0.625rem;
+}
+.email {
+		position: relative; 
+		bottom: 10px;
+}
+.get-cap-btn {
+		height: 37px; 
+		background-color: #f25e5e; 
+		color: #ffffff; 
+		font-size: 0.9375rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+.captcha {
+		position: relative;
+		bottom: 20px;
+}
+.password {
+		position: relative; 
+		bottom: 30px;
+}
+.confirm {
+		position: relative; 
+		bottom: 40px;
+}
+.submit-btn {
+		margin-left: 0.625rem; 
+		margin-right: 0.625rem; 
+		background-color: #f25e5e; 
+		color: white; 
+		font-weight: bold; 
+		height: 45px; 
+		position: relative; 
+		bottom: 1.5625rem;
+}
