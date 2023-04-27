@@ -1,6 +1,5 @@
 <template>
 	<view class="page-items">
-		<Search/>
 		<Banner :itemList="itemList"/>
 		<uni-notice-bar show-icon scrollable
 						text="Sports Center is pretty great!" />			
@@ -19,7 +18,6 @@
 </template>
 
 <script>
-	import Search from './search'
 	import Banner from '@/components/banner'
 	import Card from '@/components/card'
 	import Tabbar from '@/components/tabbar'
@@ -113,7 +111,6 @@
 		},]
 	export default {
 		components: {
-		  Search,
 		  Banner,
 		  Card,
 		  Tabbar,
