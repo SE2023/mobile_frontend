@@ -37,7 +37,7 @@
 			<button class="btn" @click="order(activity)">Confirm</button>
 		</view>
 		<!-- close button -->
-		<view class="close" @click="isshow=false">✕</view>
+		<view class="close" @click="payFail(activity)">✕</view>
 
 	</zwy-popup>
 
@@ -151,6 +151,55 @@
 
 
 			},
+			payFail(activity){
+				this.isshow=false
+				var nowDate = new Date()
+				var date = nowDate.getDate()
+				var time = nowDate.getHours() + ":" + nowDate.getMinutes() + ":" + nowDate.getSeconds()
+				const urlPrefix = config.urlPrefix
+				uni.request({
+					url: urlPrefix + '/order',
+					method: 'POST',
+					data: {
+						activityId: this.activity_id,
+						name: this.activity.name,
+						userId: this.user_id,
+						payMoney: this.price,
+						Time: date + time,
+						status: "unpaid",
+						remark: "unpaid"
+					},
+					header: {
+						'Authorization': uni.getStorageSync('token')
+					}
+				}).then((res) => {
+					if (res.statusCode === 200) {
+						uni.showToast({
+							title: 'Order Success!',
+							duration: 2000
+						})
+						setTimeout(() => {
+							uni.redirectTo({
+								url: '/pages/order/index'
+							})
+						}, 1500)
+					} else {
+						uni.showToast({
+							title: res.data.message.split(';')[0],
+							duration: 2000,
+							icon: 'error'
+						})
+					}
+					console.log(res)
+				}).catch((error) => {
+					uni.showToast({
+						title: 'Order Failed!',
+						duration: 2000,
+						icon: 'error'
+					})
+				})
+				
+			},
 			order(activity) {
 				var nowDate = new Date()
 				var date = nowDate.getDate()
@@ -162,12 +211,12 @@
 					method: 'POST',
 					data: {
 						activityId: this.activity_id,
-						name: "test",
+						name: this.activity.name,
 						userId: this.user_id,
 						payMoney: this.price,
 						Time: date + time,
-						status: "unused",
-						remark: "test"
+						status: "paid",
+						remark: "paid"
 					},
 					header: {
 						'Authorization': uni.getStorageSync('token')
