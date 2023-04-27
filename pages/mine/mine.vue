@@ -90,12 +90,6 @@
 			url: './wallet/index'
 		},
 		{
-			id: 'delivery',
-			name: 'Bookings',
-			icon: 'daifahuo',
-			url: '../order/index'
-		},
-		{
 			id: 'received',
 			name: 'Settings',
 			icon: 'daishouhuo',
