@@ -1,4 +1,5 @@
 <template>
+	<Search/>
 	<view>
 		<div id="container" :style="container">
 			<DiscoveryCard class="items" v-for="item of items" :key="items.id" :post="item" />
@@ -15,6 +16,7 @@
 		onPullDownRefresh,
 	} from '@dcloudio/uni-app'
 	import DiscoveryCard from "../../components/discovery-card/index.vue"
+	import Search from './search'
 
 	const systemInfo = uni.getSystemInfo()
 	let items = reactive([{
