@@ -3,7 +3,7 @@
 		<div id="image">
 			<image :src="post.url" mode="aspectFill" id="cover_image" :style="cover_style" />
 		</div>
-		<div id="info" :style="info_style">
+		<!-- <div id="info" :style="info_style">
 			<div id="title">
 				{{post.title}}
 			</div>
@@ -22,7 +22,7 @@
 					</svg>{{like_count}}
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</view>
 </template>
 

@@ -2266,10 +2266,10 @@
 .bottom {
 		font-size: 8px;
 		color: gray;
-		position: absolute;
 		display: flex;
 		justify-content: center;
 		bottom: 0;
 		width: 100%;
+		margin-top: 1.875rem;
 		margin-bottom: 10px;
 }

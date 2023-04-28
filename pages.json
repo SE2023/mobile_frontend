@@ -39,7 +39,7 @@
 		{
 			"path": "pages/others/others",
 			"style": {
-				"navigationBarTitleText": "Others"
+				"navigationBarTitleText": "Discovery"
 			}
 		},
 		{
@@ -122,6 +122,15 @@
 				"navigationBarTitleText": "Help & Feedback"
 			}
 		}
+        ,{
+            "path" : "pages/others/discoveryDetail/discoveryDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Discovery Detail",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	
 	"globalStyle": {
@@ -152,7 +161,7 @@
 			"pagePath": "pages/others/others",
 			"iconPath": "static/tabbar/grid.png",
 			"selectedIconPath": "static/tabbar/grid_active.png",
-			"text": "Others"
+			"text": "Discovery"
 		}, {
 			"pagePath": "pages/mine/mine",
 			"iconPath": "static/tabbar/me.png",
