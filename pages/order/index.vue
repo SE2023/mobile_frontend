@@ -21,15 +21,15 @@
 	})
 	const urlPrefix = Config.urlPrefix;
 	const barNameList = [{
-			name: 'To be Paid',
+			name: 'Unused',
 			id: '0'
 		},
 		{
-			name: 'Paid',
+			name: 'Used',
 			id: '1'
 		},
 		{
-			name: 'Cancelled',
+			name: 'All',
 			id: '2'
 		},
 	]
@@ -46,66 +46,24 @@
 			orders = res.data.result
 			reqContentList.push({
 				content: orders.filter(order => {
-					return order.status === 'unpaid'
+					return order.status === 'unused'
 				}),
 				mft_components: "OrderItem"
 			})
 			reqContentList.push({
 				content: orders.filter(order => {
-					return order.status === 'paid'
+					return order.status === 'used'
 				}),
 				mft_components: "OrderItem"
 			})
 			reqContentList.push({
 				content: orders.filter(order => {
-					return order.status === 'cancelled'
+					return true
 				}),
 				mft_components: "OrderItem"
 			})
-			console.log(reqContentList)
 		})
 	}
-
-	const barContentList = [{
-			content: [{
-					id: "01",
-					title: "To be Paid",
-					status: "unpaid",
-					time: "2023-4-1 10:00-11:00",
-				},
-				{
-					id: "02",
-					title: "To be Paid",
-					status: "unpaid",
-					time: "2023-4-1 11:00-12:00",
-				},
-			],
-			mft_components: "OrderItem"
-
-		},
-		{
-			content: [{
-				id: "02",
-				title: "Paid",
-				status: "unused",
-				time: "2023-4-2 10:00-11:00",
-			}, ],
-
-			mft_components: "OrderItem"
-
-		},
-		{
-			content: [{
-				id: "03",
-				title: "Cancelled",
-				status: "used",
-				time: "2023-4-3 10:00-11:00",
-				mft_components: "OrderItem"
-			}, ],
-			mft_components: "OrderItem"
-
-		}
-	]
 	const width = "33.3%"
 </script>
 

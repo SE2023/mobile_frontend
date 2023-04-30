@@ -17,10 +17,8 @@
 				<view class="user-content" v-if="isLogin">
 					<view class="nick-name oneline-hide">
 						{{ userInfo.username }}
-						<text 
-							v-if="userInfo.membership == 1"
-							style="background-color: #f6e0b5; padding-right: 20rpx; padding-left: 20rpx; color: #947a57; border-radius: 5px; font-size: 30rpx;"
-						>
+						<text v-if="userInfo.membership == 1"
+							style="background-color: #f6e0b5; padding-right: 20rpx; padding-left: 20rpx; color: #947a57; border-radius: 5px; font-size: 30rpx;">
 							VIP
 						</text>
 					</view>
@@ -76,7 +74,7 @@
 		},
 		{
 			id: 'delivery',
-			name: 'Cancelled',
+			name: 'All',
 			iconpath: '/static/icon/cancelled.svg',
 			url: '../order/index'
 		},

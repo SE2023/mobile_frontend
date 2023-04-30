@@ -1,5 +1,5 @@
 <template>
-	<view class="order-item" v-for="(item, index) in content" :key="item">
+	<view class="order-item" v-for="(item, index) in content" :key="item.id">
 		<view class="text">
 			<view class="title">
 				{{item.name}}
@@ -11,7 +11,7 @@
 				{{item.status}}
 			</view>
 		</view>
-		<button class="cancelBtn" v-if="item.status!='cancelled'">
+		<button class="cancelBtn" v-if="item.status==='unused'" @click="cancelOrder(item.id)">
 			Cancel
 		</button>
 	</view>
@@ -21,9 +21,32 @@
 	import {
 		defineProps
 	} from 'vue'
+	import Config from '@/config.js';
 	const props = defineProps(['content'])
-	console.log('content', props.content)
+	const urlPrefix = Config.urlPrefix
 
+	function cancelOrder(id) {
+		uni.request({
+			method: 'DELETE',
+			url: urlPrefix + '/order/' + id
+		}).then(() => {
+			setTimeout(() => {
+				uni.showModal({
+					title: 'Calcel Successfully!',
+					confirmText: 'Confirm',
+					showCancel: false
+				})
+				uni.reLaunch({
+					url: '/pages/order/index'
+				})
+			}, 200)
+		}).catch(() => {
+			uni.showModal({
+				title: 'Calcel Failed!',
+				showCancel: false
+			})
+		})
+	}
 </script>
 
 <style>

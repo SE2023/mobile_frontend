@@ -57,7 +57,6 @@
 				this.$refs.form
 					.validate()
 					.then(res => {
-						console.log('formData', this.formData)
 						uni.request({
 							url: urlPrefix + '/login',
 							header: {
