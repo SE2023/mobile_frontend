@@ -16,7 +16,7 @@
 	</uni-section>
 
 	<uni-section title="choose date" type="line" titleFontSize="18px">
-		<uni-datetime-picker type="date" :clear-icon="false" v-model="single" @change="change" />
+		<uni-datetime-picker start="2023-05-09" type="date" :clear-icon="false" v-model="single" @change="change" />
 	</uni-section>
 
 	<uni-section title="choose time" type="line" titleFontSize="18px">
@@ -33,6 +33,7 @@
 				<button class="amount-btn" @click="use_coupon(item)" :style="coupon_style">¥ {{item.discount}}</button>
 			</view>
 			<view class="money">Final Price is : ¥{{price}}</view>
+			<view>(Before members' 20% discounts.)</view>
 			<button class="btn" @click="order(activity)">Confirm</button>
 		</view>
 		<!-- close button -->
@@ -109,7 +110,6 @@
 					})
 				}
 			})
-
 		},
 		methods: {
 			time(val) {
@@ -205,6 +205,7 @@
 				})
 			},
 			order(activity) {
+				console.log('order now')
 				var nowDate = new Date()
 				var date = nowDate.getDate()
 				var time = nowDate.getHours() + ":" + nowDate.getMinutes() + ":" + nowDate.getSeconds()
@@ -226,6 +227,7 @@
 						'Authorization': uni.getStorageSync('token')
 					}
 				}).then((res) => {
+					console.log('res: ', res)
 					if (res.statusCode === 200) {
 						// uni.request({
 						// 	url: urlPrefix + '/order/'+ res.data.result +'/paid/' + this.price,
@@ -249,7 +251,7 @@
 						// 		})
 						// 	}, 1500)
 						// })
-						if (res.code === 1) {
+						if (res.data.code === 1) {
 							uni.showToast({
 								title: res.message,
 								duration: 2000,
@@ -260,6 +262,13 @@
 								title: res.message,
 								duration: 2000
 							})
+							console.log('coupon here', this.couponed)
+							if (this.couponed) {
+								uni.request({
+									url: urlPrefix + '/coupon/delete/' + this.user_id,
+									method: 'POST'
+								})
+							}
 							setTimeout(() => {
 								uni.redirectTo({
 									url: '/pages/order/index'
