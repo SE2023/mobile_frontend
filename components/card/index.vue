@@ -1,6 +1,6 @@
 <template>
 	<view >
-		<uni-card class="card " :is-shadow="true" :extra="extra" :title="name">
+		<uni-card class="card " :is-shadow="true" :title="name">
 				<view class="order-navbar">
 					<view class="order-navbar-item" v-for="(item, index) in DataList" :key="index" @click="toTargetItem(item)">
 						<view class="img">

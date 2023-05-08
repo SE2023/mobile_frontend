@@ -10,7 +10,7 @@
 			<uni-datetime-picker type="datetime" style="text-align: center;"></uni-datetime-picker>
 			<button type="warn" size="mini"	class="btn">Find Suitable Places</button>
 		</view> -->
-		<uni-section title="Recommend For You"  padding class="decoration" titleFontSize="30rpx" titleColor="#4c4950"> 
+		<uni-section title="Recommend For You"  padding class="decoration" titleFontSize="35rpx" titleColor="#F25E5E"> 
 			<Book :activity="recommendActivities[0]"></Book>
 			<Book :activity="recommendActivities[1]"></Book>
 		</uni-section>

@@ -21,11 +21,11 @@
 	})
 	const urlPrefix = Config.urlPrefix;
 	const barNameList = [{
-			name: 'Unused',
+			name: 'To Be Paid',
 			id: '0'
 		},
 		{
-			name: 'Used',
+			name: 'Paid',
 			id: '1'
 		},
 		{
