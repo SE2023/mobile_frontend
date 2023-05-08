@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<Banner :itemList="itemList" />
-		<uni-section title="Swimming Pool" type="line" padding>
+		<uni-section :title="item.facility_name" type="line" padding>
 			<uni-rate active-color="red" value="4.5" @change="onChange" />
 		</uni-section>
 		<view class="detail">
@@ -27,7 +27,7 @@
 	import config from '@/config.js'
 	
 	var facility_id = 0
-	const item = {opening_time:"7:00-18:00",coach:"Sam",contact:"130000000"}
+	const item = {facility_name: 'Swimming Pool1', opening_time:"7:00-18:00",coach:"Sam",contact:"130000000", status:"open"}
 	const itemList = [{
 			id: 0,
 			url: '/static/swiper/swiper4.jpg'
@@ -77,7 +77,7 @@
 			Book
 		},
 		onLoad(option) {
-			this.facility_id = option.id	
+			this.facility_id = option.id
 		},
 		mounted(){
 			const urlPrefix = config.urlPrefix
@@ -86,16 +86,29 @@
 				url: urlPrefix + '/facility/' + this.facility_id,
 				method: 'GET'
 			}).then(res => {
+				console.log(res.data.result)
+				this.item.facility_name = res.data.result.name
 				this.item.coach = res.data.result.manager_name
 				this.item.contact = res.data.result.manager_tel
+				this.item.status = res.data.result.status
+				console.log(res.data.result.status)
+				if (this.item.status === 'close') {
+					uni.showToast({
+						title: 'The facility is close now!',
+						duration: 2000,
+						icon: 'error'
+					})
+				}
 			})
-			uni.request({
-				url: urlPrefix + '/activity/facility/' + this.facility_id,
-				method: 'GET',
-			}).then((res) => {
-				this.ActivityList = res.data.result
-				console.log(this.ActivityList)
-			})
+			if (this.item.status === 'open') {
+				uni.request({
+					url: urlPrefix + '/activity/facility/' + this.facility_id,
+					method: 'GET',
+				}).then((res) => {
+					this.ActivityList = res.data.result
+					console.log(this.ActivityList)
+				})
+			}
 		},
 	}
 </script>

@@ -181,7 +181,7 @@
 				this.recommendActivities[0].id = res.data.result[0].id
 				this.recommendActivities[0].capacity = res.data.result[0].capacity
 				this.recommendActivities[0].facilityId = res.data.result[0].facilityId
-				this.recommendActivities[0].name = res.data.result[0].name
+				this.recommendActivities[0].name = res.data.result[0].name + ' - ' + 'Swimming pool1'
 				this.recommendActivities[0].note = res.data.result[0].note
 				this.recommendActivities[0].price = res.data.result[0].price
 				this.recommendActivities[0].status = res.data.result[0].status
@@ -190,7 +190,7 @@
 				this.recommendActivities[1].id = res.data.result[1].id
 				this.recommendActivities[1].capacity = res.data.result[1].capacity
 				this.recommendActivities[1].facilityId = res.data.result[1].facilityId
-				this.recommendActivities[1].name = res.data.result[1].name
+				this.recommendActivities[1].name = res.data.result[1].name + ' - ' + 'Swimming pool1'
 				this.recommendActivities[1].note = res.data.result[1].note
 				this.recommendActivities[1].price = res.data.result[1].price
 				this.recommendActivities[1].status = res.data.result[1].status
