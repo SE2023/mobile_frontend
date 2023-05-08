@@ -1,14 +1,31 @@
 <template>
+<<<<<<< HEAD
 	<view>
 		{{ coupons }}
 		<TopNavBar :width="width" :barNameList="coupons" :barContentList="coupons" />
+=======
+	<view>
+		<view class="order-item" v-for="(item, index) in coupons" :key="item.id">
+			<view class="text">
+				<view class="title">
+					Discount for ¥ {{item.discount}}
+				</view>
+				<view class="time">
+					Expired on {{item.expire_time}}
+				</view>
+			</view>
+		</view>
+>>>>>>> cc977a6b67c7105df76486949f8cc1a42941bc4d
 	</view>
 </template>
 
 <script>
+	import {
+		defineProps
+	} from 'vue'
 	import TopNavBar from '@/components/top-navbar/index.vue'
-	import OrderItem from '@/components/order-item/index.vue'
 	import Config from '@/config.js';
+	const props = defineProps(['content'])
 	import {
 		onBeforeMount,
 		onMounted,
@@ -33,7 +50,7 @@
 		methods: {
 			request_coupons() {
 				uni.request({
-					url: urlPrefix + '/coupon/' + 11,
+					url: urlPrefix + '/coupon/' + this.userId,
 					methods: 'GET'
 				}).then(res => {
 					console.log(res.data.result)
@@ -52,6 +69,29 @@
 	#tab {
 		width: 100%;
 		display: flex;
+	}
+
+	.order-item {
+		margin-top: 5px;
+		height: 90px;
+		background-color: #fee5e6;
+	}
+
+	.text {
+		float: left;
+		margin-top: 12px;
+		padding-left: 15px;
+	}
+	
+	.title {
+		font-size: 17px;
+		font-weight: bold;
+	}
+	
+	.time {
+		margin-top: 15rpx;
+		font-size: 15px;
+		color: #585858;
 	}
 
 	.tabName {

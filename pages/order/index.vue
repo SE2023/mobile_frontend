@@ -46,13 +46,13 @@
 			orders = res.data.result
 			reqContentList.push({
 				content: orders.filter(order => {
-					return order.status === 'unused'
+					return order.status === 'unpaid'
 				}),
 				mft_components: "OrderItem"
 			})
 			reqContentList.push({
 				content: orders.filter(order => {
-					return order.status === 'used'
+					return order.status === 'paid'
 				}),
 				mft_components: "OrderItem"
 			})
