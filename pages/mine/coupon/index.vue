@@ -1,6 +1,7 @@
 <template>
 	<view>
 		{{ coupons }}
+		<TopNavBar :width="width" :barNameList="coupons" :barContentList="coupons" />
 	</view>
 </template>
 
