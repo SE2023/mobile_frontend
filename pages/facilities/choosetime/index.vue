@@ -147,8 +147,6 @@
 						this.timeList.push(time)
 					}
 				})
-
-
 			},
 			payFail(activity){
 				this.isshow=false
@@ -173,15 +171,23 @@
 					}
 				}).then((res) => {
 					if (res.statusCode === 200) {
-						uni.showToast({
-							title: 'Order Success!',
-							duration: 2000
-						})
-						setTimeout(() => {
-							uni.redirectTo({
-								url: '/pages/order/index'
+						if (res.code === 1) {
+							uni.showToast({
+								title: res.message,
+								duration: 2000,
+								icon: 'error'
 							})
-						}, 1500)
+						} else {
+							uni.showToast({
+								title: 'Need to be paid!',
+								duration: 2000
+							})
+							setTimeout(() => {
+								uni.redirectTo({
+									url: '/pages/order/index'
+								})
+							}, 1500)
+						}
 					} else {
 						uni.showToast({
 							title: res.data.message.split(';')[0],
@@ -197,7 +203,6 @@
 						icon: 'error'
 					})
 				})
-				
 			},
 			order(activity) {
 				var nowDate = new Date()
@@ -244,15 +249,23 @@
 						// 		})
 						// 	}, 1500)
 						// })
-						uni.showToast({
-							title: 'Order Success!',
-							duration: 2000
-						})
-						setTimeout(() => {
-							uni.redirectTo({
-								url: '/pages/order/index'
+						if (res.code === 1) {
+							uni.showToast({
+								title: res.message,
+								duration: 2000,
+								icon: 'error'
 							})
-						}, 1500)
+						} else {
+							uni.showToast({
+								title: res.message,
+								duration: 2000
+							})
+							setTimeout(() => {
+								uni.redirectTo({
+									url: '/pages/order/index'
+								})
+							}, 1500)
+						}
 					} else {
 						uni.showToast({
 							title: res.data.message.split(';')[0],

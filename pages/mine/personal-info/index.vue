@@ -22,7 +22,7 @@
 			<uni-col :span="14">Male</uni-col>
 		</uni-row>
 	</view> 
-	<button type="warn" class="submit-btn">Submit</button>
+	<!-- <button type="warn" class="submit-btn">Submit</button> -->
 </template>
 
 <script>
@@ -98,6 +98,7 @@
 							},
 							success: function (uploadFileRes) {
 								console.log('Success:', uploadFileRes);
+								console.log('type: ', typeof uploadFileRes)
 								// _self.imgsID.push(JSON.parse(uploadFileRes.data).data.fileId);
 								console.log('_self.imgsID:', _self.imgsID)
 							},
