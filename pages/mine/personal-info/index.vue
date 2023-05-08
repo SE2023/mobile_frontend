@@ -39,6 +39,7 @@
 		data() {
 			return{
 				userInfo: {
+					id:0,
 					username:'Username',
 					email:'Email'
 				},
@@ -59,10 +60,12 @@
 					}
 				}).then(res => {
 					if (res.data.code === 0) {
+						console.log('ID: ', res.data.result.id)
 						console.log('username: ', res.data.result.username)
 						console.log('email: ', res.data.result.email)
 						this.userInfo.username = res.data.result.username
 						this.userInfo.email = res.data.result.email
+						this.userInfo.id = res.data.result.id
 					} else {
 						uni.showToast({
 							title: 'Get info failed',
@@ -86,7 +89,7 @@
 						const tempFilePaths = res.tempFilePaths[0];
 						// upload file
 						const uploadTask = uni.uploadFile({
-							url : 'http://localhost:8880/user/upload', // post请求地址
+							url : 'http://localhost:8880/icon/load' + _self.userInfo.id, // post请求地址
 						    filePath: tempFilePaths,
 						    name: 'file',  // need to be comfirmed
 							method: 'POST',

@@ -75,6 +75,12 @@
 			}
 		},
 		{
+			"path": "pages/mine/coupon/index",
+			"style": {
+				"navigationBarTitleText": "Discount Coupon"
+			}
+		},
+		{
 			"path": "pages/mine/settings/index",
 			"style": {
 				"navigationBarTitleText": "Settings"

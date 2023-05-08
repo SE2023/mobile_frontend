@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<TopNavBar :width="width" :barNameList="barNameList" :barContentList="reqContentList" />
+		<TopNavBar :width="width" :barContentList="reqContentList" />
 	</view>
 </template>
 
@@ -20,19 +20,6 @@
 		request_orders()
 	})
 	const urlPrefix = Config.urlPrefix;
-	const barNameList = [{
-			name: 'To Be Paid',
-			id: '0'
-		},
-		{
-			name: 'Paid',
-			id: '1'
-		},
-		{
-			name: 'All',
-			id: '2'
-		},
-	]
 	let orders = []
 	const reqContentList = reactive([])
 	const request_orders = function() {

@@ -4,7 +4,7 @@
 			<button>Balance: ¥{{ userInfo.balance }}</button>
 		</view>
 		<view class="discount-btn">
-			<button>Discount Coupon</button>
+			<button @tap="toCoupon()">Discount Coupon</button>
 		</view>
 	</view> 
 	<button type="warn" class="topup-btn" @click="isshow=!isshow">Top Up</button>
@@ -91,6 +91,11 @@
 						}
 					})
 				}
+			},
+			toCoupon() {
+				uni.navigateTo({
+					url: '../coupon/index'
+				});
 			},
 			// 获取当前用户信息
 			async getUserInfo() {
