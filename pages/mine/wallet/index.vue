@@ -94,7 +94,7 @@
 			},
 			toCoupon() {
 				uni.navigateTo({
-					url: '../coupon/index'
+					url: '/pages/mine/coupon/index?id=' + this.userInfo.id
 				});
 			},
 			// 获取当前用户信息

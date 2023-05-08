@@ -1,10 +1,10 @@
 <template>
 	<view>
-		<TopNavBar :width="width" :barContentList="reqContentList" />
+		{{ coupons }}
 	</view>
 </template>
 
-<script setup>
+<script>
 	import TopNavBar from '@/components/top-navbar/index.vue'
 	import OrderItem from '@/components/order-item/index.vue'
 	import Config from '@/config.js';
@@ -16,42 +16,34 @@
 	import {
 		onShow,
 	} from '@dcloudio/uni-app';
-	onMounted(() => {
-		request_orders()
-	})
 	const urlPrefix = Config.urlPrefix;
-	let orders = []
-	const reqContentList = reactive([])
-	const request_orders = function() {
-		uni.request({
-			url: urlPrefix + '/order/token/',
-			methods: 'GET',
-			header: {
-				'Authorization': uni.getStorageSync('token')
-			}
-		}).then(res => {
-			orders = res.data.result
-			reqContentList.push({
-				content: orders.filter(order => {
-					return order.status === 'unused'
-				}),
-				mft_components: "OrderItem"
-			})
-			reqContentList.push({
-				content: orders.filter(order => {
-					return order.status === 'used'
-				}),
-				mft_components: "OrderItem"
-			})
-			reqContentList.push({
-				content: orders.filter(order => {
-					return true
-				}),
-				mft_components: "OrderItem"
-			})
-		})
-	}
 	const width = "33.3%"
+	
+	export default {
+		data() {
+			return {
+				userId: 0,
+				coupons: []
+			}
+		},
+		onLoad(options) {
+			this.userId = options.id
+		},
+		methods: {
+			request_coupons() {
+				uni.request({
+					url: urlPrefix + '/coupon/' + 11,
+					methods: 'GET'
+				}).then(res => {
+					console.log(res.data.result)
+					this.coupons = res.data.result
+				})
+			}
+		},
+		mounted() {
+			this.request_coupons()
+		}
+	}
 </script>
 
 
