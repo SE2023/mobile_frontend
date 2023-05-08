@@ -222,28 +222,37 @@
 					}
 				}).then((res) => {
 					if (res.statusCode === 200) {
-						uni.request({
-							url: urlPrefix + '/order/'+ res.data.result +'/paid/' + this.price,
-							method: 'PUT',
-							data: {
-								activityId: this.activity_id,
-								userId: this.user_id,
-								payMoney: this.price,
-								Time: date + time,
-								status: "paid",
-								remark: "paid"
-							},
-						}).then(res => {
-							uni.showToast({
-								title: 'Order Success!',
-								duration: 2000
-							})
-							setTimeout(() => {
-								uni.redirectTo({
-									url: '/pages/order/index'
-								})
-							}, 1500)
+						// uni.request({
+						// 	url: urlPrefix + '/order/'+ res.data.result +'/paid/' + this.price,
+						// 	method: 'PUT',
+						// 	data: {
+						// 		activityId: this.activity_id,
+						// 		userId: this.user_id,
+						// 		payMoney: this.price,
+						// 		Time: date + time,
+						// 		status: "paid",
+						// 		remark: "paid"
+						// 	},
+						// }).then(res => {
+						// 	uni.showToast({
+						// 		title: 'Order Success!',
+						// 		duration: 2000
+						// 	})
+						// 	setTimeout(() => {
+						// 		uni.redirectTo({
+						// 			url: '/pages/order/index'
+						// 		})
+						// 	}, 1500)
+						// })
+						uni.showToast({
+							title: 'Order Success!',
+							duration: 2000
 						})
+						setTimeout(() => {
+							uni.redirectTo({
+								url: '/pages/order/index'
+							})
+						}, 1500)
 					} else {
 						uni.showToast({
 							title: res.data.message.split(';')[0],

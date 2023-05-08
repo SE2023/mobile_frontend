@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-	<view>
-		{{ coupons }}
-		<TopNavBar :width="width" :barNameList="coupons" :barContentList="coupons" />
-=======
 	<view>
 		<view class="order-item" v-for="(item, index) in coupons" :key="item.id">
 			<view class="text">
@@ -15,7 +10,6 @@
 				</view>
 			</view>
 		</view>
->>>>>>> cc977a6b67c7105df76486949f8cc1a42941bc4d
 	</view>
 </template>
 
