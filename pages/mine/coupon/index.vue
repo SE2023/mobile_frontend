@@ -44,7 +44,7 @@
 		methods: {
 			request_coupons() {
 				uni.request({
-					url: urlPrefix + '/coupon/' + 11,
+					url: urlPrefix + '/coupon/' + this.userId,
 					methods: 'GET'
 				}).then(res => {
 					console.log(res.data.result)
