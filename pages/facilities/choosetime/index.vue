@@ -32,8 +32,7 @@
 			<view class="amount-box-2" v-for="(item,index) in couponList" :key="item.id">
 				<button class="amount-btn" @click="use_coupon(item)" :style="coupon_style">¥ {{item.discount}}</button>
 			</view>
-			<view>Final Price is : ¥{{price}}</view>
-			<view class="info">Hint: You can become a member of BodyBuddy by topping up ¥100 once a time!</view>
+			<view class="money">Final Price is : ¥{{price}}</view>
 			<button class="btn" @click="order(activity)">Confirm</button>
 		</view>
 		<!-- close button -->
@@ -332,6 +331,12 @@
 	.text {
 		font-size: 32rpx;
 		width: 450rpx;
+	}
+	
+	.money {
+		font-weight: bold;
+		font-size: 35rpx;
+		margin: 60rpx 0 30rpx 0;
 	}
 
 	.amount-box-1 {
